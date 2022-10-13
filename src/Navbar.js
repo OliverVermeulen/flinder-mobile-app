@@ -5,7 +5,7 @@ export default function Navbar() {
         Flinder
       </a>
       <ul>
-        <li>
+        <li className="active">
           <a href="/pricing">Pricing</a>
         </li>
         <li>
