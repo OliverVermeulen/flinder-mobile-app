@@ -13,6 +13,11 @@ body {
   align-items: stretch;
   gap: 2rem;
   padding: 0 1rem;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 .site-title {
