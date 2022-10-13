@@ -14,9 +14,15 @@ body {
   gap: 2rem;
   padding: 0 1rem;
 }
+
 .site-title {
   font-size: 2rem;
 }
+
+.container {
+  margin: 1rem;
+}
+
 .nav ul {
   padding: 0;
   margin: 0;
@@ -30,12 +36,11 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
-  padding: .25rem;
+  padding: 0.25rem;
 }
-.nav li.active  {
-    background-color: #555;
+.nav li.active {
+  background-color: #555;
 }
-.nav li:hover  {
-    background-color: #777;
+.nav li:hover {
+  background-color: #777;
 }
-
