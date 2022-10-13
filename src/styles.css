@@ -21,6 +21,7 @@ body {
 
 .container {
   margin: 1rem;
+  text-align: center;
 }
 
 .nav ul {
