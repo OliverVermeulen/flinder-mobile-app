@@ -1,3 +1,10 @@
-export default function Profile () {
-    return <h1>Profile</h1>
-}
+import pfp from "../images/pfp.jpg";
+const Profile = () => {
+  return (
+    <div className="profile-img">
+      <img src={pfp} alt="" />
+    </div>
+  );
+};
+
+export default Profile;

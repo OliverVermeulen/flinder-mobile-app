@@ -5,6 +5,15 @@ body {
   margin: 0;
 }
 
+.app {
+  min-width: 320px;
+  max-width: 480px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content:; */
+}
+
 .nav {
   background-color: #333;
   color: white;
@@ -14,10 +23,11 @@ body {
   gap: 2rem;
   padding: 0 1rem;
   height: 50px;
-  position: absolute;
+  /* position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  min-width: 320px;
+max-width: 480px; */
 }
 
 .site-title {
@@ -25,7 +35,7 @@ body {
 }
 
 .container {
-  margin: 1rem;
+  /* margin: 1rem; */
   text-align: center;
 }
 
@@ -49,4 +59,15 @@ body {
 }
 .nav li:hover {
   background-color: #777;
+}
+
+.profile-img {
+  min-width: 320px;
+  max-width: 480px;
+}
+
+.profile-img img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
 }
