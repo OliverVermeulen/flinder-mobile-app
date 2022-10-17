@@ -9,7 +9,6 @@ function App() {
   return (
     <>
       <div className="app">
-        
         <div className="container">
           <Routes>
             <Route path="/" element={<Home />} />

@@ -4,9 +4,13 @@
   box-sizing: border-box;
   font-family: "Readex Pro", sans-serif;
 }
+
 body {
   margin: 0;
   background-color: #37393b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .app {
@@ -16,14 +20,37 @@ body {
   display: flex;
   flex-direction: column;
 }
+/* Page Header */
+.page-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid white;
+}
+.page-header p {
+  margin: 0;
+}
+.page-header .name-age {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
 
+/* Navbar */
 .nav {
-  background-image: linear-gradient(60deg, rgba(112,34,103,1) 0%, rgba(230,34,93,1) 100%);
-  color: #457FC3;
-  font-size: 20px;
-  position: absolute;
-  bottom: 0;
-width: 100%;
+  background-image: linear-gradient(
+    60deg,
+    rgba(112, 34, 103, 1) 0%,
+    rgba(230, 34, 93, 1) 100%
+  );
+  color: #457fc3;
+  font-size: 25px;
+  margin-top: auto;
 }
 .nav ul {
   padding: 5px;
@@ -44,27 +71,32 @@ width: 100%;
 .nav li.active {
   color: black;
 }
+
+/* Profile Page */
 .profile-img {
   min-width: 320px;
   max-width: 480px;
 }
-
 .profile-img img {
   max-width: 100%;
   max-height: 100%;
   display: block;
 }
-
-.profile-info p{
+.profile-info p {
   margin: 0;
   color: white;
   font-weight: 500;
 }
-
-.profile-info .name-age{
+.profile-info .name-age {
   display: flex;
   flex-direction: row;
   font-size: 25px;
   gap: 10px;
   padding-bottom: 15px;
+  width: fit-content;
 }
+.profile-info .profile-description {
+  width: 320px;
+}
+
+
