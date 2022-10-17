@@ -1,23 +1,23 @@
 import { Link } from "react-router-dom";
 import CustomLink from "./CustomLink";
-
-import { FaUserAlt, FaStream, FaExchangeAlt } from "react-icons/fa";
+// Material design Icons
+import { MdSwipe, MdChatBubble, MdPerson } from "react-icons/md";
 
 function Navbar() {
   return (
     <nav className="nav">
-      <Link to="/" className="site-title">
+      {/* <Link to="/" className="site-title">
         Flinder
-      </Link>
+      </Link> */}
       <ul>
         <CustomLink to="/match">
-          <FaExchangeAlt />
+          <MdSwipe />
         </CustomLink>
         <CustomLink to="/chat">
-          <FaStream />
+          <MdChatBubble/>
         </CustomLink>
         <CustomLink to="/profile">
-          <FaUserAlt />
+          <MdPerson />
         </CustomLink>
       </ul>
     </nav>

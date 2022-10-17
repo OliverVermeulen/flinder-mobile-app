@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <div className="app">
-        <Navbar />
+        
         <div className="container">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -18,6 +18,7 @@ function App() {
             <Route path="/profile" element={<Profile />} />
           </Routes>
         </div>
+        <Navbar />
       </div>
     </>
   );

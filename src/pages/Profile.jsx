@@ -10,7 +10,7 @@ const Profile = () => {
       <p>Oliver,</p>
       <p>20</p>
       </div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem laudantium temporibus aut in cupiditate dicta animi neque recusandae totam. Illo </p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem laudantium temporibus aut in cupiditate dicta animi neque recusandae totam.</p>
     </div>
     </>
   );
