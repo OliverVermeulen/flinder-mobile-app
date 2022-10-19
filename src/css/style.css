@@ -21,24 +21,25 @@ body {
   flex-direction: column;
 }
 
-.primary-title {
-  font-size: 50px;
-  color: #fff;
-}
 .primary-button {
   color: #fff;
   text-transform: uppercase;
   font-size: 15px;
-  background: linear-gradient(45deg, #fe3072, #ff5940);
-  padding: 12px 30px;
+  background: linear-gradient(
+    45deg,
+    #f25ebf,
+    #db27f2,
+    #7f0cf2,
+    #044bd9,
+    #0785f2
+  );
+  padding: 12px 20px;
   border-radius: 30px;
   border: none;
   cursor: pointer;
   margin-top: 50px;
 }
-.primary-button:hover {
-  background: linear-gradient(45deg, #ff5940, #fe3072);
-}
+
 .secondary-button {
   color: rgb(121, 119, 119);
   background-color: #fff;
@@ -93,9 +94,9 @@ body {
       rgba(0, 0, 0, 0) 100%
     ),
     url("../images/home-background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .home {
   margin-top: 30vh;
@@ -181,24 +182,19 @@ body {
   width: 320px;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Mr+Dafoe);
-@import url(https://fonts.googleapis.com/css?family=Titillium+Web:900);
-@import url(https://fonts.googleapis.com/css?family=Righteous);
-@import url(https://fonts.googleapis.com/css?family=Candal);
-
 @import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
-
-@import url(https://fonts.googleapis.com/css?family=Monoton);
-
 .victory {
-  font-family: 'Permanent Marker', cursive;
-  font-variant:small-caps;
+  font-family: "Permanent Marker", cursive;
+  font-variant: small-caps;
   font-size: 50px;
-  -webkit-transform: skew(-15deg,-15deg);
-  background-image: -webkit-linear-gradient(#FF0FF8 0%,  #F9F9F7 100%);
+  transform: skew(-15deg, -15deg);
+  -webkit-transform: skew(-15deg, -15deg);
+  background-image: -webkit-linear-gradient(#ff0ff8 0%, #f9f9f7 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 0 auto;
+  filter: drop-shadow(2px 2px 20px #f008b7);
   -webkit-filter: drop-shadow(2px 2px 20px #f008b7);
   width: fit-content;
   text-align: center;
