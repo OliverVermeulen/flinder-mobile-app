@@ -7,18 +7,21 @@
 
 body {
   margin: 0;
-  background-color: #37393b;
+  background-color: black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 .app {
-  min-width: 320px;
-  max-width: 480px;
-  height: 100vh;
+  /* min-width: 320px;
+  max-width: 480px; */
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  background-color: #37393b;
 }
 
 .primary-button {
@@ -84,23 +87,36 @@ body {
 .header-nav .logo-container .logo {
   width: 100%;
 }
+.header-nav .logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
 /* ----- Home page ----- */
 .overlay {
-  height: calc(100vh - 43px);
-  background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.65) 0%,
-      rgba(0, 0, 0, 0) 100%
-    ),
-    url("../images/home-background.jpg");
+  height: 100vh;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.05) 0px,
+    rgba(255, 255, 255, 0.05) 1px,
+    rgba(255, 255, 255, 0) 1px,
+    rgba(255, 255, 255, 0) 2px
+  ),
+  url("../images/home-background.jpg");    
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
 }
 .home {
-  margin-top: 30vh;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
+  width: 100%;
 }
 
 /* Page Header */
@@ -203,19 +219,22 @@ body {
 /* auth model */
 .auth-modal {
   position: absolute;
-  top: 70px;
+  top: -90%;
   left: 0;
-  max-width: 360px;
+  right: 0;
   margin: 0 auto;
+  max-width: 350px;
+  height: auto;
   background-color: rgb(46, 46, 46);
-  border: 0.2rem solid #fff;
-  border-radius: 5px;
+  border-radius: 10px;
+  padding: 40px;
+  border: 4px solid #fff;
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
     0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
-  padding: 40px;
 }
 .auth-modal .close-icon {
   float: right;
+  color: #fff;
 }
 .auth-modal h2 {
   color: #fff;
@@ -236,4 +255,5 @@ body {
   font-size: 17px;
   border-radius: 5px;
   outline: none;
+  border: 2px solid rgb(121, 119, 119);
 }
