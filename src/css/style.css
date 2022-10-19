@@ -199,3 +199,41 @@ body {
   width: fit-content;
   text-align: center;
 }
+
+/* auth model */
+.auth-modal {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  max-width: 360px;
+  margin: 0 auto;
+  background-color: rgb(46, 46, 46);
+  border: 0.2rem solid #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
+  padding: 40px;
+}
+.auth-modal .close-icon {
+  float: right;
+}
+.auth-modal h2 {
+  color: #fff;
+  text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #f09,
+    0 0 80px #f09, 0 0 90px #f09, 0 0 100px #f09, 0 0 150px #f09;
+}
+.auth-modal p {
+  color: #fff;
+}
+.auth-modal form {
+  display: flex;
+  flex-direction: column;
+}
+.auth-modal input[type="password"],
+.auth-modal input[type="email"] {
+  padding: 8px;
+  margin: 8px;
+  font-size: 17px;
+  border-radius: 5px;
+  outline: none;
+}

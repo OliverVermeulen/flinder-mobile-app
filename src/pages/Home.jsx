@@ -1,5 +1,5 @@
 import Nav from '../components/Nav'
-// import AuthModal from "../components/AuthModel"
+import AuthModal from "../components/AuthModel"
 import {useState} from 'react'
 import {useCookies} from "react-cookie"
 
@@ -25,21 +25,19 @@ const Home = () => {
             <Nav
                 authToken={authToken}
                 minimal={false}
-                // setShowModal={setShowModal}
+                setShowModal={setShowModal}
                 showModal={showModal}
                 setIsSignUp={setIsSignUp}
             />
             <div className="home">
-                {/* <h1 className="primary-title">Swipe Right®</h1> */}
                 <h1 class="victory">Swipe Right</h1>
                 <button className="primary-button" onClick={handleClick}>
                     {authToken ? 'Sign Out' : 'Create Account'}
                 </button>
 
-
-                {/* {showModal && (
+                {showModal && (
                     <AuthModal setShowModal={setShowModal} isSignUp={isSignUp}/>
-                )} */}
+                )}
             </div>
         </div>
     )
