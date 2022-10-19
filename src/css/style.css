@@ -97,17 +97,16 @@ body {
 .overlay {
   height: 100vh;
   background: repeating-linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 0.05) 0px,
-    rgba(255, 255, 255, 0.05) 1px,
-    rgba(255, 255, 255, 0) 1px,
-    rgba(255, 255, 255, 0) 2px
-  ),
-  url("../images/home-background.jpg");    
+      0deg,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 1px,
+      rgba(255, 255, 255, 0) 1px,
+      rgba(255, 255, 255, 0) 2px
+    ),
+    url("../images/home-background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
 }
 .home {
   margin: 0;
@@ -198,22 +197,29 @@ body {
   width: 320px;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
-.victory {
-  font-family: "Permanent Marker", cursive;
-  font-variant: small-caps;
-  font-size: 50px;
-  transform: skew(-15deg, -15deg);
-  -webkit-transform: skew(-15deg, -15deg);
-  background-image: -webkit-linear-gradient(#ff0ff8 0%, #f9f9f7 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+@import url(https://fonts.googleapis.com/css?family=Yellowtail:400);
+.neonText {
+  font-family: "Yellowtail", sans-serif;
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #7f0cf2,
+    0 0 82px #7f0cf2, 0 0 92px #7f0cf2, 0 0 102px #7f0cf2, 0 0 151px #7f0cf2;
   margin: 0 auto;
-  filter: drop-shadow(2px 2px 20px #f008b7);
-  -webkit-filter: drop-shadow(2px 2px 20px #f008b7);
-  width: fit-content;
-  text-align: center;
+}
+h1 {
+  font-weight: 400;
+  font-size: 70px;
+  animation: pulsate 0.11s ease-in-out infinite alternate;
+}
+@keyframes pulsate {
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #7f0cf2,
+      0 0 80px #7f0cf2, 0 0 90px #7f0cf2, 0 0 100px #7f0cf2, 0 0 150px #7f0cf2;
+  }
+
+  0% {
+    text-shadow: 0 0 4px #fff, 0 0 10px #fff, 0 0 18px #fff, 0 0 38px #7f0cf2,
+      0 0 73px #7f0cf2, 0 0 80px #7f0cf2, 0 0 94px #7f0cf2, 0 0 140px #7f0cf2;
+  }
 }
 
 /* auth model */
