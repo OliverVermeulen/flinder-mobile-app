@@ -1,15 +1,13 @@
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Onboarding from "./pages/Onboarding";
-import Match from "./pages/Match";
-import Chat from "./pages/Chat";
-import Profile from "./pages/Profile";
+import Navbar from "../components/Navbar";
+import Home from "./Home";
+import Match from "./Match";
+import Chat from "./Chat";
+import Profile from "./Profile";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Dashboard from "./pages/Dashboard";
 
 import { useCookies } from "react-cookie";
 
-const App = () => {
+const Dashboard = () => {
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
   const authToken = cookies.AuthToken;
   return (
@@ -17,18 +15,17 @@ const App = () => {
       <div className="app">
         <div className="container">
           <Routes>
-            <Route path="/" element={<Home />} />
-            {authToken && <Route path="/onboarding" element={<Onboarding />} />}
-            {authToken && <Route path="/dashboard" element={<Dashboard />} />}
+            {/* <Route path="/" element={<Home />} />
+            {authToken && <Route path="/onboarding" element={<Onboarding />} />} */}
             <Route path="/match" element={<Match />} />
             <Route path="/chat" element={<Chat />} />
             <Route path="/profile" element={<Profile />} />
           </Routes>
         </div>
-        {/* <Navbar /> */}
+        <Navbar />
       </div>
     </>
   );
 };
 
-export default App;
+export default Dashboard;
