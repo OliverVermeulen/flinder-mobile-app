@@ -1,4 +1,7 @@
+/*  Main Font */
 @import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap");
+/* Stylized Font */
+@import url("https://fonts.googleapis.com/css?family=Yellowtail:400");
 
 * {
   box-sizing: border-box;
@@ -67,19 +70,6 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.header-nav .nav-button {
-  color: #fe3072;
-  background-color: #fff;
-  font-size: 20px;
-  padding: 10px 20px;
-  border-radius: 10px;
-  border: none;
-  margin: 10px;
-}
-.header-nav .nav-button:disabled {
-  background-color: rgb(230, 228, 228);
-  color: #c02a59;
-}
 .header-nav .logo-container {
   width: 170px;
   margin: 15px;
@@ -91,6 +81,21 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.header-nav .nav-button {
+  color: #fe3072;
+  background-color: #fff;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+}
+.header-nav .nav-button:disabled {
+  background-color: rgb(230, 228, 228);
+  color: #c02a59;
+  cursor: auto;
 }
 
 /* ----- Home page ----- */
@@ -116,6 +121,74 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
   width: 100%;
+}
+.neonText {
+  font-family: "Yellowtail", sans-serif;
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #7f0cf2,
+    0 0 82px #7f0cf2, 0 0 92px #7f0cf2, 0 0 102px #7f0cf2, 0 0 151px #7f0cf2;
+  margin: 0 auto;
+}
+h1 {
+  font-weight: 400;
+  font-size: 70px;
+  animation: pulsate 0.11s ease-in-out infinite alternate;
+}
+@keyframes pulsate {
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #7f0cf2,
+      0 0 80px #7f0cf2, 0 0 90px #7f0cf2, 0 0 100px #7f0cf2, 0 0 150px #7f0cf2;
+  }
+
+  0% {
+    text-shadow: 0 0 4px #fff, 0 0 10px #fff, 0 0 18px #fff, 0 0 38px #7f0cf2,
+      0 0 73px #7f0cf2, 0 0 80px #7f0cf2, 0 0 94px #7f0cf2, 0 0 140px #7f0cf2;
+  }
+}
+
+/* Auth Model */
+.auth-modal {
+  position: absolute;
+  top: -90%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 350px;
+  height: auto;
+  background-color: rgb(46, 46, 46);
+  border-radius: 10px;
+  padding: 40px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #7f0cf2,
+    0 0 0.8rem #7f0cf2, 0 0 2.8rem #7f0cf2, inset 0 0 1.3rem #7f0cf2;
+}
+.auth-modal .close-icon {
+  float: right;
+  color: #fff;
+}
+.auth-modal h2 {
+  font-weight: 400;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #7f0cf2,
+    0 0 80px #7f0cf2, 0 0 90px #7f0cf2, 0 0 100px #7f0cf2, 0 0 150px #7f0cf2;
+}
+.auth-modal p {
+  color: #fff;
+}
+.auth-modal form {
+  display: flex;
+  flex-direction: column;
+}
+.auth-modal input[type="password"],
+.auth-modal input[type="email"] {
+  padding: 8px;
+  margin: 8px;
+  font-size: 17px;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid rgb(121, 119, 119);
 }
 
 /* Page Header */
@@ -197,72 +270,65 @@ body {
   width: 320px;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Yellowtail:400);
-.neonText {
-  font-family: "Yellowtail", sans-serif;
-  color: #fff;
-  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #7f0cf2,
-    0 0 82px #7f0cf2, 0 0 92px #7f0cf2, 0 0 102px #7f0cf2, 0 0 151px #7f0cf2;
-  margin: 0 auto;
+/* ----- Onboarding Page ----- */
+.onboarding {
+  border-top: solid 1px rgb(154, 154, 154);
 }
-h1 {
-  font-weight: 400;
-  font-size: 70px;
-  animation: pulsate 0.11s ease-in-out infinite alternate;
-}
-@keyframes pulsate {
-  100% {
-    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #7f0cf2,
-      0 0 80px #7f0cf2, 0 0 90px #7f0cf2, 0 0 100px #7f0cf2, 0 0 150px #7f0cf2;
-  }
-
-  0% {
-    text-shadow: 0 0 4px #fff, 0 0 10px #fff, 0 0 18px #fff, 0 0 38px #7f0cf2,
-      0 0 73px #7f0cf2, 0 0 80px #7f0cf2, 0 0 94px #7f0cf2, 0 0 140px #7f0cf2;
-  }
-}
-
-/* auth model */
-.auth-modal {
-  position: absolute;
-  top: -90%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  max-width: 350px;
-  height: auto;
-  background-color: rgb(46, 46, 46);
-  border-radius: 10px;
-  padding: 40px;
-  border: 2px solid #fff;
-  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #7f0cf2,
-    0 0 0.8rem #7f0cf2, 0 0 2.8rem #7f0cf2, inset 0 0 1.3rem #7f0cf2;
-}
-.auth-modal .close-icon {
-  float: right;
-  color: #fff;
-}
-.auth-modal h2 {
-  font-weight: 400;
-  font-style: italic;
-  text-transform: uppercase;
-  color: #fff;
-  text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #7f0cf2,
-    0 0 80px #7f0cf2, 0 0 90px #7f0cf2, 0 0 100px #7f0cf2, 0 0 150px #7f0cf2;
-}
-.auth-modal p {
-  color: #fff;
-}
-.auth-modal form {
+.onboarding form {
   display: flex;
   flex-direction: column;
+  padding: 20px;
+  text-align: start;
+  justify-content: center;
 }
-.auth-modal input[type="password"],
-.auth-modal input[type="email"] {
-  padding: 8px;
-  margin: 8px;
-  font-size: 17px;
-  border-radius: 5px;
-  outline: none;
-  border: 2px solid rgb(121, 119, 119);
+.onboarding form input {
+  padding: 15px 30px;
+  margin: 10px 0px;
+  font-size: 15px;
+  border: solid 2px rgb(219, 219, 219);
+  border-radius: 10px;
+}
+.onboarding form input::-webkit-outer-spin-button,
+.onboarding form input::-webkit-inner-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+.onboarding form label {
+  margin: 10px 0;
+}
+.onboarding form .multiple-input-container {
+  display: flex;
+  flex-direction: row;
+}
+.onboarding form .multiple-input-container input {
+  margin-right: 10px;
+}
+.onboarding form .multiple-input-container label {
+  padding: 10px;
+  border: solid 2px rgb(144, 144, 144);
+  border-radius: 10px;
+  transition: all 0.3s;
+  margin-right: 10px;
+}
+.onboarding form input[type="radio"] {
+  display: none;
+}
+.onboarding form input[type="radio"]:checked + label {
+  border: solid 2px rgb(221, 39, 22);
+}
+.onboarding form input[type="submit"]:hover {
+  background-color: rgb(235, 235, 235);
+}
+.onboarding form input[type="submit"]:active {
+  background-color: rgb(226, 115, 155);
+}
+.onboarding form input[type="number"] {
+  width: 100%;
+}
+.onboarding form input[type="checkbox"] {
+  align-self: start;
+}
+.onboarding form .photo-container img {
+  width: 100%;
 }

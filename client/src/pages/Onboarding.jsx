@@ -54,149 +54,146 @@ const Onboarding = () => {
       <div className="onboarding">
         <h2>CREATE ACCOUNT</h2>
         <form onSubmit={handleSubmit}>
-          <section>
-            <label htmlFor="first_name">Name</label>
+          <label htmlFor="first_name">Name</label>
+          <input
+            type="text"
+            id="first_name"
+            name="first_name"
+            placeholder="Display Name"
+            required={true}
+            value={formData.first_name}
+            onChange={handleChange}
+          />
+
+          <label>Date of Birth</label>
+          <div className="multiple-input-container">
             <input
-              type="text"
-              id="first_name"
-              name="first_name"
-              placeholder="Display Name"
+              type="number"
+              id="dob_day"
+              name="dob_day"
+              placeholder="DD"
               required={true}
-              value={formData.first_name}
+              value={formData.dob_day}
               onChange={handleChange}
             />
+            <input
+              type="number"
+              id="dob_month"
+              name="dob_month"
+              placeholder="MM"
+              required={true}
+              value={formData.dob_month}
+              onChange={handleChange}
+            />
+            <input
+              type="number"
+              id="dob_year"
+              name="dob_year"
+              placeholder="YYYY"
+              required={true}
+              value={formData.dob_year}
+              onChange={handleChange}
+            />
+          </div>
 
-            <label>Date of Birth</label>
-            <div className="multiple-input-container">
-              <input
-                type="number"
-                id="dob_day"
-                name="dob_day"
-                placeholder="DD"
-                required={true}
-                value={formData.dob_day}
-                onChange={handleChange}
-              />
-              <input
-                type="number"
-                id="dob_month"
-                name="dob_month"
-                placeholder="MM"
-                required={true}
-                value={formData.dob_month}
-                onChange={handleChange}
-              />
-              <input
-                type="number"
-                id="dob_year"
-                name="dob_year"
-                placeholder="YYYY"
-                required={true}
-                value={formData.dob_year}
-                onChange={handleChange}
-              />
-            </div>
+          <label>Gender</label>
+          <div className="multiple-input-container">
+            <input
+              type="radio"
+              id="man-gender-identity"
+              name="gender_identity"
+              value="man"
+              onChange={handleChange}
+              checked={formData.gender_identity === "man"}
+            />
+            <label htmlFor="man-gender-identity">M</label>
+            <input
+              type="radio"
+              id="woman-gender-identity"
+              name="gender_identity"
+              value="woman"
+              onChange={handleChange}
+              checked={formData.gender_identity === "woman"}
+            />
+            <label htmlFor="woman-gender-identity">W</label>
+            <input
+              type="radio"
+              id="more-gender-identity"
+              name="gender_identity"
+              value="more"
+              onChange={handleChange}
+              checked={formData.gender_identity === "more"}
+            />
+            <label htmlFor="more-gender-identity">NB</label>
+          </div>
 
-            <label>Gender</label>
-            <div className="multiple-input-container">
-              <input
-                type="radio"
-                id="man-gender-identity"
-                name="gender_identity"
-                value="man"
-                onChange={handleChange}
-                checked={formData.gender_identity === "man"}
-              />
-              <label htmlFor="man-gender-identity">M</label>
-              <input
-                type="radio"
-                id="woman-gender-identity"
-                name="gender_identity"
-                value="woman"
-                onChange={handleChange}
-                checked={formData.gender_identity === "woman"}
-              />
-              <label htmlFor="woman-gender-identity">W</label>
-              <input
-                type="radio"
-                id="more-gender-identity"
-                name="gender_identity"
-                value="more"
-                onChange={handleChange}
-                checked={formData.gender_identity === "more"}
-              />
-              <label htmlFor="more-gender-identity">NB</label>
-            </div>
-
-            <label htmlFor="show-gender">Show Gender</label>
+          {/* <label htmlFor="show-gender">Show Gender</label>
             <input
               type="checkbox"
               id="show-gender"
               name="show_gender"
               onChange={handleChange}
               checked={formData.show_gender}
-            />
+            /> */}
 
-            <label>Looking For</label>
-            <div className="multiple-input-container">
-              <input
-                type="radio"
-                id="man-gender-interest"
-                name="gender_interest"
-                value="man"
-                onChange={handleChange}
-                checked={formData.gender_interest === "man"}
-              />
-              <label htmlFor="man-gender-interest">M</label>
-              <input
-                type="radio"
-                id="woman-gender-interest"
-                name="gender_interest"
-                value="woman"
-                onChange={handleChange}
-                checked={formData.gender_interest === "woman"}
-              />
-              <label htmlFor="woman-gender-interest">W</label>
-              <input
-                type="radio"
-                id="everyone-gender-interest"
-                name="gender_interest"
-                value="everyone"
-                onChange={handleChange}
-                checked={formData.gender_interest === "everyone"}
-              />
-              <label htmlFor="everyone-gender-interest">All</label>
-            </div>
-
-            <label htmlFor="about">About Me</label>
+          <label>Looking For</label>
+          <div className="multiple-input-container">
             <input
-              type="text"
-              id="about"
-              name="about"
-              required={true}
-              placeholder="I like long walks..."
-              value={formData.about}
+              type="radio"
+              id="man-gender-interest"
+              name="gender_interest"
+              value="man"
               onChange={handleChange}
+              checked={formData.gender_interest === "man"}
             />
-            <input type="submit" />
-          </section>
-
-          <section>
-            <label htmlFor="url">Profile Picture</label>
+            <label htmlFor="man-gender-interest">M</label>
             <input
-              type="url"
-              id="url"
-              name="url"
-              required={true}
-              placeholder="Photo URL"
+              type="radio"
+              id="woman-gender-interest"
+              name="gender_interest"
+              value="woman"
               onChange={handleChange}
+              checked={formData.gender_interest === "woman"}
             />
-            <div className="photo-container">
-              {formData.url && (
-                <img src={formData.url} alt="profile pic preview" />
-              )}
-            </div>
-          </section>
+            <label htmlFor="woman-gender-interest">W</label>
+            <input
+              type="radio"
+              id="everyone-gender-interest"
+              name="gender_interest"
+              value="everyone"
+              onChange={handleChange}
+              checked={formData.gender_interest === "everyone"}
+            />
+            <label htmlFor="everyone-gender-interest">All</label>
+          </div>
+
+          <label htmlFor="url">Profile Picture</label>
+          <input
+            type="url"
+            id="url"
+            name="url"
+            required={true}
+            placeholder="Photo URL"
+            onChange={handleChange}
+          />
+          <div className="photo-container">
+            {formData.url && (
+              <img src={formData.url} alt="profile pic preview" />
+            )}
+          </div>
+
+          <label htmlFor="about">About Me</label>
+          <input
+            type="text"
+            id="about"
+            name="about"
+            required={true}
+            placeholder="I like long walks..."
+            value={formData.about}
+            onChange={handleChange}
+          />
+
+          <input type="submit" />
         </form>
       </div>
     </>
