@@ -7,6 +7,7 @@ import axios from "axios";
 const Onboarding = () => {
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
 
+  // Form Data
   const [formData, setFormData] = useState({
     user_id: cookies.UserId,
     first_name: "",
@@ -23,6 +24,7 @@ const Onboarding = () => {
 
   let navigate = useNavigate();
 
+  // Submit User Data
   const handleSubmit = async (e) => {
     console.log("submitted");
     e.preventDefault();
@@ -37,6 +39,7 @@ const Onboarding = () => {
     }
   };
 
+  // Change Checkbox value if checked
   const handleChange = (e) => {
     const value =
       e.target.type === "checkbox" ? e.target.checked : e.target.value;
@@ -52,8 +55,9 @@ const Onboarding = () => {
     <>
       <Nav minimal={true} setShowModal={() => {}} showModal={false} />
       <div className="onboarding">
-        <h2>CREATE ACCOUNT</h2>
+        <h2 className="neonText">CREATE ACCOUNT</h2>
         <form onSubmit={handleSubmit}>
+          {/* User Name */}
           <label htmlFor="first_name">Name</label>
           <input
             type="text"
@@ -65,7 +69,9 @@ const Onboarding = () => {
             onChange={handleChange}
           />
 
+          {/* Date Of Birth Inputs */}
           <label>Date of Birth</label>
+          {/* Day */}
           <div className="multiple-input-container">
             <input
               type="number"
@@ -76,6 +82,7 @@ const Onboarding = () => {
               value={formData.dob_day}
               onChange={handleChange}
             />
+            {/* Birth Month */}
             <input
               type="number"
               id="dob_month"
@@ -85,6 +92,7 @@ const Onboarding = () => {
               value={formData.dob_month}
               onChange={handleChange}
             />
+            {/* Birth Year */}
             <input
               type="number"
               id="dob_year"
@@ -96,8 +104,10 @@ const Onboarding = () => {
             />
           </div>
 
+          {/* Gender Choice*/}
           <label>Gender</label>
           <div className="multiple-input-container">
+            {/* Man */}
             <input
               type="radio"
               id="man-gender-identity"
@@ -106,7 +116,10 @@ const Onboarding = () => {
               onChange={handleChange}
               checked={formData.gender_identity === "man"}
             />
-            <label htmlFor="man-gender-identity">M</label>
+            <label htmlFor="man-gender-identity" className="choice-label">
+              M
+            </label>
+            {/* Woman */}
             <input
               type="radio"
               id="woman-gender-identity"
@@ -115,7 +128,10 @@ const Onboarding = () => {
               onChange={handleChange}
               checked={formData.gender_identity === "woman"}
             />
-            <label htmlFor="woman-gender-identity">W</label>
+            <label htmlFor="woman-gender-identity" className="choice-label">
+              W
+            </label>
+            {/* Non Binary */}
             <input
               type="radio"
               id="more-gender-identity"
@@ -124,19 +140,14 @@ const Onboarding = () => {
               onChange={handleChange}
               checked={formData.gender_identity === "more"}
             />
-            <label htmlFor="more-gender-identity">NB</label>
+            <label htmlFor="more-gender-identity" className="choice-label">
+              NB
+            </label>
           </div>
 
-          {/* <label htmlFor="show-gender">Show Gender</label>
-            <input
-              type="checkbox"
-              id="show-gender"
-              name="show_gender"
-              onChange={handleChange}
-              checked={formData.show_gender}
-            /> */}
-
+          {/* Looking For Choice */}
           <label>Looking For</label>
+          {/* Men */}
           <div className="multiple-input-container">
             <input
               type="radio"
@@ -146,7 +157,10 @@ const Onboarding = () => {
               onChange={handleChange}
               checked={formData.gender_interest === "man"}
             />
-            <label htmlFor="man-gender-interest">M</label>
+            <label htmlFor="man-gender-interest" className="choice-label">
+              M
+            </label>
+            {/* Women */}
             <input
               type="radio"
               id="woman-gender-interest"
@@ -155,7 +169,10 @@ const Onboarding = () => {
               onChange={handleChange}
               checked={formData.gender_interest === "woman"}
             />
-            <label htmlFor="woman-gender-interest">W</label>
+            <label htmlFor="woman-gender-interest" className="choice-label">
+              W
+            </label>
+            {/* All */}
             <input
               type="radio"
               id="everyone-gender-interest"
@@ -164,9 +181,12 @@ const Onboarding = () => {
               onChange={handleChange}
               checked={formData.gender_interest === "everyone"}
             />
-            <label htmlFor="everyone-gender-interest">All</label>
+            <label htmlFor="everyone-gender-interest" className="choice-label">
+              All
+            </label>
           </div>
 
+          {/* Profile Picture */}
           <label htmlFor="url">Profile Picture</label>
           <input
             type="url"
@@ -176,12 +196,14 @@ const Onboarding = () => {
             placeholder="Photo URL"
             onChange={handleChange}
           />
+          {/* Picture Display */}
           <div className="photo-container">
             {formData.url && (
               <img src={formData.url} alt="profile pic preview" />
             )}
           </div>
 
+          {/* About Me */}
           <label htmlFor="about">About Me</label>
           <input
             type="text"
@@ -191,6 +213,8 @@ const Onboarding = () => {
             placeholder="I like long walks..."
             value={formData.about}
             onChange={handleChange}
+            minLength="10"
+            maxLength="150"
           />
 
           <input type="submit" />

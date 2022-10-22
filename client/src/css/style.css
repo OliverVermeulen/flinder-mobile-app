@@ -277,15 +277,18 @@ h1 {
 .onboarding form {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 0 10px;
   text-align: start;
   justify-content: center;
+  min-width: 320px;
+  max-width: 480px;
 }
 .onboarding form input {
   padding: 15px 30px;
   margin: 10px 0px;
   font-size: 15px;
-  border: solid 2px rgb(219, 219, 219);
+  border: none;
+  border: solid 2px rgb(144, 144, 144);
   border-radius: 10px;
 }
 .onboarding form input::-webkit-outer-spin-button,
@@ -296,6 +299,12 @@ h1 {
 }
 .onboarding form label {
   margin: 10px 0;
+  color: white;
+  font-size: 20px;
+}
+.onboarding form .choice-label  {
+  color: black;
+  font-size: 16px;
 }
 .onboarding form .multiple-input-container {
   display: flex;
@@ -310,6 +319,7 @@ h1 {
   border-radius: 10px;
   transition: all 0.3s;
   margin-right: 10px;
+  background-color: #fff;
 }
 .onboarding form input[type="radio"] {
   display: none;
@@ -324,11 +334,26 @@ h1 {
   background-color: rgb(226, 115, 155);
 }
 .onboarding form input[type="number"] {
-  width: 100%;
+  width: 33%;
 }
 .onboarding form input[type="checkbox"] {
   align-self: start;
 }
 .onboarding form .photo-container img {
   width: 100%;
+}
+
+.neonText {
+  font-family: "Yellowtail", sans-serif;
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #7f0cf2,
+    0 0 82px #7f0cf2, 0 0 92px #7f0cf2;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+h2 {
+  font-weight: 400;
+  font-size: 35px;
+  margin-top: 10px;
+  text-align: center;
 }

@@ -15,7 +15,7 @@ app.use(express.json());
 
 // Default
 app.get("/", (req, res) => {
-  res.json("Hello to my app");
+  res.json("Welcome to my app");
 });
 
 // Sign up to the Database
