@@ -359,7 +359,7 @@ h2 {
 }
 
 /* ----- Chat Container ----- */
-/* .chat-container {
+.chat-container {
   background-color: #fff;
   text-align: left;
   z-index: 1;
@@ -404,10 +404,10 @@ h2 {
 }
 .img-container img {
   width: 100%;
-} */
+}
 
 /* ----- Chat Display ----- */
-/* .chat-display,
+.chat-display,
 .matches-display {
   padding: 10px;
   height: calc(100vh - 164px);
@@ -425,10 +425,10 @@ h2 {
   display: flex;
   flex-direction: row;
   line-height: 15px;
-}*/
+}
 
 /* ----- Chat Input ----- */
-/*.chat-input {
+.chat-input {
   padding: 10px;
   display: flex;
   flex-direction: row;
@@ -478,113 +478,4 @@ flex-direction: row;
     flex-shrink: 0;
     font-size: 18px;
     
-} */
-
-
-/* ----- Dashboard Page ----- */
-.dashboard {
-  display: flex;
-  justify-content: space-between;
-}
-.dashboard .swipe-container {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-.swipe {
-  position: absolute;
-}
-.dashboard .card-container {
-  width: 400px;
-  height: 650px;
-}
-.card {
-  width: 400px;
-  height: 650px;
-  border-radius: 30px;
-  background-size: cover;
-  background-position: center;
-}
-.card h3 {
-  margin-top: 0;
-}
-.dashboard .swipe-info {
-  position: absolute;
-  bottom: 0;
-  padding: 10px;
-}
-
-/* ----- Chat Container ----- */
-.chat-container {
-  background-color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-  width: 30%;
-  text-align: left;
-  z-index: 1;
-}
-.chat-container .chat-container-header {
-  background: linear-gradient(45deg, #fe3072, #ff5940);
-  height: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.chat-container .option {
-  border: none;
-  background-color: #fff;
-  border-bottom: solid 4px rgb(243, 33, 33);
-  font-size: 20px;
-  margin: 2px;
-  padding: 10px;
-}
-.chat-container .option:disabled {
-  border-bottom: solid 4px rgb(187, 187, 187);
-}
-.chat-container .profile,
-.chat-container .log-out-icon {
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  color: #fff;
-}
-.img-container {
-  height: 30px;
-  width: 30px;
-  border-radius: 15px;
-  overflow: hidden;
-  margin: 10px;
-}
-.img-container img {
-  width: 100%;
-}
-
-/* ----- Chat Display ----- */
-.chat-display,
-.matches-display {
-  padding: 20px;
-  height: 60vh;
-  overflow-y: auto;
-}
-
-.match-card {
-  display: flex;
-  flex-direction: row;
-  line-height: 15px;
-}
-
-.chat-message-header {
-  display: flex;
-  flex-direction: row;
-  line-height: 15px;
-}
-
-/* ----- Chat Input ----- */
-.chat-input {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
 }
