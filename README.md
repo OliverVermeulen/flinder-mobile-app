@@ -1,6 +1,11 @@
 # Flinder Mobile App
 
- This is a mobile dating web app inspired by tinder 
+This is a mobile dating web app inspired by tinder
+
+### Start App
+
+- npm run start:frontend (start frontend)
+- npm run start:backend (start backend server)
 
 ## Description
 
@@ -35,8 +40,3 @@ In my Project specifically I aim to make a dating app inspired by tinder.
 ## Repo link
 
 https://github.com/OliverVermeulen/flinder-mobile-app
-
-### Start App
-
-+ npm run start:frontend (start frontend)
-+ npm run start:backend (start backend server)
