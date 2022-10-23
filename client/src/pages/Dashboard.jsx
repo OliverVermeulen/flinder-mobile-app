@@ -44,18 +44,6 @@ const Dashboard = () => {
     }
   }, [user]);
 
-  const updateMatches = async (matchedUserId) => {
-    try {
-      await axios.put("http://localhost:8000/addmatch", {
-        userId,
-        matchedUserId,
-      });
-      getUser();
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   console.log(user);
 
   return (
