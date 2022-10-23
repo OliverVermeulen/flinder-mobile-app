@@ -358,43 +358,6 @@ h2 {
   text-align: center;
 }
 
-
-/* ----- Dashboard Page ----- */
-/* .dashboard {
-  display: flex;
-  justify-content: space-between;
-}
-.dashboard .swipe-container {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-.swipe {
-  position: absolute;
-}
-.dashboard .card-container {
-  width: 400px;
-  height: 650px;
-}
-.card {
-  width: 400px;
-  height: 650px;
-  border-radius: 30px;
-  background-size: cover;
-  background-position: center;
-}
-.card h3 {
-  margin-top: 0;
-}
-.dashboard .swipe-info {
-  position: absolute;
-  bottom: 0;
-  padding: 10px;
-} */
-
 /* ----- Chat Container ----- */
 .chat-container {
   background-color: #fff;
@@ -405,8 +368,15 @@ h2 {
   z-index: 1;
 }
 .chat-container .chat-container-header {
-  background: linear-gradient(45deg, #fe3072, #ff5940);
-  height: 100px;
+  background: linear-gradient(
+    45deg,
+    #f25ebf,
+    #db27f2,
+    #7f0cf2,
+    #044bd9,
+    #0785f2
+  );
+  /* height: 100px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -424,7 +394,7 @@ h2 {
 }
 .chat-container .profile,
 .chat-container .log-out-icon {
-  padding: 20px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   color: #fff;
@@ -443,8 +413,9 @@ h2 {
 /* ----- Chat Display ----- */
 .chat-display,
 .matches-display {
-  padding: 20px;
-  height: calc(100vh - 152.8px);
+  padding: 10px;
+  height: calc(100vh - 164px);
+  word-break: break-all;
   overflow-y: auto;
 }
 
@@ -462,7 +433,53 @@ h2 {
 
 /* ----- Chat Input ----- */
 .chat-input {
-  padding: 20px;
+  padding: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+}
+.react-input-emoji--container {
+  color: #000 !important;
+  text-rendering: optimizeLegibility;
+  background-color: #fff;
+  border: none !important;
+  border-radius: 21px;
+  margin: 0px !important;
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  font-size: 15px;
+  font-family:"Readex Pro", sans-serif;
+  font-weight: 400;
+  line-height: 20px;
+  min-height: 20px;
+  min-width: 0;
+  outline: none;
+  width: inherit;
+  will-change: width;
+  vertical-align: baseline;
+  border: 2px solid rgb(121, 119, 119) !important;
+  margin-right: 0;
+}
+
+
+.chat-input .input-buttons {
+display: flex;
+flex-direction: row;
+}
+
+.input-button {
+  position: relative;
+    display: block;
+    text-align: center;
+    padding: 0 10px 0px 0px;
+    overflow: hidden;
+    transition: color 0.1s ease-out;
+    margin: 0;
+    box-shadow: none;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-size: 18px;
+    
 }

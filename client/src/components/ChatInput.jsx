@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import InputEmoji from "react-input-emoji";
+import { MdSend, MdRefresh } from "react-icons/md";
 
 const ChatInput = ({
   user,
@@ -44,13 +45,14 @@ const ChatInput = ({
         cleanOnEnter
         placeholder="Type a message"
         required
+        maxLength="300"
       />
-      <div>
-        <button className="secondary-button" onClick={addMessage}>
-          ✔
+      <div className="input-buttons">
+        <button className="input-button" onClick={addMessage}>
+          <MdSend/>
         </button>
-        <button className="secondary-button" onClick={refreshPage}>
-          ↻
+        <button className="input-button" onClick={refreshPage}>
+          <MdRefresh/>
         </button>
       </div>
     </div>
