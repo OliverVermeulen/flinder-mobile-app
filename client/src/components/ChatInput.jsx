@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import InputEmoji from "react-input-emoji";
 
 const ChatInput = ({
   user,
@@ -37,20 +38,20 @@ const ChatInput = ({
 
   return (
     <div className="chat-input">
-      <textarea
+      <InputEmoji
         value={textArea}
-        onChange={(e) => setTextArea(e.target.value)}
-        className="chat-text-input"
-        placeholder="Message"
+        onChange={setTextArea}
+        cleanOnEnter
+        placeholder="Type a message"
         required
       />
       <div>
-      <button className="secondary-button" onClick={addMessage}>
-        ✔
-      </button>
-      <button className="secondary-button" onClick={refreshPage}>
-        ↻
-      </button>
+        <button className="secondary-button" onClick={addMessage}>
+          ✔
+        </button>
+        <button className="secondary-button" onClick={refreshPage}>
+          ↻
+        </button>
       </div>
     </div>
   );
