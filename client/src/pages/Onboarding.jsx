@@ -55,8 +55,9 @@ const Onboarding = () => {
     <>
       <Nav minimal={true} setShowModal={() => {}} showModal={false} />
       <div className="onboarding">
-        <h2 className="neonText">CREATE ACCOUNT</h2>
+        
         <form onSubmit={handleSubmit}>
+          <h2 className="neonText">CREATE ACCOUNT</h2>
           {/* User Name */}
           <label htmlFor="first_name">Name</label>
           <input

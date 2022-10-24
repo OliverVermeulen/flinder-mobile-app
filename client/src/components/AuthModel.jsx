@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
-import { AiOutlineCloseCircle } from "react-icons/ai";
+import { MdClose } from "react-icons/md";
 
 const AuthModal = ({ setShowModal, isSignUp }) => {
   const [email, setEmail] = useState(null);
@@ -47,10 +47,10 @@ const AuthModal = ({ setShowModal, isSignUp }) => {
   return (
     <div className="auth-modal">
       <div className="close-icon" onClick={handleClick}>
-      <AiOutlineCloseCircle/>
+      <MdClose/>
       </div>
       <h2>{isSignUp ? "CREATE ACCOUNT" : "LOG IN"}</h2>
-      <p>{isSignUp ? "By clicking Submit, you agree to our Terms and Conditions." : "Input Email and Password to Log In"}</p>
+      <p>{isSignUp ? "By clicking Submit, you agree to our Terms and Conditions." : ""}</p>
       <form onSubmit={handleSubmit}>
         <input
           type="email"
