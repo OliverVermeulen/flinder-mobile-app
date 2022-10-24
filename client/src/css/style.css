@@ -1,26 +1,29 @@
 /*  Main Font */
 @import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap");
-/* Stylized Font */
-@import url("https://fonts.googleapis.com/css?family=Yellowtail:400");
 
 * {
   box-sizing: border-box;
   font-family: "Readex Pro", sans-serif;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
-
+html {
+  height: -webkit-fill-available;
+}
 body {
-  margin: 0;
-  background-color: black;
-  min-height: 100vh;
+  background-color: #37393b;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  height: 100vh;
+  height: -webkit-fill-available;
 }
 
 .app {
-  /* min-width: 320px;
-  max-width: 480px; */
-  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -42,15 +45,13 @@ body {
   border-radius: 30px;
   border: none;
   cursor: pointer;
-  margin-top: 50px;
 }
 
 .secondary-button {
   color: rgb(121, 119, 119);
   background-color: #fff;
   font-weight: 500;
-  font-size: 15px;
-  text-transform: uppercase;
+  font-size: 17px;
   padding: 12px 30px;
   border-radius: 30px;
   border: solid 2px rgb(121, 119, 119);
@@ -72,16 +73,29 @@ body {
   justify-content: space-between;
 }
 .header-nav .logo-container {
-  width: 170px;
-  margin: 15px;
-}
-.header-nav .logo-container .logo {
-  width: 100%;
-}
-.header-nav .logo-container {
+  font-size: 60px;
+  font-weight: 400;
+  margin-left: 10px;
+  font-style: italic;
+  gap: 5px;
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #7f0cf2,
+    0 0 82px #7f0cf2, 0 0 92px #7f0cf2, 0 0 102px #7f0cf2, 0 0 151px #7f0cf2;
+  animation: pulsate 0.11s ease-in-out infinite alternate;
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.header-nav .logo-container {
+  font-size: 50px;
+  font-weight: 400;
+  margin-left: 10px;
+  font-style: italic;
+  gap: 5px;
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #7f0cf2,
+    0 0 82px #7f0cf2, 0 0 92px #7f0cf2, 0 0 102px #7f0cf2, 0 0 151px #7f0cf2;
+  animation: pulsate 0.11s ease-in-out infinite alternate;
 }
 .header-nav .nav-button {
   color: #fff;
@@ -107,6 +121,7 @@ body {
 
 /* ----- Home page ----- */
 .overlay {
+  width: 100vw;
   height: 100vh;
   background: repeating-linear-gradient(
       0deg,
@@ -121,23 +136,12 @@ body {
   background-repeat: no-repeat;
 }
 .home {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 30vh;
   text-align: center;
-  width: 100%;
 }
-.neonText {
-  /* font-family: "Yellowtail", sans-serif; */
-  font-style: italic;
+.home h1 {
   color: #fff;
-  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #7f0cf2,
-    0 0 82px #7f0cf2, 0 0 92px #7f0cf2, 0 0 102px #7f0cf2, 0 0 151px #7f0cf2;
-  margin: 0 auto;
-}
-h1 {
+  font-style: italic;
   font-weight: 400;
   font-size: 70px;
   animation: pulsate 0.11s ease-in-out infinite alternate;
@@ -157,12 +161,12 @@ h1 {
 /* Auth Model */
 .auth-modal {
   position: absolute;
-  top: -90%;
+  top: 100px;
   left: 0;
   right: 0;
   margin: 0 auto;
-  max-width: 350px;
-  height: auto;
+  max-width: 360px;
+  height: fit-content;
   background-color: rgb(46, 46, 46);
   border-radius: 10px;
   padding: 40px;
@@ -281,10 +285,17 @@ h1 {
 
 /* ----- Onboarding Page ----- */
 .onboarding {
-  border-top: solid 1px rgb(154, 154, 154);
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
+}
+.onboarding h2 {
+  font-size: 35px;
+  font-weight: 400;
+  font-style: italic;
+  margin-top: 10px;
+  color: #fff;
+  animation: pulsate 0.11s ease-in-out infinite alternate;
+  text-align: center;
 }
 .onboarding form {
   display: flex;
@@ -303,9 +314,6 @@ h1 {
   outline: none;
   border: 2px solid rgb(121, 119, 119);
 }
-.onboarding form input::placeholder {
-  color: #7f0cf2;
-}
 .onboarding form input::-webkit-outer-spin-button,
 .onboarding form input::-webkit-inner-spin-button {
   appearance: none;
@@ -317,8 +325,8 @@ h1 {
   color: white;
   font-size: 20px;
 }
-.onboarding form .choice-label  {
-  color: black;
+.onboarding form .choice-label {
+  color: rgb(144, 144, 144);
   font-size: 16px;
 }
 .onboarding form .multiple-input-container {
@@ -341,6 +349,7 @@ h1 {
 }
 .onboarding form input[type="radio"]:checked + label {
   border: solid 2px #7f0cf2;
+  color: #000;
 }
 .onboarding form input[type="submit"] {
   color: rgb(121, 119, 119);
@@ -364,21 +373,6 @@ h1 {
 }
 .onboarding form .photo-container img {
   width: 100%;
-}
-
-/* .neonText {
-  font-family: "Yellowtail", sans-serif;
-  color: #fff;
-  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #7f0cf2,
-    0 0 82px #7f0cf2, 0 0 92px #7f0cf2;
-  margin: 0 auto;
-  margin-top: 10px;
-} */
-h2 {
-  font-weight: 400;
-  font-size: 35px;
-  margin-top: 10px;
-  text-align: center;
 }
 
 /* ----- Chat Container ----- */
@@ -466,7 +460,7 @@ h2 {
   box-sizing: border-box;
   flex: 1 1 auto;
   font-size: 15px;
-  font-family:"Readex Pro", sans-serif;
+  font-family: "Readex Pro", sans-serif;
   font-weight: 400;
   line-height: 20px;
   min-height: 20px;
@@ -479,26 +473,24 @@ h2 {
   margin-right: 0;
 }
 
-
 .chat-input .input-buttons {
-display: flex;
-flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .input-button {
   position: relative;
-    display: block;
-    text-align: center;
-    padding: 0 10px 0px 0px;
-    overflow: hidden;
-    transition: color 0.1s ease-out;
-    margin: 0;
-    box-shadow: none;
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    flex-shrink: 0;
-    font-size: 18px;
-    
+  display: block;
+  text-align: center;
+  padding: 0 10px 0px 0px;
+  overflow: hidden;
+  transition: color 0.1s ease-out;
+  margin: 0;
+  box-shadow: none;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-size: 18px;
 }

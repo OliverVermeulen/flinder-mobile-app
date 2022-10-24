@@ -1,4 +1,5 @@
-import whiteLogo from "../images/tinder-white-logo.png";
+import { GiButterfly } from "react-icons/gi";
+
 
 const Nav = ({ authToken, minimal, setShowModal, showModal, setIsSignUp }) => {
   const handleClick = () => {
@@ -9,8 +10,10 @@ const Nav = ({ authToken, minimal, setShowModal, showModal, setIsSignUp }) => {
   return (
     <nav  className="header-nav">
       <div className="logo-container">
-        <img className="logo" src={whiteLogo} alt="Tinder logo"/>
+        Flinder
+        <GiButterfly/>
       </div>
+
       {!authToken && !minimal && (
         <button
           className="nav-button"
