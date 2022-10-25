@@ -256,33 +256,6 @@ body {
   color: black;
 }
 
-/* Profile Page */
-.profile-img {
-  min-width: 320px;
-  max-width: 480px;
-}
-.profile-img img {
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
-}
-.profile-info p {
-  margin: 0;
-  color: white;
-  font-weight: 500;
-}
-.profile-info .name-age {
-  display: flex;
-  flex-direction: row;
-  font-size: 25px;
-  gap: 10px;
-  padding-bottom: 15px;
-  width: fit-content;
-}
-.profile-info .profile-description {
-  width: 320px;
-}
-
 /* ----- Onboarding Page ----- */
 .onboarding {
   display: flex;
@@ -494,3 +467,42 @@ body {
   flex-shrink: 0;
   font-size: 18px;
 }
+
+/* Profile Page */
+.swipe {
+  position: absolute;
+}
+.card-container {
+  width: 400px;
+  height: 650px;
+}
+.card {
+  width: 400px;
+  height: 650px;
+  border-radius: 30px;
+  background-size: cover;
+  background-position: center;
+}
+.card .user-info {
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+  word-break: break-all;
+}
+/* .card h3 {
+  margin-top: 0;
+  text-align: center;
+}
+.card p {
+  margin: 0 20px;
+  text-align: left;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 400;
+  word-break: break-all;
+} */
+/* .dashboard .swipe-info {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+} */
