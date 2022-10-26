@@ -469,40 +469,54 @@ body {
 }
 
 /* Profile Page */
-.swipe {
+.card-container {
+  width: 100%;
+  height: 100%;
+}
+.card-container .user-card {
   position: absolute;
 }
-.card-container {
-  width: 400px;
-  height: 650px;
-}
-.card {
+.card-container .user-card .user-img {
   width: 400px;
   height: 650px;
   border-radius: 30px;
   background-size: cover;
   background-position: center;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #7f0cf2,
+    0 0 0.8rem #7f0cf2, 0 0 2.8rem #7f0cf2, inset 0 0 1.3rem #7f0cf2;
 }
-.card .user-info {
+.card-container .user-card .user-info {
   position: absolute;
-  bottom: 8px;
-  left: 10px;
+  bottom: 0px;
   word-break: break-all;
-}
-/* .card h3 {
-  margin-top: 0;
-  text-align: center;
-}
-.card p {
-  margin: 0 20px;
-  text-align: left;
-  font-size: 20px;
+  padding: 0 25px;
   color: #fff;
+  /* background-color: red; */
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.1)
+  );
+  border-radius: 0px 0px 30px 30px;
+}
+.card-container .user-card p {
+  margin: 0;
+}
+.card-container .user-card .user-name-age {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: 30px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.card-container .user-card .user-province {
+  font-size: 20px;
+  margin-bottom: 5px;
   font-weight: 400;
-  word-break: break-all;
-} */
-/* .dashboard .swipe-info {
-  position: absolute;
-  bottom: 0;
-  padding: 10px;
-} */
+}
+.card-container .user-card .user-about {
+  font-size: 20px;
+  margin-bottom: 10px;
+}

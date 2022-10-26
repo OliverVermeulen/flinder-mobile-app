@@ -29,22 +29,26 @@ const Profile = () => {
   return (
     <>
       {user && (
+        <>
+        <div>Profile</div>
         <div className="card-container">
-          <div className="swipe">
+          <div className="user-card">
             <div
               style={{ backgroundImage: "url(" + user.url + ")" }}
-              className="card"
+              className="user-img"
             >
               <div className="user-info">
-                <div className="name-age">
-                <p>{user.first_name}</p>
-                <p>{new Date().getFullYear() - user.dob_year}</p>
+                <div className="user-name-age">
+                  <p>{user.first_name},</p>
+                  <p>{new Date().getFullYear() - user.dob_year}</p>
                 </div>
-                <p className="about">{user.about}</p>
+                <p className="user-province">Western Cape</p>
+                <p className="user-about">{user.about}</p>
               </div>
             </div>
           </div>
         </div>
+        </>
       )}
     </>
   );
