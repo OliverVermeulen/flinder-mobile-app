@@ -11,7 +11,7 @@ const Nav = ({ authToken, minimal, setShowModal, showModal, setIsSignUp }) => {
     <nav  className="header-nav">
       <div className="logo-container">
         Flinder
-        <GiButterfly/>
+        {/* <GiButterfly/> */}
       </div>
 
       {!authToken && !minimal && (

@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 import axios from "axios";
+import { BsGearFill } from "react-icons/bs";
 
 const Profile = () => {
   const [user, setUser] = useState(null);
@@ -30,11 +31,20 @@ const Profile = () => {
     <>
       {user && (
         <>
-        <div>Profile</div>
-        <div className="card-container">
+          <div className="dashboard-header">
+            <p>Profile</p>
+            <BsGearFill />
+          </div>
           <div className="user-card">
             <div
-              style={{ backgroundImage: "url(" + user.url + ")" }}
+              style={{
+                backgroundImage: "url(" + user.url + ")",
+                width: "100%",
+                height: "100%",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                backgroundPosition: "center center",
+              }}
               className="user-img"
             >
               <div className="user-info">
@@ -47,7 +57,6 @@ const Profile = () => {
               </div>
             </div>
           </div>
-        </div>
         </>
       )}
     </>

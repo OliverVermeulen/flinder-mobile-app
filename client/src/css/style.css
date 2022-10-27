@@ -469,41 +469,51 @@ body {
 }
 
 /* Profile Page */
-.card-container {
-  width: 100%;
-  height: 100%;
+.dashboard-header {
+  padding: 10px;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 20px;
 }
-.card-container .user-card {
+.dashboard-header p {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.user-card {
   position: absolute;
-}
-.card-container .user-card .user-img {
-  width: 400px;
-  height: 650px;
-  border-radius: 30px;
-  background-size: cover;
-  background-position: center;
   border: 2px solid #fff;
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #7f0cf2,
     0 0 0.8rem #7f0cf2, 0 0 2.8rem #7f0cf2, inset 0 0 1.3rem #7f0cf2;
+  border-radius: 30px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 480px;
+  height: 100%;
+  max-height: 730px;
 }
-.card-container .user-card .user-info {
+.user-card .user-info {
   position: absolute;
   bottom: 0px;
   word-break: break-all;
   padding: 0 25px;
   color: #fff;
-  /* background-color: red; */
-  background-image: linear-gradient(
+  background: linear-gradient(
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.3),
     rgba(0, 0, 0, 0.1)
   );
-  border-radius: 0px 0px 30px 30px;
+  width: 100%;
 }
-.card-container .user-card p {
+.user-card p {
   margin: 0;
 }
-.card-container .user-card .user-name-age {
+.user-card .user-name-age {
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -511,12 +521,12 @@ body {
   margin-bottom: 5px;
   font-weight: 500;
 }
-.card-container .user-card .user-province {
+.user-card .user-province {
   font-size: 20px;
   margin-bottom: 5px;
   font-weight: 400;
 }
-.card-container .user-card .user-about {
+.user-card .user-about {
   font-size: 20px;
   margin-bottom: 10px;
 }
