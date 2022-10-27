@@ -57,6 +57,11 @@ const Profile = () => {
               </div>
             </div>
           </div>
+          {/* <footer className="dashboard-nav">
+            <BsGearFill />
+            <BsGearFill />
+            <BsGearFill />
+          </footer> */}
         </>
       )}
     </>

@@ -471,7 +471,6 @@ body {
 /* Profile Page */
 .dashboard-header {
   padding: 10px;
-  border-bottom: 1px solid #fff;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -486,7 +485,6 @@ body {
 }
 
 .user-card {
-  position: absolute;
   border: 2px solid #fff;
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #7f0cf2,
     0 0 0.8rem #7f0cf2, 0 0 2.8rem #7f0cf2, inset 0 0 1.3rem #7f0cf2;
@@ -496,6 +494,9 @@ body {
   max-width: 480px;
   height: 100%;
   max-height: 730px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 .user-card .user-info {
   position: absolute;
@@ -529,4 +530,17 @@ body {
 .user-card .user-about {
   font-size: 20px;
   margin-bottom: 10px;
+}
+.dashboard-nav {
+  background-color: #db27f2;
+  color: #fff;
+  font-size: 20px;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
