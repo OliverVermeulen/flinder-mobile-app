@@ -31,6 +31,7 @@ In my Project specifically I aim to make a dating app inspired by tinder.
 - Style all pages
 - Make help page
 - Make profile pages
+- Add better Mongo.uri
 
 ## Future additions
 

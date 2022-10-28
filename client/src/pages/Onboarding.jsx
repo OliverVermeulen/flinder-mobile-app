@@ -204,6 +204,8 @@ const Onboarding = () => {
             )}
           </div>
 
+          {/* <input type="file" name="sampleFile" /> */}
+
           {/* About Me */}
           <label htmlFor="about">About Me</label>
           <input

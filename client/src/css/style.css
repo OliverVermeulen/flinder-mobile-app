@@ -564,3 +564,8 @@ max-width: 80%;
   bottom: 0;
   width: 100%;
 }
+
+.reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
