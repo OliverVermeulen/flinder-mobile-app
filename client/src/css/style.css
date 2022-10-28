@@ -99,14 +99,15 @@ body {
 }
 .header-nav .nav-button {
   color: #fff;
-  background: linear-gradient(
+  /* background: linear-gradient(
     360deg,
     #f25ebf,
     #db27f2,
     #7f0cf2,
     #044bd9,
     #0785f2
-  );
+  ); */
+  background-color: #db27f2;
   font-size: 20px;
   padding: 12px 30px;
   border-radius: 30px;
@@ -136,7 +137,10 @@ body {
   background-repeat: no-repeat;
 }
 .home {
-  margin-top: 30vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
 }
 .home h1 {
@@ -161,14 +165,13 @@ body {
 /* Auth Model */
 .auth-modal {
   position: absolute;
-  top: 100px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   max-width: 360px;
   height: fit-content;
   background-color: rgb(46, 46, 46);
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 40px;
   border: 2px solid #fff;
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #7f0cf2,
@@ -409,7 +412,7 @@ body {
 .chat-display,
 .matches-display {
   padding: 10px;
-  height: calc(100vh - 164px);
+  height: calc(100vh - 179px);
   word-break: break-all;
   overflow-y: auto;
 }
@@ -427,9 +430,10 @@ body {
   line-height: 15px;
 }
 .chat-message-header .text-message {
-background-color: #7f0cf2;
+background-color: #fff;
 padding: 10px;
 border-radius: 20px;
+max-width: 80%;
 }
 
 
