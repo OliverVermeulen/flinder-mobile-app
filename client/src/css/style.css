@@ -409,12 +409,32 @@ body {
 }
 
 /* ----- Chat Display ----- */
-.chat-display,
+/* .chat-display,
 .matches-display {
   padding: 10px;
   height: calc(100vh - 179px);
   word-break: break-all;
   overflow-y: auto;
+} */
+.matches-display {
+  padding: 10px;
+  height: calc(100vh - 115px);
+  word-break: break-all;
+  overflow: auto;
+}
+.chat-box {
+  overflow: none;
+  word-break: break-all;
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 179px);
+}
+.chat-display {
+  overflow: auto;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-height: 100%;
 }
 
 .match-card {
