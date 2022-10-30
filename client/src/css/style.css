@@ -409,13 +409,6 @@ body {
 }
 
 /* ----- Chat Display ----- */
-/* .chat-display,
-.matches-display {
-  padding: 10px;
-  height: calc(100vh - 179px);
-  word-break: break-all;
-  overflow-y: auto;
-} */
 .matches-display {
   padding: 10px;
   height: calc(100vh - 115px);
@@ -435,6 +428,12 @@ body {
   bottom: 0;
   width: 100%;
   max-height: 100%;
+  -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+  scrollbar-width: none;  /* Hide scrollbar for Firefox */
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.chat-display::-webkit-scrollbar {
+  display: none;
 }
 
 .match-card {
@@ -448,12 +447,19 @@ body {
   display: flex;
   flex-direction: row;
   line-height: 15px;
+  align-items: center;
+}
+.chat-message-header .img-container{
+width: 35px;
+height: 35px;
+border-radius: 50%;
 }
 .chat-message-header .text-message {
 background-color: #fff;
 padding: 10px;
 border-radius: 20px;
 max-width: 80%;
+margin: 15px 0px;
 }
 
 
@@ -462,6 +468,12 @@ max-width: 80%;
   padding: 10px;
   display: flex;
   flex-direction: row;
+}
+.react-emoji {
+  display: flex;
+    align-items: center;
+    position: relative;
+    width: calc(100% - 60px) !important;
 }
 .react-input-emoji--container {
   color: #000 !important;
@@ -484,8 +496,24 @@ max-width: 80%;
   vertical-align: baseline;
   border: 2px solid rgb(121, 119, 119) !important;
   margin-right: 0;
+  /* width: 90% !important; */
 }
-
+.react-emoji-picker--wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 357px !important; 
+  width: 357px !important;
+  overflow:auto;
+  z-index: 10;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.emoji-mart-scroll::-webkit-scrollbar {
+  display: none;
+}
+.emoji-mart {
+  width: 357px !important;
+}
 .chat-input .input-buttons {
   display: flex;
   flex-direction: row;
@@ -505,7 +533,8 @@ max-width: 80%;
   outline: none;
   cursor: pointer;
   flex-shrink: 0;
-  font-size: 18px;
+  font-size: 20px;
+  color: #858585;
 }
 
 /* Profile Page */
