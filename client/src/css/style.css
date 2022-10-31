@@ -618,3 +618,9 @@ margin: 15px 0px;
   display: flex;
   flex-direction: row-reverse;
 }
+
+.dashboard-options {
+  position:fixed;
+  bottom: 0;
+  width: 100%;
+}
