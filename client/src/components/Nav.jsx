@@ -1,6 +1,3 @@
-import { GiButterfly } from "react-icons/gi";
-
-
 const Nav = ({ authToken, minimal, setShowModal, showModal, setIsSignUp }) => {
   const handleClick = () => {
     setShowModal(true);
@@ -11,7 +8,6 @@ const Nav = ({ authToken, minimal, setShowModal, showModal, setIsSignUp }) => {
     <nav  className="header-nav">
       <div className="logo-container">
         Flinder
-        {/* <GiButterfly/> */}
       </div>
 
       {!authToken && !minimal && (

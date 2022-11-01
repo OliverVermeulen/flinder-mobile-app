@@ -23,6 +23,12 @@ const Profile = () => {
     }
   };
 
+  const logout = () => {
+    removeCookie("UserId", cookies.UserId);
+    removeCookie("AuthToken", cookies.AuthToken);
+    window.location.reload()
+  };
+
   useEffect(() => {
     getUser();
   }, []);
@@ -33,7 +39,7 @@ const Profile = () => {
         <>
           <div className="dashboard-header">
             <p>Profile</p>
-            <BsGearFill />
+            <BsGearFill onClick={logout}/>
           </div>
           <div className="user-card">
             <div
@@ -57,11 +63,6 @@ const Profile = () => {
               </div>
             </div>
           </div>
-          {/* <footer className="dashboard-nav">
-            <BsGearFill />
-            <BsGearFill />
-            <BsGearFill />
-          </footer> */}
         </>
       )}
     </>
