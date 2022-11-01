@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
-import ChatContainer from "../components/ChatContainer";
-import Match from "../components/Match";
+import ChatContainer from "../src/components/ChatContainer";
+import Match from "../src/components/Match";
 import axios from "axios";
 
 const Test = () => {
