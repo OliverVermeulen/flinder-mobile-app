@@ -27,6 +27,14 @@
   --flat-shadow: 0 4px 15px 0 #7f0cf2;
   --neon-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #7f0cf2,
     0 0 0.8rem #7f0cf2, 0 0 2.8rem #7f0cf2, inset 0 0 1.3rem #7f0cf2;
+  --background-image: repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 1px,
+      rgba(255, 255, 255, 0) 1px,
+      rgba(255, 255, 255, 0) 2px
+    ),
+    url("../images/home-background.jpg");
 }
 @keyframes pulsate {
   100% {
@@ -159,14 +167,7 @@ body {
 .overlay {
   width: 100vw;
   height: 100vh;
-  background: repeating-linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.05) 0px,
-      rgba(255, 255, 255, 0.05) 1px,
-      rgba(255, 255, 255, 0) 1px,
-      rgba(255, 255, 255, 0) 2px
-    ),
-    url("../images/home-background.jpg");
+  background: var(--background-image);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -230,15 +231,31 @@ body {
 }
 
 /* ----- Onboarding Page ----- */
+.onboarding-overlay {
+  background: var(--background-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  max-height: 100%;
+  width: 100%;
+  padding: 0 10px 10px;
+}
 .onboarding {
   display: flex;
   justify-content: center;
+  background-color: var(--bg-color);
+  width: fit-content;
+  border-radius: 20px;
+  max-width: 500px;
+  border: 2px solid var(--white);
+  box-shadow: var(--neon-shadow);
 }
 .onboarding h2 {
   font-size: 35px;
   font-weight: 400;
   font-style: italic;
-  margin-top: 10px;
+  margin: 0px 10px;
   color: var(--white);
   animation: pulsate 0.11s ease-in-out infinite alternate;
   text-align: center;
@@ -518,7 +535,6 @@ body {
   font-size: 30px;
   font-weight: 500;
 }
-
 .user-card {
   border: 2px solid var(--white);
   box-shadow: var(--neon-shadow);
@@ -564,29 +580,4 @@ body {
 .user-card .user-about {
   font-size: 20px;
   margin-bottom: 10px;
-}
-
-.dashboard-nav {
-  background-color: #db27f2;
-  color: var(--white);
-  font-size: 20px;
-  margin: 0;
-  padding: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-.reverse {
-  display: flex;
-  flex-direction: row-reverse;
-}
-
-.dashboard-options {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
