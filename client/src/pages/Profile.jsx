@@ -1,6 +1,7 @@
 // import TinderCard from "react-tinder-card";
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { BsGearFill } from "react-icons/bs";
 
@@ -9,6 +10,7 @@ const Profile = () => {
   const [genderedUsers, setGenderedUsers] = useState(null);
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
   const [lastDirection, setLastDirection] = useState();
+  let navigate = useNavigate();
 
   const userId = cookies.UserId;
 
@@ -26,7 +28,7 @@ const Profile = () => {
   const logout = () => {
     removeCookie("UserId", cookies.UserId);
     removeCookie("AuthToken", cookies.AuthToken);
-    window.location.reload()
+    window.location.reload(navigate("/"))
   };
 
   useEffect(() => {

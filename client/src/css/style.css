@@ -415,7 +415,7 @@ font-weight: 500;
   transition: 0.1s;
 }
 .match-card:hover {
-  background-color: #27292b;
+  background-color: #333638;
 }
 .chat-box {
   overflow: none;
@@ -428,7 +428,7 @@ font-weight: 500;
   overflow: auto;
   position: absolute;
   width: 100%;
-  max-height: 100%;
+ height: 100%;
   -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
   scrollbar-width: none; /* Hide scrollbar for Firefox */
   background-color: #242627;
@@ -453,6 +453,12 @@ font-weight: 500;
   border-radius: 20px;
   max-width: 80%;
   margin: 15px 0px;
+}
+.owner {
+  flex-direction: row-reverse;
+}
+.owner .text-message{
+  background-color: var(--light-grey);
 }
 
 /* ----- Chat Input ----- */
