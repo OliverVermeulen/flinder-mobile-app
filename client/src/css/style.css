@@ -415,7 +415,7 @@ font-weight: 500;
   transition: 0.1s;
 }
 .match-card:hover {
-  background-color: var(--light-grey);
+  background-color: #27292b;
 }
 .chat-box {
   overflow: none;
