@@ -1,7 +1,7 @@
 import { useCookies } from "react-cookie";
 
 const Chat = ({ descendingOrderMessages}) => {
-  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
+  const [cookies] = useCookies(["user"]);
   const userId = cookies.UserId;
   return (
     <>

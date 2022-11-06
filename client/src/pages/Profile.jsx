@@ -43,22 +43,22 @@ const Profile = () => {
     <>
       {user && (
         <div className="profile">
-          <div className="dashboard-header">
+          <div className="profile-header">
             <p>Profile</p>
             <div className="dropdown">
-              <button className="dropbtn">
+              <button className="settings">
                 <BsGearFill />
               </button>
               <div className="dropdown-content">
                 <p onClick={logout}>
                   <BiExit /> Log Out
                 </p>
-                <p>
+                {/* <p>
                   <BiUser /> Profile
                 </p>
                 <p>
                   <BiHelpCircle /> Help
-                </p>
+                </p> */}
                 <p onClick={previousPage}>
                   <BsArrowReturnLeft/> Back
                 </p>
