@@ -4,6 +4,7 @@ import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { BsGearFill } from "react-icons/bs";
+import { BiUser, BiExit, BiHelpCircle } from "react-icons/bi";
 
 const Profile = () => {
   const [user, setUser] = useState(null);
@@ -28,7 +29,7 @@ const Profile = () => {
   const logout = () => {
     removeCookie("UserId", cookies.UserId);
     removeCookie("AuthToken", cookies.AuthToken);
-    window.location.reload(navigate("/"))
+    window.location.reload(navigate("/"));
   };
 
   useEffect(() => {
@@ -38,11 +39,27 @@ const Profile = () => {
   return (
     <>
       {user && (
-        <>
+        <div className="profile">
           <div className="dashboard-header">
             <p>Profile</p>
-            <BsGearFill onClick={logout}/>
+            <div class="dropdown">
+              <button class="dropbtn">
+                <BsGearFill />
+              </button>
+              <div class="dropdown-content">
+                <a onClick={logout}>
+                  <BiExit /> Log Out
+                </a>
+                <a>
+                  <BiUser /> Profile
+                </a>
+                <a>
+                  <BiHelpCircle /> Help
+                </a>
+              </div>
+            </div>
           </div>
+
           <div className="user-card">
             <div
               style={{
@@ -65,7 +82,7 @@ const Profile = () => {
               </div>
             </div>
           </div>
-        </>
+        </div>
       )}
     </>
   );
