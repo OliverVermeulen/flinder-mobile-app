@@ -1,3 +1,4 @@
+// import TinderCard from "react-tinder-card";
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +8,8 @@ import { BiUser, BiExit, BiHelpCircle } from "react-icons/bi";
 
 const Profile = () => {
   const [user, setUser] = useState(null);
-  const [cookies, removeCookie] = useCookies(["user"]);
+  // const [genderedUsers, setGenderedUsers] = useState(null);
+  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
   const navigate = useNavigate();
 
   const userId = cookies.UserId;
@@ -43,23 +45,23 @@ const Profile = () => {
         <div className="profile">
           <div className="dashboard-header">
             <p>Profile</p>
-            <div class="dropdown">
-              <button class="dropbtn">
+            <div className="dropdown">
+              <button className="dropbtn">
                 <BsGearFill />
               </button>
-              <div class="dropdown-content">
-                <a onClick={logout}>
-                  <BiExit /> Sign Out
-                </a>
-                {/* <a>
+              <div className="dropdown-content">
+                <p onClick={logout}>
+                  <BiExit /> Log Out
+                </p>
+                <p>
                   <BiUser /> Profile
-                </a>
-                <a>
+                </p>
+                <p>
                   <BiHelpCircle /> Help
-                </a> */}
-                <a onClick={previousPage}>
+                </p>
+                <p onClick={previousPage}>
                   <BsArrowReturnLeft/> Back
-                </a>
+                </p>
               </div>
             </div>
           </div>

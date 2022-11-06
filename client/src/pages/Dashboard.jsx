@@ -5,8 +5,8 @@ import axios from "axios";
 
 const Dashboard = () => {
   const [user, setUser] = useState(null);
-  const [setGenderedUsers] = useState(null);
-  const [cookies] = useCookies(["user"]);
+  const [genderedUsers, setGenderedUsers] = useState(null);
+  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
 
   const userId = cookies.UserId;
 

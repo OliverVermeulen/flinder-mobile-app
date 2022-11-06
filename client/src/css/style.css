@@ -50,15 +50,15 @@ html {
   height: -webkit-fill-available;
 }
 body {
-  background-color: #000;
+  /* background-color: #000; */
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   height: 100vh;
   height: -webkit-fill-available;
   color: var(--black);
-  width: 500px;
-  max-width: 100%;
+  /* width: 500px;
+  max-width: 100%; */
 }
 
 .app {
@@ -167,7 +167,7 @@ body {
 
 /* ----- Home Page ----- */
 .overlay {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: var(--background-image);
   background-size: cover;
@@ -631,7 +631,7 @@ body {
   border: 1px solid var(--white);
   box-shadow: var(--neon-shadow);
 }
-.dropdown-content a {
+.dropdown-content p {
   color: var(--white);
   padding: 10px;
   text-decoration: none;
@@ -640,7 +640,7 @@ body {
   cursor: pointer;
   transition: 0.1s;
 }
-.dropdown-content a:hover {
+.dropdown-content p:hover {
   background-color: #3336388a;
 }
 

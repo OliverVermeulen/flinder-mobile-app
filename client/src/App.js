@@ -3,11 +3,12 @@ import Dashboard from './pages/Dashboard'
 import Onboarding from './pages/Onboarding'
 import Profile from './pages/Profile'
 import User from './pages/User'
+// import Match from './pages/Match'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import {useCookies} from 'react-cookie'
 
 const App = () => {
-    const [cookies, setCookie, removeCookie] = useCookies(['user'])
+    const [cookies] = useCookies(['user'])
 
     const authToken = cookies.AuthToken
 
