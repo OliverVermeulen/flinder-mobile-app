@@ -13,7 +13,7 @@ const ChatHeader = ({ user }) => {
   return (
     <div className="chat-container-header">
       <p>Chat</p>
-      <div className="img-container">
+      <div className="header-img">
         <img src={user.url} alt={"Photo of " + user.first_name} onClick={redirect}/>
       </div>
     </div>

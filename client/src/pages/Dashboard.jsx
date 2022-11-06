@@ -1,4 +1,3 @@
-// import TinderCard from "react-tinder-card";
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 import ChatContainer from "../components/ChatContainer";
@@ -6,9 +5,8 @@ import axios from "axios";
 
 const Dashboard = () => {
   const [user, setUser] = useState(null);
-  const [genderedUsers, setGenderedUsers] = useState(null);
-  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
-  const [lastDirection, setLastDirection] = useState();
+  const [setGenderedUsers] = useState(null);
+  const [cookies] = useCookies(["user"]);
 
   const userId = cookies.UserId;
 
@@ -43,8 +41,6 @@ const Dashboard = () => {
       getGenderedUsers();
     }
   }, [user]);
-
-  console.log(user);
 
   return (
     <>

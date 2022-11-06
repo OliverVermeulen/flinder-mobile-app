@@ -1,13 +1,14 @@
+// import TinderCard from "react-tinder-card";
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { BsGearFill, BsArrowReturnLeft } from "react-icons/bs";
-import { BiUser, BiExit, BiHelpCircle } from "react-icons/bi";
+import { BsArrowReturnLeft } from "react-icons/bs";
 
-const Profile = () => {
+const User = () => {
   const [user, setUser] = useState(null);
-  const [cookies, removeCookie] = useCookies(["user"]);
+  // const [genderedUsers, setGenderedUsers] = useState(null);
+  const [cookies] = useCookies(["user"]);
   const navigate = useNavigate();
 
   const userId = cookies.UserId;
@@ -23,14 +24,8 @@ const Profile = () => {
     }
   };
 
-  const logout = () => {
-    removeCookie("UserId", cookies.UserId);
-    removeCookie("AuthToken", cookies.AuthToken);
-    window.location.reload(navigate("/"));
-  };
-
   const previousPage = () => {
-    navigate('/dashboard', {replace: true});
+    navigate("/dashboard", { replace: true });
   };
 
   useEffect(() => {
@@ -42,26 +37,8 @@ const Profile = () => {
       {user && (
         <div className="profile">
           <div className="dashboard-header">
-            <p>Profile</p>
-            <div class="dropdown">
-              <button class="dropbtn">
-                <BsGearFill />
-              </button>
-              <div class="dropdown-content">
-                <a onClick={logout}>
-                  <BiExit /> Sign Out
-                </a>
-                {/* <a>
-                  <BiUser /> Profile
-                </a>
-                <a>
-                  <BiHelpCircle /> Help
-                </a> */}
-                <a onClick={previousPage}>
-                  <BsArrowReturnLeft/> Back
-                </a>
-              </div>
-            </div>
+            <p>User</p>
+            <BsArrowReturnLeft onClick={previousPage} />
           </div>
 
           <div className="user-card">
@@ -91,4 +68,4 @@ const Profile = () => {
     </>
   );
 };
-export default Profile;
+export default User;
