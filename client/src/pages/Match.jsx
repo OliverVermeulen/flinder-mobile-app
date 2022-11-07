@@ -75,7 +75,7 @@ const Dashboard = (page) => {
     (genderedUser) => !matchedUserIds.includes(genderedUser.user_id)
   );
 
-  console.log("filteredGenderedUsers ", filteredGenderedUsers);
+  // console.log("filteredGenderedUsers ", filteredGenderedUsers);
   return (
     <>
       {user && (
@@ -109,6 +109,9 @@ const Dashboard = (page) => {
                   </div>
                 </TinderCard>
               ))}
+              {/* <div className="swipe-info">
+                {lastDirection ? <p>You swiped {lastDirection}</p> : <p />}
+              </div> */}
             </div>
           </div>
         </div>

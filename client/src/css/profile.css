@@ -68,7 +68,7 @@
   width: 100%;
   max-width: 500px;
   height: 100%;
-  max-height: calc(100vh - 57.6px);
+  max-height: calc(100vh - 50px);
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
@@ -77,20 +77,40 @@
   position: absolute;
   bottom: 0px;
   word-break: break-all;
-  padding: 0 25px;
+  padding: 10px;
   color: var(--white);
   background: linear-gradient(
     to bottom,
+    transparent,
     rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.3),
-    rgba(0, 0, 0, 0.1)
+    rgba(0, 0, 0, 0.6)
   );
   width: 100%;
 }
 .profile .user-img {
-  background-color: var(--bg-color);
+  background-color: #242627;
 }
-.profile .user-card p {
+.profile .info {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  color: var(--white);
+}
+.profile .info p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 200;
+}
+.profile .info .name {
+  font-size: 25px;
+  font-weight: 500;
+}
+.profile .info .age {
+  font-size: 20px;
+  font-weight: 300;
+}
+/* .profile .user-card p {
   margin: 0;
 }
 .profile .user-card .user-name-age {
@@ -108,5 +128,4 @@
 }
 .profile .user-card .user-about {
   font-size: 20px;
-  margin-bottom: 10px;
-}
+} */

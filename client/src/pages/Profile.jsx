@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { BsGearFill, BsArrowReturnLeft } from "react-icons/bs";
 import { BiUser, BiExit, BiHelpCircle } from "react-icons/bi";
+import { CiLocationOn } from "react-icons/ci";
 
 const Profile = () => {
   const [user, setUser] = useState(null);
@@ -32,7 +33,7 @@ const Profile = () => {
   };
 
   const previousPage = () => {
-    navigate('/dashboard', {replace: true});
+    navigate("/dashboard", { replace: true });
   };
 
   useEffect(() => {
@@ -60,7 +61,7 @@ const Profile = () => {
                   <BiHelpCircle /> Help
                 </p> */}
                 <p onClick={previousPage}>
-                  <BsArrowReturnLeft/> Back
+                  <BsArrowReturnLeft /> Back
                 </p>
               </div>
             </div>
@@ -79,12 +80,18 @@ const Profile = () => {
               className="user-img"
             >
               <div className="user-info">
-                <div className="user-name-age">
-                  <p>{user.first_name},</p>
-                  <p>{new Date().getFullYear() - user.dob_year}</p>
+                <div className="info">
+                  <p className="name">{user.first_name}</p>
+                  <p className="age">{new Date().getFullYear() - user.dob_year}</p>
                 </div>
-                <p className="user-province">{user.province}</p>
-                <p className="user-about">{user.about}</p>
+                <div className="info">
+                  <CiLocationOn/>
+                  <p className="province">{user.province}</p>
+                </div>
+                <div className="info">
+                {/* <CiLocationOn/> */}
+                  <p className="about">{user.about}</p>
+                </div>
               </div>
             </div>
           </div>
