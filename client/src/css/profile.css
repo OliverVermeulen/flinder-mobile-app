@@ -1,0 +1,112 @@
+/* ----- Profile ----- */
+.profile {
+  background-color: #242627;
+  height: 100vh;
+  min-height: 100%;
+}
+
+/* Profile Header */
+.profile .profile-header {
+  padding: 0px 10px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--white);
+  background-color: var(--bg-color);
+  font-size: 20px;
+}
+.profile .profile-header p {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+/* Profile Header Settings*/
+.profile .profile-header .settings {
+  background-color: transparent;
+  color: var(--white);
+  font-size: 20px;
+  border: none;
+  padding-top: 7px;
+}
+.profile .profile-header .dropdown {
+  position: relative;
+  display: inline-block;
+}
+.profile .profile-header .dropdown-content {
+  display: none;
+  position: absolute;
+  left: -75px;
+  background-color: var(--bg-color);
+  z-index: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--white);
+  box-shadow: var(--neon-shadow);
+}
+.profile .profile-header .dropdown-content p {
+  color: var(--white);
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.profile .profile-header .dropdown-content p:hover {
+  background-color: #3336388a;
+}
+.profile .profile-header .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Profile User Card */
+.profile .user-card {
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  max-height: calc(100vh - 57.6px);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.profile .user-card .user-info {
+  position: absolute;
+  bottom: 0px;
+  word-break: break-all;
+  padding: 0 25px;
+  color: var(--white);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.1)
+  );
+  width: 100%;
+}
+.profile .user-img {
+  background-color: var(--bg-color);
+}
+.profile .user-card p {
+  margin: 0;
+}
+.profile .user-card .user-name-age {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: 30px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.profile .user-card .user-province {
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+.profile .user-card .user-about {
+  font-size: 20px;
+  margin-bottom: 10px;
+}

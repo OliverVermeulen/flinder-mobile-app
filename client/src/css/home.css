@@ -1,0 +1,66 @@
+/* ----- Home Page ----- */
+.overlay {
+    width: 100%;
+    height: 100vh;
+    background: var(--background-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .home {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .home h1 {
+    color: var(--white);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 70px;
+    animation: pulsate 0.11s ease-in-out infinite alternate;
+  }
+  
+  /* Auth Model */
+  .auth-modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 360px;
+    height: fit-content;
+    background-color: var(--bg-color);
+    border-radius: 20px;
+    padding: 40px;
+    border: 2px solid var(--white);
+    box-shadow: var(--neon-shadow);
+  }
+  .auth-modal .close-icon {
+    float: right;
+    color: var(--white);
+    font-size: 20px;
+  }
+  .auth-modal h2 {
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+    color: var(--white);
+    animation: pulsate 0.11s ease-in-out infinite alternate;
+  }
+  .auth-modal p {
+    color: var(--white);
+  }
+  .auth-modal form {
+    display: flex;
+    flex-direction: column;
+  }
+  .auth-modal input[type="password"],
+  .auth-modal input[type="email"] {
+    padding: 8px 8px 8px 12px;
+    margin: 8px;
+    font-size: 17px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid var(--light-grey);
+  }

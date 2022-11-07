@@ -1,0 +1,121 @@
+/* ----- Onboarding ----- */
+/* Onboarding Overlay */
+.onboarding-overlay {
+  background: var(--background-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  max-height: 100%;
+  width: 100%;
+  padding: 0 10px 10px;
+}
+
+.onboarding {
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-color);
+  width: fit-content;
+  border-radius: 20px;
+  max-width: 500px;
+  border: 2px solid var(--white);
+  box-shadow: var(--neon-shadow);
+  margin: 0 auto;
+}
+.onboarding h2 {
+  font-size: 35px;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0px 10px;
+  color: var(--white);
+  animation: pulsate 0.11s ease-in-out infinite alternate;
+  text-align: center;
+}
+
+/* Onboarding Form */
+.onboarding form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  text-align: start;
+  justify-content: center;
+  min-width: 320px;
+  max-width: 480px;
+}
+.onboarding form input {
+  padding: 8px 8px 8px 12px;
+  margin: 8px 0px;
+  font-size: 17px;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid var(--light-grey);
+}
+.onboarding form input::-webkit-outer-spin-button,
+.onboarding form input::-webkit-inner-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+.onboarding form select {
+  appearance: none;
+  padding: 8px 8px 8px 12px;
+  margin: 8px 0px;
+  font-size: 17px;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid var(--light-grey);
+}
+.onboarding form label {
+  margin: 10px 0;
+  color: var(--white);
+  font-size: 20px;
+}
+.onboarding form .choice-label {
+  color: var(--light-grey);
+  font-size: 16px;
+}
+.onboarding form .multiple-input-container {
+  display: flex;
+  flex-direction: row;
+}
+.onboarding form .multiple-input-container input {
+  margin-right: 10px;
+}
+.onboarding form .multiple-input-container label {
+  padding: 10px;
+  border: solid 2px var(--light-grey);
+  border-radius: 10px;
+  transition: all 0.3s;
+  margin-right: 10px;
+  background-color: var(--white);
+}
+.onboarding form input[type="radio"] {
+  display: none;
+}
+.onboarding form input[type="radio"]:checked + label {
+  border: solid 2px #7f0cf2;
+  color: var(--black);
+}
+.onboarding form input[type="submit"] {
+  color: var(--light-grey);
+  background-color: var(--white);
+  font-weight: 500;
+  font-size: 17px;
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: solid 2px var(--light-grey);
+  margin: 6px auto;
+  cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+}
+.onboarding form input[type="number"] {
+  width: 33%;
+}
+.onboarding form input[type="checkbox"] {
+  align-self: start;
+}
+.onboarding form .photo-container img {
+  width: 100%;
+}

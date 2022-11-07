@@ -5,8 +5,8 @@ const Nav = ({ authToken, minimal, setShowModal, showModal, setIsSignUp }) => {
   };
   
   return (
-    <nav  className="header-nav">
-      <div className="logo-container">
+    <div className="nav">
+      <div className="nav-logo">
         Flinder
       </div>
 
@@ -19,7 +19,7 @@ const Nav = ({ authToken, minimal, setShowModal, showModal, setIsSignUp }) => {
           Log In
         </button>
       )}
-    </nav>
+    </div>
   );
 };
 export default Nav;
