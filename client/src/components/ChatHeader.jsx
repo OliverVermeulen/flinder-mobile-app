@@ -1,9 +1,7 @@
-import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 
-const ChatHeader = ({ user }) => {
+const ChatHeader = ({ user, page }) => {
   const navigate = useNavigate();
-
 
   const redirect = () => {
     navigate("/profile");
@@ -11,9 +9,13 @@ const ChatHeader = ({ user }) => {
 
   return (
     <div className="chat-container-header">
-      <p>Chat</p>
+      <p>{page ? "Chat" : "Match"}</p>
       <div className="header-img">
-        <img src={user.url} alt={"Photo of " + user.first_name} onClick={redirect}/>
+        <img
+          src={user.url}
+          alt={"Photo of " + user.first_name}
+          onClick={redirect}
+        />
       </div>
     </div>
   );

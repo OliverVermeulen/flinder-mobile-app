@@ -3,7 +3,7 @@ import Dashboard from './pages/Dashboard'
 import Onboarding from './pages/Onboarding'
 import Profile from './pages/Profile'
 import User from './pages/User'
-// import Match from './pages/Match'
+import Match from './pages/Match'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import {useCookies} from 'react-cookie'
 
@@ -17,6 +17,7 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 {authToken && <Route path="/dashboard" element={<Dashboard/>}/>}
+                {authToken && <Route path="/match" element={<Match/>}/>}
                 {authToken && <Route path="/onboarding" element={<Onboarding/>}/>}
                 {authToken && <Route path="/profile" element={<Profile/>}/>}
                 {authToken && <Route path="/user" element={<User/>}/>}
