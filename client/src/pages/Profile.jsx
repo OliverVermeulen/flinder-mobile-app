@@ -83,7 +83,7 @@ const Profile = () => {
                   <p>{user.first_name},</p>
                   <p>{new Date().getFullYear() - user.dob_year}</p>
                 </div>
-                <p className="user-province">Western Cape</p>
+                <p className="user-province">{user.province}</p>
                 <p className="user-about">{user.about}</p>
               </div>
             </div>
