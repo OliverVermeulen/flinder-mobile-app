@@ -13,8 +13,6 @@ const AuthModal = ({ setShowModal, isSignUp }) => {
 
   let navigate = useNavigate();
 
-  console.log(email, password, confirmPassword);
-
   const handleClick = () => {
     setShowModal(false);
   };
@@ -65,6 +63,7 @@ const AuthModal = ({ setShowModal, isSignUp }) => {
           id="password"
           name="password"
           placeholder="password"
+          minLength={6}
           required={true}
           onChange={(e) => setPassword(e.target.value)}
         />

@@ -22,7 +22,8 @@ const Onboarding = () => {
     matches: [],
   });
 
-  let navigate = useNavigate();
+  // Navigate to Dashboard if successful
+  const navigate = useNavigate();
 
   // Submit User Data
   const handleSubmit = async (e) => {
@@ -39,7 +40,6 @@ const Onboarding = () => {
     }
   };
 
-  // Change Checkbox value if checked
   const handleChange = (e) => {
     const value =
       e.target.type === "checkbox" ? e.target.checked : e.target.value;
@@ -59,7 +59,8 @@ const Onboarding = () => {
           {/* User Form */}
           <form onSubmit={handleSubmit}>
             <h2 className="neonText">CREATE ACCOUNT</h2>
-            {/* User Name */}
+
+            {/* Display Name */}
             <label htmlFor="first_name">Name</label>
             <input
               type="text"
@@ -71,7 +72,7 @@ const Onboarding = () => {
               onChange={handleChange}
             />
 
-            {/* Date Of Birth Inputs */}
+            {/* Date Of Birth */}
             <label>Date of Birth</label>
             {/* Day */}
             <div className="multiple-input-container">
@@ -83,6 +84,8 @@ const Onboarding = () => {
                 required={true}
                 value={formData.dob_day}
                 onChange={handleChange}
+                min={1}
+                max={31}
               />
               {/* Birth Month */}
               <input
@@ -93,6 +96,8 @@ const Onboarding = () => {
                 required={true}
                 value={formData.dob_month}
                 onChange={handleChange}
+                min={1}
+                max={12}
               />
               {/* Birth Year */}
               <input
@@ -121,7 +126,7 @@ const Onboarding = () => {
               <option value="Western Cape">Western Cape</option>
             </select>
 
-            {/* Gender Choice*/}
+            {/* Gender Identity */}
             <label>Gender</label>
             <div className="multiple-input-container">
               {/* Man */}
@@ -162,7 +167,7 @@ const Onboarding = () => {
               </label>
             </div>
 
-            {/* Looking For Choice */}
+            {/* Gender Interest */}
             <label>Looking For</label>
             {/* Men */}
             <div className="multiple-input-container">
@@ -223,9 +228,7 @@ const Onboarding = () => {
               )}
             </div>
 
-            {/* <input type="file" name="sampleFile" /> */}
-
-            {/* About Me */}
+            {/* About */}
             <label htmlFor="about">About Me</label>
             <input
               type="text"

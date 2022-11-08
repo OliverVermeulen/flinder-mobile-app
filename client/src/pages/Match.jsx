@@ -10,9 +10,9 @@ const Dashboard = (page) => {
   const [genderedUsers, setGenderedUsers] = useState(null);
   const [lastDirection, setLastDirection] = useState();
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
-
   const userId = cookies.UserId;
 
+  // Get User
   const getUser = async () => {
     try {
       const response = await axios.get("http://localhost:8000/user", {
@@ -23,6 +23,8 @@ const Dashboard = (page) => {
       console.log(error);
     }
   };
+
+// Get all Gendered Users
   const getGenderedUsers = async () => {
     try {
       const response = await axios.get("http://localhost:8000/gendered-users", {
@@ -44,6 +46,7 @@ const Dashboard = (page) => {
     }
   }, [user]);
 
+  // Update User Matches
   const updateMatches = async (matchedUserId) => {
     try {
       await axios.put("http://localhost:8000/addmatch", {
