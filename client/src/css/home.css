@@ -19,7 +19,7 @@
     color: var(--white);
     font-style: italic;
     font-weight: 400;
-    font-size: 70px;
+    font-size: 60px;
     animation: pulsate 0.11s ease-in-out infinite alternate;
   }
   

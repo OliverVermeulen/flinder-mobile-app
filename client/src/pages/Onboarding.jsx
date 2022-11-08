@@ -113,8 +113,14 @@ const Onboarding = () => {
 
             {/* Province */}
             <label htmlFor="province">Province</label>
-            <select id="province" name="province" onChange={handleChange} value={formData.province} required={true}>
-            <option value="">Choose Province</option>
+            <select
+              id="province"
+              name="province"
+              onChange={handleChange}
+              value={formData.province}
+              required={true}
+            >
+              <option>Choose Province</option>
               <option value="Eastern Cape">Eastern Cape</option>
               <option value="Free State">Free State</option>
               <option value="Gauteng">Gauteng</option>
@@ -223,9 +229,7 @@ const Onboarding = () => {
             />
             {/* Picture Display */}
             <div className="photo-container">
-              {formData.url && (
-                <img src={formData.url} alt="profile pic preview" />
-              )}
+              {formData.url && <img src={formData.url} alt="pfp" />}
             </div>
 
             {/* About */}

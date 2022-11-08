@@ -4,13 +4,6 @@
 * {
   box-sizing: border-box;
   font-family: "Readex Pro", sans-serif;
-  /* Disable Select */
-  -webkit-touch-callout: none; 
-  -webkit-user-select: none; 
-  -khtml-user-select: none; 
-  -moz-user-select: none; 
-  -ms-user-select: none; 
-  user-select: none; 
 }
 
 /* Color Root */
@@ -27,7 +20,6 @@
     #044bd9,
     #0785f2
   );
-  --flat-shadow: 0 4px 15px 0 #7f0cf2;
   --neon-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #7f0cf2,
     0 0 0.8rem #7f0cf2, 0 0 2.8rem #7f0cf2, inset 0 0 1.3rem #7f0cf2;
   --background-image: repeating-linear-gradient(
