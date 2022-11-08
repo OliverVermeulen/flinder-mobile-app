@@ -9,6 +9,7 @@ const ChatDisplay = ({ user, clickedUser }) => {
   const [usersMessages, setUsersMessages] = useState(null);
   const [clickedUsersMessages, setClickedUsersMessages] = useState(null);
 
+  // Get User Messages
   const getUsersMessages = async () => {
     try {
       const response = await axios.get("http://localhost:8000/messages", {
@@ -20,6 +21,7 @@ const ChatDisplay = ({ user, clickedUser }) => {
     }
   };
 
+  // Get Clicked User Messages
   const getClickedUsersMessages = async () => {
     try {
       const response = await axios.get("http://localhost:8000/messages", {
@@ -57,13 +59,17 @@ const ChatDisplay = ({ user, clickedUser }) => {
     messages.push(formattedMessage);
   });
 
+  // Order Messages based on time stamp
   const descendingOrderMessages = messages?.sort((a, b) =>
     a.timestamp.localeCompare(b.timestamp)
   );
 
   return (
     <>
+      {/* Chat */}
       <Chat descendingOrderMessages={descendingOrderMessages} />
+
+      {/* Chat Input */}
       <ChatInput
         user={user}
         clickedUser={clickedUser}

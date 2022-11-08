@@ -1,4 +1,4 @@
-import Nav from "../components/Nav";
+import Header from "../components/Header";
 import { useState } from "react";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
@@ -54,7 +54,9 @@ const Onboarding = () => {
   return (
     <>
       <div className="onboarding-overlay">
-        <Nav minimal={true} setShowModal={() => {}} showModal={false} />
+        {/* Header */}
+        <Header minimal={true} setShowModal={() => {}} showModal={false} />
+
         <div className="onboarding">
           {/* User Form */}
           <form onSubmit={handleSubmit}>
@@ -87,6 +89,7 @@ const Onboarding = () => {
                 min={1}
                 max={31}
               />
+
               {/* Birth Month */}
               <input
                 type="number"
@@ -99,6 +102,7 @@ const Onboarding = () => {
                 min={1}
                 max={12}
               />
+              
               {/* Birth Year */}
               <input
                 type="number"

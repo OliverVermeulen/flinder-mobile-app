@@ -1,15 +1,21 @@
-const Nav = ({ authToken, minimal, setShowModal, showModal, setIsSignUp }) => {
+const Header = ({
+  authToken,
+  minimal,
+  setShowModal,
+  showModal,
+  setIsSignUp,
+}) => {
   const handleClick = () => {
     setShowModal(true);
     setIsSignUp(false);
   };
-  
+
   return (
     <div className="nav">
-      <div className="nav-logo">
-        Flinder
-      </div>
+      {/* Logo */}
+      <div className="nav-logo">Flinder</div>
 
+      {/* Log In */}
       {!authToken && !minimal && (
         <button
           className="nav-button"
@@ -22,4 +28,4 @@ const Nav = ({ authToken, minimal, setShowModal, showModal, setIsSignUp }) => {
     </div>
   );
 };
-export default Nav;
+export default Header;

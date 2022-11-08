@@ -24,7 +24,7 @@ const Dashboard = (page) => {
     }
   };
 
-// Get all Gendered Users
+  // Get all Gendered Users
   const getGenderedUsers = async () => {
     try {
       const response = await axios.get("http://localhost:8000/gendered-users", {
@@ -78,7 +78,6 @@ const Dashboard = (page) => {
     (genderedUser) => !matchedUserIds.includes(genderedUser.user_id)
   );
 
-  // console.log("filteredGenderedUsers ", filteredGenderedUsers);
   return (
     <>
       {user && (
@@ -93,10 +92,12 @@ const Dashboard = (page) => {
                   onSwipe={(dir) => swiped(dir, genderedUser.user_id)}
                   onCardLeftScreen={() => outOfFrame(genderedUser.first_name)}
                 >
+                  {/* Match Profile Picture */}
                   <div
                     style={{ backgroundImage: "url(" + genderedUser.url + ")" }}
                     className="card"
                   >
+                    {/* Match Info */}
                     <div className="match-info">
                       <div className="info">
                         <p className="name">{genderedUser.first_name}</p>
@@ -104,6 +105,7 @@ const Dashboard = (page) => {
                           {new Date().getFullYear() - genderedUser.dob_year}
                         </p>
                       </div>
+
                       <div className="info">
                         <CiLocationOn />
                         <p>{genderedUser.province}</p>
@@ -112,9 +114,6 @@ const Dashboard = (page) => {
                   </div>
                 </TinderCard>
               ))}
-              {/* <div className="swipe-info">
-                {lastDirection ? <p>You swiped {lastDirection}</p> : <p />}
-              </div> */}
             </div>
           </div>
         </div>

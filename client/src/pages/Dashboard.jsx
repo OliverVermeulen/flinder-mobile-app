@@ -7,9 +7,9 @@ const Dashboard = () => {
   const [user, setUser] = useState(null);
   const [genderedUsers, setGenderedUsers] = useState(null);
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
-
   const userId = cookies.UserId;
 
+  // Get User
   const getUser = async () => {
     try {
       const response = await axios.get("http://localhost:8000/user", {
@@ -21,6 +21,7 @@ const Dashboard = () => {
     }
   };
 
+  // Get Gendered Users
   const getGenderedUsers = async () => {
     try {
       const response = await axios.get("http://localhost:8000/gendered-users", {
@@ -46,6 +47,7 @@ const Dashboard = () => {
     <>
       {user && (
         <div className="dashboard">
+          {/* Chat Container */}
           <ChatContainer user={user} />
         </div>
       )}

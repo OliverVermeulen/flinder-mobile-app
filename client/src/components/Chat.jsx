@@ -1,6 +1,6 @@
 import { useCookies } from "react-cookie";
 
-const Chat = ({ descendingOrderMessages}) => {
+const Chat = ({ descendingOrderMessages }) => {
   const [cookies] = useCookies(["user"]);
   const userId = cookies.UserId;
   return (
@@ -9,10 +9,18 @@ const Chat = ({ descendingOrderMessages}) => {
         <div className="chat-display">
           {descendingOrderMessages.map((message, _index) => (
             <div key={_index}>
-              <div className={`chat-message-header ${message.from_userId === userId && "owner"}`}>
+              {/* Split Chat */}
+              <div
+                className={`chat-message-header ${
+                  message.from_userId === userId && "owner"
+                }`}
+              >
+                {/* User / Match Profile Picture */}
                 <div className="img-container">
                   <img src={message.img} alt={message.name + " profile"} />
                 </div>
+
+                {/* Message */}
                 <p className="text-message">{message.message}</p>
               </div>
             </div>

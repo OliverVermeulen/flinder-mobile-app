@@ -4,17 +4,16 @@ import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { BsGearFill, BsArrowReturnLeft } from "react-icons/bs";
-import { BiUser, BiExit, BiHelpCircle } from "react-icons/bi";
+import { BiExit } from "react-icons/bi";
 import { CiLocationOn } from "react-icons/ci";
 
 const Profile = () => {
   const [user, setUser] = useState(null);
-  // const [genderedUsers, setGenderedUsers] = useState(null);
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
   const navigate = useNavigate();
-
   const userId = cookies.UserId;
 
+  // Get User Data
   const getUser = async () => {
     try {
       const response = await axios.get("http://localhost:8000/user", {
@@ -26,12 +25,14 @@ const Profile = () => {
     }
   };
 
+  // Log Out, Remove Cookie and Navigate to Home page
   const logout = () => {
     removeCookie("UserId", cookies.UserId);
     removeCookie("AuthToken", cookies.AuthToken);
     window.location.reload(navigate("/"));
   };
 
+  // Navigate back to previous game
   const previousPage = () => {
     navigate("/dashboard", { replace: true });
   };
@@ -44,22 +45,19 @@ const Profile = () => {
     <>
       {user && (
         <div className="profile">
+          {/* Profile Header */}
           <div className="profile-header">
             <p>Profile</p>
             <div className="dropdown">
               <button className="settings">
                 <BsGearFill />
               </button>
+
+              {/* Header Dropdown */}
               <div className="dropdown-content">
                 <p onClick={logout}>
                   <BiExit /> Log Out
                 </p>
-                {/* <p>
-                  <BiUser /> Profile
-                </p>
-                <p>
-                  <BiHelpCircle /> Help
-                </p> */}
                 <p onClick={previousPage}>
                   <BsArrowReturnLeft /> Back
                 </p>
@@ -67,6 +65,7 @@ const Profile = () => {
             </div>
           </div>
 
+          {/* User Card */}
           <div className="user-card">
             <div
               style={{
@@ -80,15 +79,23 @@ const Profile = () => {
               className="user-img"
             >
               <div className="user-info data">
+                {/* User Name and Age */}
                 <div className="info">
                   <p className="name">{user.first_name}</p>
-                  <p className="age">{new Date().getFullYear() - user.dob_year}</p>
+                  <p className="age">
+                    {new Date().getFullYear() - user.dob_year}
+                  </p>
                 </div>
+
+                {/* User Province */}
                 <div className="info">
-                  <p className="province"><CiLocationOn/> {user.province}</p>
+                  <p className="province">
+                    <CiLocationOn /> {user.province}
+                  </p>
                 </div>
+
+                {/* User About */}
                 <div className="info">
-                {/* <CiLocationOn/> */}
                   <p className="about">{user.about}</p>
                 </div>
               </div>

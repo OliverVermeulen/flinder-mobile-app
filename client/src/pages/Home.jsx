@@ -1,4 +1,4 @@
-import Nav from "../components/Nav";
+import Header from "../components/Header";
 import AuthModal from "../components/AuthModel";
 import { useState } from "react";
 import { useCookies } from "react-cookie";
@@ -21,21 +21,26 @@ const Home = () => {
   };
 
   return (
-    <div className="overlay">
-      <Nav
+    <div className="home-overlay">
+      {/* Header */}
+      <Header
         authToken={authToken}
         minimal={false}
         setShowModal={setShowModal}
         showModal={showModal}
         setIsSignUp={setIsSignUp}
       />
+
       <div className="home">
+        {/* Slogan */}
         <h1 className="neonText">Start Swiping</h1>
 
+        {/* Create Account / Sign Out */}
         <button className="primary-button" onClick={handleClick}>
           {authToken ? "Sign Out" : "Create Account"}
         </button>
 
+        {/* Auth Modal */}
         {showModal && (
           <AuthModal setShowModal={setShowModal} isSignUp={isSignUp} />
         )}

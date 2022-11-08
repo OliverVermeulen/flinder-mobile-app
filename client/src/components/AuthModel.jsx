@@ -36,7 +36,7 @@ const AuthModal = ({ setShowModal, isSignUp }) => {
       const success = response.status === 201;
       if (success && isSignUp) navigate("/onboarding");
       if (success && !isSignUp) navigate("/dashboard");
-      window.location.reload()
+      window.location.reload();
     } catch (error) {
       console.log(error);
     }
@@ -44,40 +44,58 @@ const AuthModal = ({ setShowModal, isSignUp }) => {
 
   return (
     <div className="auth-modal">
+      {/* Auth Modal Header */}
       <div className="close-icon" onClick={handleClick}>
-      <MdClose/>
+        <MdClose />
       </div>
+
       <h2>{isSignUp ? "CREATE ACCOUNT" : "LOG IN"}</h2>
-      <p>{isSignUp ? "By clicking Submit, you agree to our Terms and Conditions." : ""}</p>
+
+      <p>
+        {isSignUp
+          ? "By clicking Submit, you agree to our Terms and Conditions."
+          : ""}
+      </p>
+
+      {/* Auth Modal Form */}
       <form onSubmit={handleSubmit}>
+        {/* Email */}
         <input
           type="email"
           id="email"
           name="email"
-          placeholder="email"
+          placeholder="Email"
           required={true}
           onChange={(e) => setEmail(e.target.value)}
         />
+
+        {/* Password */}
         <input
           type="password"
           id="password"
           name="password"
-          placeholder="password"
+          placeholder="Password"
           minLength={6}
           required={true}
           onChange={(e) => setPassword(e.target.value)}
         />
+
+        {/* Confirm Password */}
         {isSignUp && (
           <input
             type="password"
             id="password-check"
             name="password-check"
-            placeholder="confirm password"
+            placeholder="Confirm Password"
             required={true}
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
         )}
-        <input className="secondary-button" type="submit" />
+
+        {/* Submit */}
+        <input type="submit" />
+
+        {/* error */}
         <span>{error}</span>
       </form>
     </div>

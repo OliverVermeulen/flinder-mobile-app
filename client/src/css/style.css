@@ -86,26 +86,6 @@ body {
   outline: none;
 }
 
-.secondary-button {
-  color: var(--light-grey);
-  background-color: var(--white);
-  font-weight: 500;
-  font-size: 17px;
-  padding: 12px 30px;
-  border-radius: 30px;
-  border: solid 2px var(--light-grey);
-  margin: 6px auto;
-  cursor: pointer;
-  width: fit-content;
-  text-align: center;
-  transition: 0.4s;
-}
-.secondary-button:hover {
-  color: rgb(90, 89, 89);
-  background-color: rgb(240, 240, 240);
-  border: solid 2px rgb(90, 89, 89);
-}
-
 /* Nav */
 .nav {
   width: 100%;

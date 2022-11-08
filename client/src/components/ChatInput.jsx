@@ -13,7 +13,7 @@ const ChatInput = ({
   const userId = user?.user_id;
   const clickUserId = clickedUser?.user_id;
 
-  // add message
+  // Add Message
   const addMessage = async () => {
     const message = {
       timestamp: new Date().toISOString(),
@@ -32,13 +32,15 @@ const ChatInput = ({
     }
   };
 
-  // refresh page
+  // Refresh Page
   const refreshPage = () => {
     window.location.reload(false);
   };
 
   return (
+    // Chat Input
     <div className="chat-input">
+      {/* Message Input */}
       <InputEmoji
         value={textArea}
         onChange={setTextArea}
@@ -47,12 +49,16 @@ const ChatInput = ({
         required
         maxLength="300"
       />
+
       <div className="input-buttons">
+        {/* Send Message */}
         <button className="input-button" onClick={addMessage}>
-          <MdSend/>
+          <MdSend />
         </button>
+
+        {/* Refresh Chat */}
         <button className="input-button" onClick={refreshPage}>
-          <MdRefresh/>
+          <MdRefresh />
         </button>
       </div>
     </div>
