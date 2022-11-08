@@ -1,16 +1,16 @@
 # Flinder Mobile App
 
-This is a mobile dating web app inspired by tinder
+This is a mobile dating web app inspired by Tinder
 
 ### Start App
 
-- npm run start:frontend (start frontend)
-- npm run start:backend (start backend server)
+- cd client >> npm run start:frontend
+- cd server >> npm run start:backend
 
 ## Description
 
 The aim of this project is to make a mobile web app using the React.js framework.
-In my Project specifically I aim to make a dating app inspired by tinder.
+In my Project specifically I aim to make a dating app inspired by Tinder using the MERN stack.
 
 ## Features
 
@@ -26,16 +26,19 @@ In my Project specifically I aim to make a dating app inspired by tinder.
 
 ## Backlog
 
-- Fix react-tinder-card error
+- Fix react-tinder-card error(fixed)
 - Fix navbar
 - Style all pages
 - Make help page
-- Make profile pages
+- Make profile pages (complete)
 - Add better Mongo.uri
+- fix matches colour bug
+- fix chat box stretching
 
 ## Future additions
 
 - Add live chat
+- Add ability to send pictures and videos to matches
 - Add in physical distance between matches
 
 ## Repo link

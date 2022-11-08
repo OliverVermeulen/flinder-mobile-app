@@ -8,14 +8,16 @@
 /* Profile Header */
 .profile .profile-header {
   padding: 0px 10px;
-  height: 50px;
+  height: 60px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   color: var(--white);
-  background-color: var(--bg-color);
+  animation: pulsate 0.11s ease-in-out infinite alternate;
+  background-color: #7f0cf2;
   font-size: 20px;
+  font-style: italic;
 }
 .profile .profile-header p {
   margin: 0;
@@ -68,24 +70,23 @@
   width: 100%;
   max-width: 500px;
   height: 100%;
-  max-height: calc(100vh - 50px);
+  max-height: calc(100vh - 60px);
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
 }
 .profile .user-card .user-info {
   position: absolute;
-  bottom: 0px;
-  word-break: break-all;
+  bottom: 10px;
+  /* word-break: break-all; */
   padding: 10px;
+  margin: 10px;
   color: var(--white);
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.6)
-  );
-  width: 100%;
+  background-color: #242627;
+  border: 1px solid var(--white);
+  /* width: 100%; */
+  border-radius: 20px;
+  box-shadow: var(--neon-shadow);
 }
 .profile .user-img {
   background-color: #242627;
@@ -93,9 +94,11 @@
 .profile .info {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  justify-content: space-between;
   align-items: center;
   color: var(--white);
+  padding-right: 5px;
+  padding-bottom: 5px;
 }
 .profile .info p {
   margin: 0;
@@ -105,27 +108,10 @@
 .profile .info .name {
   font-size: 25px;
   font-weight: 500;
+  animation: pulsate 0.11s ease-in-out infinite alternate;
+  font-style: italic;
 }
 .profile .info .age {
   font-size: 20px;
   font-weight: 300;
 }
-/* .profile .user-card p {
-  margin: 0;
-}
-.profile .user-card .user-name-age {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  font-size: 30px;
-  margin-bottom: 5px;
-  font-weight: 500;
-}
-.profile .user-card .user-province {
-  font-size: 20px;
-  margin-bottom: 5px;
-  font-weight: 400;
-}
-.profile .user-card .user-about {
-  font-size: 20px;
-} */

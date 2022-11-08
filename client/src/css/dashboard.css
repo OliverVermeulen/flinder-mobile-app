@@ -8,14 +8,17 @@
 /* Chat Container Header */
 .chat-container-header {
   padding: 0px 10px;
-  height: 50px;
+  height: 60px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   color: var(--white);
-  background-color: var(--bg-color);
+  background-color: #7f0cf2;
+  color: var(--white);
+  animation: pulsate 0.11s ease-in-out infinite alternate;
   font-size: 20px;
+  font-style: italic;
 }
 .chat-container-header p {
   margin: 0;
@@ -38,16 +41,16 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: var(--bg-color);
+  background-color: #db27f2;
   height: 40px;
 }
 .chat-container .option {
   border: none;
   background-color: transparent;
-  border-bottom: solid 4px #f25ebf;
+  border-bottom: solid 4px #ec91cc;
   color: var(--white);
   font-size: 20px;
-  margin: 0px 2px;
+  /* margin: 0px 2px; */
   padding: 5px 0px;
   width: 50%;
 }
@@ -59,10 +62,12 @@
 /* Matches Display */
 .matches-display {
   padding-top: 5px;
-  height: calc(100vh - 90px);
+  height: calc(100vh - 100px);
   word-break: break-all;
   overflow: auto;
   background-color: #242627;
+  background: var(--background-image);
+  
 }
 .chat-container .img-container {
   height: 30px;
@@ -85,7 +90,7 @@
   transition: 0.1s;
 }
 .match-card:hover {
-  background-color: #333638;
+  background-color: #33363831;
 }
 
 /* Chat Display */
@@ -94,7 +99,7 @@
   word-break: break-all;
   position: relative;
   width: 100%;
-  height: calc(100vh - 144px);
+  height: calc(100vh - 154px);
 }
 .chat-display {
   overflow: auto;
@@ -104,6 +109,7 @@
   -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
   scrollbar-width: none; /* Hide scrollbar for Firefox */
   background-color: #242627;
+  background: var(--background-image);
 }
 .chat-display::-webkit-scrollbar {
   display: none; /* Hide scrollbar for Chrome, Safari and Opera */
@@ -130,7 +136,7 @@
   flex-direction: row-reverse;
 }
 .owner .text-message {
-  background-color: var(--light-grey);
+  background-color: #b78de0;
 }
 
 /* Chat Input */
@@ -138,7 +144,7 @@
   padding: 5px 10px;
   display: flex;
   flex-direction: row;
-  background-color: #242627;
+  background-color: #7f0cf2;
 }
 .react-emoji {
   display: flex;
@@ -202,7 +208,7 @@
   cursor: pointer;
   flex-shrink: 0;
   font-size: 20px;
-  color: #858585;
+  color: var(--white);
 }
 
 .dashboard {
@@ -271,4 +277,7 @@
 .card .info .age {
   font-size: 20px;
   font-weight: 300;
+}
+.react-input-emoji--button svg {
+  fill: var(--white) !important;
 }

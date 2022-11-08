@@ -79,14 +79,13 @@ const Profile = () => {
               }}
               className="user-img"
             >
-              <div className="user-info">
+              <div className="user-info data">
                 <div className="info">
                   <p className="name">{user.first_name}</p>
                   <p className="age">{new Date().getFullYear() - user.dob_year}</p>
                 </div>
                 <div className="info">
-                  <CiLocationOn/>
-                  <p className="province">{user.province}</p>
+                  <p className="province"><CiLocationOn/> {user.province}</p>
                 </div>
                 <div className="info">
                 {/* <CiLocationOn/> */}
