@@ -86,7 +86,7 @@ const Dashboard = (page) => {
           <ChatHeader user={user} page={!page} />
           {/* Match */}
           <div className="match">
-            <div className="cardContainer">
+            <div className="card-container">
               {filteredGenderedUsers?.map((genderedUser) => (
                 // Tinder Card
                 <TinderCard
@@ -118,9 +118,9 @@ const Dashboard = (page) => {
               ))}
             </div>
             {lastDirection ? (
-              <h2 className="infoText">You swiped {lastDirection}</h2>
+              <h2 className="info-text">You swiped {lastDirection}</h2>
             ) : (
-              <h2 className="infoText" />
+              <h2 className="info-text" />
             )}
           </div>
         </div>

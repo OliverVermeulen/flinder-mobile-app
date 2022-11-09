@@ -34,6 +34,7 @@
 }
 .chat-container-header .header-img img {
   width: 100%;
+  cursor: pointer;
 }
 
 /* Chat Container Options */
@@ -104,13 +105,13 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
-  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   background-color: #242627;
   background: var(--background-image);
 }
 .chat-display::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+  display: none;
 }
 .chat-message-header {
   display: flex;
@@ -182,7 +183,7 @@
   z-index: 10;
 }
 .emoji-mart-scroll::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+  display: none;
 }
 .emoji-mart {
   width: 357px !important;
@@ -212,29 +213,28 @@
 .dashboard {
   background-color: #242627;
   height: 100vh;
+  background: var(--background-image);
 }
 
+/* Match Page */
 .match {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
+.card-container {
+  width: 100vw;
+  max-width: 300px;
+  max-height: 500px;
+}
 .swipe {
   position: absolute;
 }
-
-.cardContainer {
-  width: 100vw;
-  max-width: 300px;
-  /* height: 100vh; */
-  max-height: 500px;
-}
-
+/* Card */
 .card {
   position: relative;
-  background-color: #fff;
+  background-color: #242627;
   width: 80vw;
   max-width: 300px;
   height: 500px;
@@ -243,13 +243,8 @@
   background-position: center;
   margin-top: 25%;
   overflow: hidden;
+  cursor: grab;
 }
-
-.cardContent {
-  width: 100%;
-  height: 100%;
-}
-
 .card .match-info {
   position: absolute;
   bottom: 0;
@@ -270,11 +265,25 @@
 }
 .card .match-info p {
   margin: 0;
+  font-weight: 200;
 }
-.match-name {
+.card .match-info .match-name {
   font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+  animation: pulsate 0.11s ease-in-out infinite alternate;
 }
-.infoText {
+.card .match-info .province-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+/* Info Text */
+.info-text {
   color: #fff;
   position: absolute;
   bottom: 0;
@@ -282,12 +291,4 @@
   font-style: italic;
   font-size: 30px;
   font-weight: 500;
-}
-.province-info {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 5px;
-  margin-top: 5px;
 }

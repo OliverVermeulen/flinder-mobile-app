@@ -32,6 +32,7 @@
   font-size: 20px;
   border: none;
   padding-top: 7px;
+  cursor: pointer;
 }
 .profile .profile-header .dropdown {
   position: relative;
