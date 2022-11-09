@@ -30,7 +30,7 @@
   height: 30px;
   border-radius: 15px;
   overflow: hidden;
-  background-color: #242627;
+  background-color: #33363831;
 }
 .chat-container-header .header-img img {
   width: 100%;
@@ -66,7 +66,6 @@
   overflow: auto;
   background-color: #242627;
   background: var(--background-image);
-  
 }
 .chat-container .img-container {
   height: 30px;
@@ -74,7 +73,7 @@
   border-radius: 15px;
   overflow: hidden;
   margin: 10px;
-  background-color: var(--bg-color);
+  background-color: #33363831;
 }
 .chat-container .img-container img {
   width: 100%;
@@ -212,71 +211,83 @@
 
 .dashboard {
   background-color: #242627;
-  width: 100%;
   height: 100vh;
 }
 
-.dashboard .swipe-container {
-  /* display: flex;
+.match {
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; */
-  position: absolute;
-  left: 50%;
-  top: 10%;
-  transform: translate(-50%, 0);
-  width: fit-content;
-  height: fit-content;
-  /* background-color: #333638; */
+  align-items: center;
 }
-.dashboard .swipe-container .card-container {
-  width: 300px;
-  height: 550px;
-}
-.dashboard .swipe-container .card-container .swipe {
+
+.swipe {
   position: absolute;
 }
+
+.cardContainer {
+  width: 100vw;
+  max-width: 300px;
+  /* height: 100vh; */
+  max-height: 500px;
+}
+
 .card {
-  width: 300px;
-  height: 550px;
+  position: relative;
+  background-color: #fff;
+  width: 80vw;
+  max-width: 300px;
+  height: 500px;
   border-radius: 10px;
   background-size: cover;
   background-position: center;
-  background-color: #333638;
+  margin-top: 25%;
+  overflow: hidden;
 }
+
+.cardContent {
+  width: 100%;
+  height: 100%;
+}
+
 .card .match-info {
   position: absolute;
   bottom: 0;
+  margin: 5%;
+  color: #fff;
+  width: 90%;
+  background-color: #242627;
   padding: 10px;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.6)
-  );
-  width: 100%;
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--white);
+  box-shadow: var(--neon-shadow);
 }
-.card .info {
+.card .match-info .info {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  justify-content: space-between;
   align-items: center;
-  color: var(--white);
 }
-.card .info p {
+.card .match-info p {
   margin: 0;
-  font-size: 16px;
-  font-weight: 200;
 }
-.card .info .name {
-  font-size: 25px;
+.match-name {
+  font-size: 20px;
+}
+.infoText {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  animation: pulsate 0.11s ease-in-out infinite alternate;
+  font-style: italic;
+  font-size: 30px;
   font-weight: 500;
 }
-.card .info .age {
-  font-size: 20px;
-  font-weight: 300;
-}
-.react-input-emoji--button svg {
-  fill: var(--white) !important;
+.province-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
 }

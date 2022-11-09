@@ -45,6 +45,7 @@
   float: right;
   color: var(--white);
   font-size: 20px;
+  cursor: pointer;
 }
 .auth-modal h2 {
   font-weight: 400;
@@ -86,7 +87,7 @@ input[type="email"] {
   text-align: center;
   transition: 0.4s;
 }
-.auth-modal form input:hover {
+.auth-modal form input[type="submit"]:hover {
   color: rgb(105, 103, 103);
   background-color: rgb(226, 226, 226);
   border: solid 2px rgb(105, 103, 103);

@@ -82,17 +82,20 @@ const Dashboard = (page) => {
     <>
       {user && (
         <div className="dashboard">
+          {/* Header */}
           <ChatHeader user={user} page={!page} />
-          <div className="swipe-container">
-            <div className="card-container">
+          {/* Match */}
+          <div className="match">
+            <div className="cardContainer">
               {filteredGenderedUsers?.map((genderedUser) => (
+                // Tinder Card
                 <TinderCard
                   className="swipe"
                   key={genderedUser.user_id}
                   onSwipe={(dir) => swiped(dir, genderedUser.user_id)}
                   onCardLeftScreen={() => outOfFrame(genderedUser.first_name)}
                 >
-                  {/* Match Profile Picture */}
+                  {/* Match Picture */}
                   <div
                     style={{ backgroundImage: "url(" + genderedUser.url + ")" }}
                     className="card"
@@ -100,13 +103,12 @@ const Dashboard = (page) => {
                     {/* Match Info */}
                     <div className="match-info">
                       <div className="info">
-                        <p className="name">{genderedUser.first_name}</p>
-                        <p className="age">
+                        <p className="match-name">{genderedUser.first_name}</p>
+                        <p>
                           {new Date().getFullYear() - genderedUser.dob_year}
                         </p>
                       </div>
-
-                      <div className="info">
+                      <div className="province-info">
                         <CiLocationOn />
                         <p>{genderedUser.province}</p>
                       </div>
@@ -115,6 +117,11 @@ const Dashboard = (page) => {
                 </TinderCard>
               ))}
             </div>
+            {lastDirection ? (
+              <h2 className="infoText">You swiped {lastDirection}</h2>
+            ) : (
+              <h2 className="infoText" />
+            )}
           </div>
         </div>
       )}

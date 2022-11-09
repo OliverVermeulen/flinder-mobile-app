@@ -47,6 +47,7 @@
   overflow: hidden;
   border: 1px solid var(--white);
   box-shadow: var(--neon-shadow);
+  animation: none;
 }
 .profile .profile-header .dropdown-content p {
   color: var(--white);
