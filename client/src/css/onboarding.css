@@ -10,6 +10,9 @@
   background-repeat: no-repeat;
 }
 
+.onboarding {
+  height: 100vh;
+}
 /* Onboarding Form */
 .onboarding form {
   display: flex;
@@ -26,6 +29,7 @@
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
+  margin-top: 3%;
 }
 
 /* Form Heading */
@@ -33,7 +37,7 @@
   font-size: 30px;
   font-weight: 400;
   font-style: italic;
-  margin: 0px 10px;
+  margin: 0px;
   color: var(--white);
   animation: pulsate 0.11s ease-in-out infinite alternate;
   text-align: center;
@@ -73,6 +77,7 @@
   border-radius: 5px;
   outline: none;
   border: 2px solid var(--light-grey);
+  cursor: pointer;
 }
 
 /* Multiple Input Container */
@@ -81,7 +86,6 @@
   flex-direction: row;
   justify-content: space-between;
 }
-
 .onboarding form .multiple-input-container {
   display: flex;
   flex-direction: row;
@@ -98,9 +102,10 @@
   margin: 0;
   margin-bottom: 8px;
   background-color: var(--white);
+  cursor: pointer;
 }
 
-/* Choice Input */
+/* Gender / Interest Input */
 .onboarding form .choice-label {
   color: var(--light-grey);
   font-size: 15px;
@@ -123,7 +128,6 @@
   border: solid 2px var(--light-grey);
   margin: 8px auto;
   cursor: pointer;
-  width: -moz-fit-content;
   width: fit-content;
   text-align: center;
 }
