@@ -12,7 +12,7 @@ const ChatHeader = ({ user, page }) => {
     // Chat Header
     <div className="chat-container-header">
       {/* Chat / Match */}
-      <p>{page ? "Chat" : "Match"}</p>
+      <p title={page ? "Chat" : "Match"}>{page ? "Chat" : "Match"}</p>
 
       {/* User Profile Picture */}
       <div className="header-img">
@@ -20,6 +20,7 @@ const ChatHeader = ({ user, page }) => {
           src={user.url}
           alt={"Photo of " + user.first_name}
           onClick={redirect}
+          title="Profile"
         />
       </div>
     </div>

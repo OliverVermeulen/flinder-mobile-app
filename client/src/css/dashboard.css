@@ -53,10 +53,17 @@
   font-size: 20px;
   padding: 5px 0px;
   width: 50%;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.chat-container .option:hover {
+  background-color: #e52bfd;
 }
 .chat-container .option:disabled {
   color: rgb(199, 199, 199);
   border-bottom: solid 4px rgb(199, 199, 199);
+  cursor: default;
+  background-color: transparent;
 }
 
 /* Matches Display */
@@ -140,11 +147,13 @@
 
 /* Chat Input */
 .chat-input {
-  padding: 5px 10px;
+  padding: 5px 0px 5px 10px;
   display: flex;
   flex-direction: row;
   background-color: #7f0cf2;
 }
+
+/* React Emoji */
 .react-emoji {
   display: flex;
   align-items: center;
@@ -188,17 +197,26 @@
 .emoji-mart {
   width: 357px !important;
 }
+.react-input-emoji--button svg {
+  fill: var(--white) !important;
+  transition: 0.2s;
+}
+.react-input-emoji--button svg:hover {
+  fill: rgb(207, 206, 206) !important;
+}
+
+/* Chat Submit and Refresh */
 .chat-input .input-buttons {
   display: flex;
   flex-direction: row;
 }
-.input-button {
+.chat-input .input-button {
   position: relative;
   display: block;
   text-align: center;
   padding: 0 10px 0px 0px;
   overflow: hidden;
-  transition: color 0.1s ease-out;
+  transition: 0.2s;
   margin: 0;
   box-shadow: none;
   background: none;
@@ -208,6 +226,9 @@
   flex-shrink: 0;
   font-size: 20px;
   color: var(--white);
+}
+.chat-input .input-button:hover {
+  color: rgb(207, 206, 206);
 }
 
 .dashboard {
@@ -231,6 +252,7 @@
 .swipe {
   position: absolute;
 }
+
 /* Card */
 .card {
   position: relative;

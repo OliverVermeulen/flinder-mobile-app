@@ -47,9 +47,9 @@ const Profile = () => {
         <div className="profile">
           {/* Profile Header */}
           <div className="profile-header">
-            <p>Profile</p>
+            <p className="page-name" title="Profile">Profile</p>
             <div className="dropdown">
-              <button className="settings">
+              <button className="settings" title="Settings">
                 <BsGearFill />
               </button>
 
@@ -82,7 +82,7 @@ const Profile = () => {
                 {/* User Name and Age */}
                 <div className="info">
                   <p className="name">{user.first_name}</p>
-                  <p className="age">
+                  <p className="age" title="Age">
                     {new Date().getFullYear() - user.dob_year}
                   </p>
                 </div>

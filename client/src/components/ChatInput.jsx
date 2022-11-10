@@ -47,17 +47,17 @@ const ChatInput = ({
         cleanOnEnter
         placeholder="Type a message"
         required
-        maxLength="300"
+        maxLength="500"
       />
 
       <div className="input-buttons">
         {/* Send Message */}
-        <button className="input-button" onClick={addMessage}>
+        <button className="input-button" onClick={addMessage} title="Submit">
           <MdSend />
         </button>
 
         {/* Refresh Chat */}
-        <button className="input-button" onClick={refreshPage}>
+        <button className="input-button" onClick={refreshPage} title="Refresh">
           <MdRefresh />
         </button>
       </div>

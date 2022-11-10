@@ -13,7 +13,7 @@ const Header = ({
   return (
     <div className="nav">
       {/* Logo */}
-      <div className="nav-logo">Flinder</div>
+      <div className="nav-logo" title="Flinder">Flinder</div>
 
       {/* Log In */}
       {!authToken && !minimal && (

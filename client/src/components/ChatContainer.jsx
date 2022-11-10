@@ -13,12 +13,12 @@ const ChatContainer = ({ user, page }) => {
       {/* Display Module */}
       <div className="options">
         {/* Matches */}
-        <button className="option" onClick={() => setClickedUser(null)}>
+        <button className="option" onClick={() => setClickedUser(null)} title="Matches">
           Matches
         </button>
 
         {/* Chat */}
-        <button className="option" disabled={!clickedUser}>
+        <button className="option" disabled={!clickedUser} title="Chat">
           Chat
         </button>
       </div>

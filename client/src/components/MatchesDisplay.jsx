@@ -42,7 +42,7 @@ const MatchesDisplay = ({ matches, setClickedUser }) => {
           onClick={() => setClickedUser(match)}
         >
           {/* Match Profile Picture */}
-          <div className="img-container">
+          <div className="img-container" title={match?.first_name}>
             <img src={match?.url} alt={match?.first_name + " profile"} />
           </div>
 

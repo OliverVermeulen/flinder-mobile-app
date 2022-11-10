@@ -1,27 +1,13 @@
 /* ----- Onboarding ----- */
 /* Onboarding Overlay */
 .onboarding-overlay {
+  width: 100%;
+  height: 100vh;
   background: var(--background-image);
+  background-color: #242627;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
-  max-height: 100%;
-  width: 100%;
-  padding: 0 10px 10px;
-}
-
-.onboarding {
-  display: flex;
-  justify-content: center;
-  background-color: #242627;
-  width: fit-content;
-  border-radius: 20px;
-  max-width: 500px;
-  border: 1px solid var(--white);
-  box-shadow: var(--neon-shadow);
-  margin: 0 auto;
-  margin-top: 10px;
 }
 
 /* Onboarding Form */
@@ -31,8 +17,15 @@
   padding: 20px;
   text-align: start;
   justify-content: center;
-  min-width: 320px;
+  min-width: 340px;
   max-width: 480px;
+  background-color: #242627;
+  border: 1px solid var(--white);
+  box-shadow: var(--neon-shadow);
+  border-radius: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 /* Form Heading */
@@ -55,7 +48,7 @@
 
 /* Input */
 .onboarding form input {
-  padding: 8px 8px 8px 12px;
+  padding: 8px;
   margin-bottom: 8px;
   border-radius: 5px;
   outline: none;
@@ -74,19 +67,28 @@
 /* Select Input */
 .onboarding form select {
   appearance: none;
-  padding: 8px 8px 8px 12px;
+  padding: 8px;
   margin-bottom: 8px;
-font-size: 17px;
+  font-size: 17px;
   border-radius: 5px;
   outline: none;
   border: 2px solid var(--light-grey);
 }
 
 /* Multiple Input Container */
+.test-label label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .onboarding form .multiple-input-container {
   display: flex;
   flex-direction: row;
   gap: 10px;
+}
+.onboarding form .gender {
+  width: 50%;
 }
 .onboarding form .multiple-input-container label {
   padding: 10px;
@@ -111,15 +113,6 @@ font-size: 17px;
   color: var(--black);
 }
 
-/* Photo Container */
-.onboarding form .photo-container {
-  margin: 0 auto;
-}
-.onboarding form .photo-container img {
-  width: 100%;
-  max-width: 300px;
-}
-
 /* Submit */
 .onboarding form input[type="submit"] {
   color: var(--light-grey);
@@ -133,4 +126,15 @@ font-size: 17px;
   width: -moz-fit-content;
   width: fit-content;
   text-align: center;
+}
+.test {
+  display: flex;
+  flex-direction: row;
+}
+.gender-label {
+  display: flex;
+  flex-direction: row;
+}
+.gender-label label {
+  width: 50%;
 }

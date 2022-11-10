@@ -14,15 +14,18 @@
   align-items: center;
   justify-content: space-between;
   color: var(--white);
-  animation: pulsate 0.11s ease-in-out infinite alternate;
   background-color: #7f0cf2;
   font-size: 20px;
-  font-style: italic;
+  cursor: default;
 }
-.profile .profile-header p {
+
+/* Profile Name */
+.profile .profile-header .page-name {
   margin: 0;
   font-size: 30px;
   font-weight: 500;
+ animation: pulsate 0.11s ease-in-out infinite alternate; 
+ font-style: italic;
 }
 
 /* Profile Header Settings*/
@@ -57,7 +60,8 @@
   display: block;
   font-size: 16px;
   cursor: pointer;
-  transition: 0.1s;
+  transition: 0.4s;
+  margin: 0;
 }
 .profile .profile-header .dropdown-content p:hover {
   background-color: #3336388a;
@@ -91,6 +95,7 @@
   box-shadow: var(--neon-shadow);
   width: 90%;
   max-width: 500px;
+  cursor: default;
 }
 .profile .user-img {
   background-color: #242627;
