@@ -312,7 +312,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  /* gap: 1rem; */
   width: 100%;
 }
 .nav a {
@@ -346,7 +345,3 @@
 .nav li .icon-active{
   display: none;
 }
-
-/* .nav li.active:hover {
-  background-color: transparent;
-} */

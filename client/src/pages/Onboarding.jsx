@@ -35,7 +35,7 @@ const Onboarding = () => {
       });
       const success = response.status === 200;
       // if (success) navigate("/dashboard");
-      if (success) navigate("/test/swipe");
+      if (success) navigate("/dashboard/swipe");
     } catch (err) {
       console.log(err);
     }
@@ -121,7 +121,13 @@ const Onboarding = () => {
 
             {/* Province */}
             <label htmlFor="province">Province</label>
-            <select id="province" name="province" onChange={handleChange} value={formData.province} required={true}>
+            <select
+              id="province"
+              name="province"
+              onChange={handleChange}
+              value={formData.province}
+              required={true}
+            >
               <option>Choose Province</option>
               <option value="Eastern Cape">Eastern Cape</option>
               <option value="Free State">Free State</option>
@@ -142,31 +148,109 @@ const Onboarding = () => {
               {/* Gender */}
               <div className="multiple-input-container gender">
                 {/* Man */}
-                <input type="radio" id="man-gender-identity" name="gender_identity" value="man" onChange={handleChange} checked={formData.gender_identity === "man"}/>
-                <label htmlFor="man-gender-identity" className="choice-label" title="Man">M</label>
+                <input
+                  type="radio"
+                  id="man-gender-identity"
+                  name="gender_identity"
+                  value="man"
+                  onChange={handleChange}
+                  checked={formData.gender_identity === "man"}
+                />
+                <label
+                  htmlFor="man-gender-identity"
+                  className="choice-label"
+                  title="Man"
+                >
+                  M
+                </label>
 
                 {/* Woman */}
-                <input type="radio"id="woman-gender-identity"name="gender_identity"value="woman"onChange={handleChange}checked={formData.gender_identity === "woman"}/>
-                <label htmlFor="woman-gender-identity"className="choice-label"title="Woman">W</label>
+                <input
+                  type="radio"
+                  id="woman-gender-identity"
+                  name="gender_identity"
+                  value="woman"
+                  onChange={handleChange}
+                  checked={formData.gender_identity === "woman"}
+                />
+                <label
+                  htmlFor="woman-gender-identity"
+                  className="choice-label"
+                  title="Woman"
+                >
+                  W
+                </label>
 
                 {/* Non Binary */}
-                <input type="radio"id="more-gender-identity"name="gender_identity"value="more"onChange={handleChange}checked={formData.gender_identity === "more"}/>
-                <label htmlFor="more-gender-identity" className="choice-label"title="Non Binary">NB</label>
+                <input
+                  type="radio"
+                  id="more-gender-identity"
+                  name="gender_identity"
+                  value="more"
+                  onChange={handleChange}
+                  checked={formData.gender_identity === "more"}
+                />
+                <label
+                  htmlFor="more-gender-identity"
+                  className="choice-label"
+                  title="Non Binary"
+                >
+                  NB
+                </label>
               </div>
 
               {/* Gender Interest */}
               <div className="multiple-input-container">
                 {/* Men */}
-                <input type="radio"id="man-gender-interest" name="gender_interest" value="man" onChange={handleChange}checked={formData.gender_interest === "man"}/>
-                <label htmlFor="man-gender-interest" className="choice-label"title="Men">M</label>
+                <input
+                  type="radio"
+                  id="man-gender-interest"
+                  name="gender_interest"
+                  value="man"
+                  onChange={handleChange}
+                  checked={formData.gender_interest === "man"}
+                />
+                <label
+                  htmlFor="man-gender-interest"
+                  className="choice-label"
+                  title="Men"
+                >
+                  M
+                </label>
 
                 {/* Women */}
-                <input type="radio" id="woman-gender-interest" name="gender_interest" value="woman" onChange={handleChange} checked={formData.gender_interest === "woman"}/>
-                <label htmlFor="woman-gender-interest" className="choice-label" title="Women">W</label>
+                <input
+                  type="radio"
+                  id="woman-gender-interest"
+                  name="gender_interest"
+                  value="woman"
+                  onChange={handleChange}
+                  checked={formData.gender_interest === "woman"}
+                />
+                <label
+                  htmlFor="woman-gender-interest"
+                  className="choice-label"
+                  title="Women"
+                >
+                  W
+                </label>
 
                 {/* All */}
-                <input type="radio"id="everyone-gender-interest"name="gender_interest"value="everyone"onChange={handleChange}checked={formData.gender_interest === "everyone"}/>
-                <label htmlFor="everyone-gender-interest"className="choice-label" title="All">All</label>
+                <input
+                  type="radio"
+                  id="everyone-gender-interest"
+                  name="gender_interest"
+                  value="everyone"
+                  onChange={handleChange}
+                  checked={formData.gender_interest === "everyone"}
+                />
+                <label
+                  htmlFor="everyone-gender-interest"
+                  className="choice-label"
+                  title="All"
+                >
+                  All
+                </label>
               </div>
             </div>
 

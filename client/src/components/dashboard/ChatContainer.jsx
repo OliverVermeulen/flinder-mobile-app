@@ -1,5 +1,5 @@
-import ChatHeader from "./ChatHeader";
-import MatchesDisplay from "./MatchesDisplay.jsx";
+import ChatHeader from "./DashboardHeader";
+import MatchesDisplay from "../MatchesDisplay.jsx";
 import ChatDisplay from "./ChatDisplay";
 import { useState } from "react";
 

@@ -34,7 +34,8 @@ const Profile = () => {
 
   // Navigate back to previous game
   const previousPage = () => {
-    navigate("/dashboard", { replace: true });
+    // navigate("/dashboard", { replace: true });
+    navigate("/dashboard/swipe", { replace: true });
   };
 
   useEffect(() => {

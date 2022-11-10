@@ -1,6 +1,6 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { MdOutlineSwipe, MdSwipe, MdChatBubbleOutline, MdChatBubble } from "react-icons/md";
-const TestNav = () => {
+const DashboardNav = () => {
   return (
     <nav className="nav">
       <ul>
@@ -10,7 +10,7 @@ const TestNav = () => {
     </nav>
   );
 };
-export default TestNav;
+export default DashboardNav;
 
 const CustomLink = ({ to, children, ...props }) => {
   const resolvedPath = useResolvedPath(to);
