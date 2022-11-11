@@ -2,9 +2,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap");
 
 * {
-  box-sizing: border-box;
   font-family: "Readex Pro", sans-serif;
-  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  /* background-color: var(--bg-color); */
+  margin: 0;
+  padding: 0;
+  /* height: 100%;
+  color: var(--black);
+  overflow:hidden; */
 }
 
 /* Color Root */
@@ -23,7 +32,7 @@
   );
   --neon-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #7f0cf2,
     0 0 0.8rem #7f0cf2, 0 0 2.8rem #7f0cf2, inset 0 0 1.3rem #7f0cf2;
-  --background-image: repeating-linear-gradient(
+  --overlay: repeating-linear-gradient(
       0deg,
       rgba(255, 255, 255, 0.05) 0px,
       rgba(255, 255, 255, 0.05) 1px,
@@ -45,21 +54,7 @@
   }
 }
 
-html {
-  height: -webkit-fill-available;
-}
 
-body {
-  background-color: var(--black);
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  height: 100vh;
-  height: -webkit-fill-available;
-  color: var(--black);
-  width: 500px;
-  max-width: 100%;
-}
 
 .primary-button {
   width: 200px;
@@ -87,15 +82,15 @@ body {
   outline: none;
 }
 
-/* Nav */
-.nav {
+/* header */
+.header {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-/* Nav Logo */
-.nav .nav-logo {
+/* Header Logo */
+.header .header-logo {
   font-size: 50px;
   font-weight: 400;
   margin-left: 10px;
@@ -108,8 +103,8 @@ body {
   align-items: center;
 }
 
-/* Nav Button */
-.nav .nav-button {
+/* Header Button */
+.header .header-button {
   margin: 10px;
   width: 110px;
   font-size: 20px;
@@ -126,16 +121,16 @@ body {
   transition: all 0.4s ease-in-out;
   background-image: var(--gradient);
 }
-.nav .nav-button:hover {
+.header .header-button:hover {
   background-position: 100% 0;
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-.nav .nav-button:focus {
+.header .header-button:focus {
   outline: none;
 }
-.nav .nav-button:disabled {
+.header .header-button:disabled {
   color: rgb(199, 199, 199);
   background: #f25ebf;
   transition: none;

@@ -11,14 +11,14 @@ const Header = ({
   };
 
   return (
-    <div className="nav">
+    <div className="header">
       {/* Logo */}
-      <div className="nav-logo" title="Flinder">Flinder</div>
+      <div className="header-logo" title="Flinder">Flinder</div>
 
       {/* Log In */}
       {!authToken && !minimal && (
         <button
-          className="nav-button"
+          className="header-button"
           onClick={handleClick}
           disabled={showModal}
         >

@@ -47,7 +47,7 @@ const MatchesDisplay = ({ matches, setClickedUser }) => {
           </div>
 
           {/* Match Name */}
-          <h3>{match?.first_name}</h3>
+          <p className="match-name">{match?.first_name}</p>
         </div>
       ))}
     </div>

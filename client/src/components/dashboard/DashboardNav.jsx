@@ -1,11 +1,26 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
-import { MdOutlineSwipe, MdSwipe, MdChatBubbleOutline, MdChatBubble } from "react-icons/md";
+import {
+  MdOutlineSwipe,
+  MdSwipe,
+  MdChatBubbleOutline,
+  MdChatBubble,
+} from "react-icons/md";
 const DashboardNav = () => {
   return (
-    <nav className="nav">
+    <nav className="dashboard-nav">
       <ul>
-        <CustomLink to="swipe"><MdOutlineSwipe class="icon-inactive"/><MdSwipe class="icon-active"/></CustomLink>
-        <CustomLink to="chat"><MdChatBubbleOutline class="icon-inactive"/><MdChatBubble class="icon-active"/></CustomLink>
+        <CustomLink to="swipe">
+          <MdOutlineSwipe className="icon-inactive" />
+          <MdSwipe className="icon-active" />
+        </CustomLink>
+        <CustomLink to="chat">
+          <MdChatBubbleOutline className="icon-inactive" />
+          <MdChatBubble className="icon-active" />
+        </CustomLink>
+        {/* <CustomLink to="chat">
+          <MdChatBubbleOutline className="icon-inactive" />
+          <MdChatBubble className="icon-active" />
+        </CustomLink> */}
       </ul>
     </nav>
   );

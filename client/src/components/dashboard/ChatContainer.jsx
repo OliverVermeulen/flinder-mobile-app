@@ -7,30 +7,35 @@ const ChatContainer = ({ user, page }) => {
   const [clickedUser, setClickedUser] = useState(null);
 
   return (
-    <div className="chat-container">
+    <>
       <ChatHeader user={user} page={!page} />
+      <div className="chat-container">
+        {/* Display Module */}
+        <div className="options">
+          {/* Matches */}
+          <button
+            className="option"
+            onClick={() => setClickedUser(null)}
+            title="Matches"
+          >
+            Matches
+          </button>
 
-      {/* Display Module */}
-      <div className="options">
-        {/* Matches */}
-        <button className="option" onClick={() => setClickedUser(null)} title="Matches">
-          Matches
-        </button>
+          {/* Chat */}
+          <button className="option" disabled={!clickedUser} title="Chat">
+            Chat
+          </button>
+        </div>
 
-        {/* Chat */}
-        <button className="option" disabled={!clickedUser} title="Chat">
-          Chat
-        </button>
+        {!clickedUser && (
+          <MatchesDisplay
+            matches={user.matches}
+            setClickedUser={setClickedUser}
+          />
+        )}
+        {clickedUser && <ChatDisplay user={user} clickedUser={clickedUser} />}
       </div>
-
-      {!clickedUser && (
-        <MatchesDisplay
-          matches={user.matches}
-          setClickedUser={setClickedUser}
-        />
-      )}
-      {clickedUser && <ChatDisplay user={user} clickedUser={clickedUser} />}
-    </div>
+    </>
   );
 };
 

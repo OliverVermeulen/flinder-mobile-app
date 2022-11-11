@@ -10,12 +10,12 @@ const ChatHeader = ({ user, page }) => {
 
   return (
     // Chat Header
-    <div className="chat-container-header">
+    <div className="dashboard-header">
       {/* Chat / Match */}
-      <p title={page ? "Chat" : "Match"}>{page ? "Chat" : "Match"}</p>
+      <p className="dashboard-header-name" title={page ? "Chat" : "Swipe"}>{page ? "Chat" : "Swipe"}</p>
 
       {/* User Profile Picture */}
-      <div className="header-img">
+      <div className="dashboard-header-img">
         <img
           src={user.url}
           alt={"Photo of " + user.first_name}
