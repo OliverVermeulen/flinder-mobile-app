@@ -25,13 +25,14 @@
   font-weight: 500;
   font-style: italic;
   animation: pulsate 0.11s ease-in-out infinite alternate;
+  cursor: default;
 }
 .dashboard-header .dashboard-header-img {
   width: 35px;
   height: 35px;
   border-radius: 50%;
   overflow: hidden;
-  background-color: #33363831;
+  background-color: #3336386c;
 }
 .dashboard-header .dashboard-header-img img {
   width: 100%;
@@ -124,7 +125,7 @@
   border-radius: 50%;
   overflow: hidden;
   margin: 10px;
-  background-color: #33363831;
+  background-color: #3336386c;
 }
 
 .matches-display .img-container img {

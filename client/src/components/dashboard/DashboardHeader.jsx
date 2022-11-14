@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-const ChatHeader = ({ user, page }) => {
+const DashboardHeader = ({ user, page }) => {
   const navigate = useNavigate();
 
   // Redirect to Profile page
@@ -26,4 +26,4 @@ const ChatHeader = ({ user, page }) => {
     </div>
   );
 };
-export default ChatHeader;
+export default DashboardHeader;

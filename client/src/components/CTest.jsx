@@ -2,7 +2,7 @@ import TinderCard from "react-tinder-card";
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 import axios from "axios";
-import ChatHeader from "./dashboard/DashboardHeader";
+import DashboardHeader from "./dashboard/DashboardHeader";
 import { CiLocationOn } from "react-icons/ci";
 
 const CTest = (page) => {
@@ -83,7 +83,7 @@ const CTest = (page) => {
       {user && (
         <>
           {/* Header */}
-          <ChatHeader user={user} page={!page} />
+          <DashboardHeader user={user} page={!page} />
 
           {/* Match */}
           <div className="match">

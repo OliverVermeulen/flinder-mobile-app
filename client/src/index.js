@@ -5,6 +5,7 @@ import "./css/style.css";
 // import "./css/onboarding.css";
 import "./css/dashboard2.css";
 // import "./css/profile.css";
+import "./css/profile2.css";
 import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

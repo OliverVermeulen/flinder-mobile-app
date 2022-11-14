@@ -1,4 +1,4 @@
-import ChatHeader from "./DashboardHeader";
+import DashboardHeader from "./DashboardHeader";
 import MatchesDisplay from "../MatchesDisplay.jsx";
 import ChatDisplay from "./ChatDisplay";
 import { useState } from "react";
@@ -8,7 +8,7 @@ const ChatContainer = ({ user, page }) => {
 
   return (
     <>
-      <ChatHeader user={user} page={!page} />
+      <DashboardHeader user={user} page={!page} />
       <div className="chat-container">
         {/* Display Module */}
         <div className="options">
