@@ -2,6 +2,7 @@ import Home from "./pages/Home";
 import Onboarding from "./pages/Onboarding";
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
+import Update from "./pages/Update";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useCookies } from "react-cookie";
 
@@ -20,6 +21,9 @@ const App = () => {
 
         {/* Dashboard */}
         {authToken && <Route path="/dashboard/*" element={<Dashboard />} />}
+
+        {/* Update */}
+        {authToken && <Route path="/update" element={<Update />} />}
 
         {/* Profile */}
         {authToken && <Route path="/profile" element={<Profile />} />}

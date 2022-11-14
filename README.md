@@ -15,9 +15,8 @@ In my Project specifically I aim to make a dating app inspired by Tinder using t
 ## Features
 
 1. The ability to register, sign in and out
-2. The ability to to add and update personal user info
-3. The ability to swipe and match with potential partners
-4. The ability to chat to matches
+2. The ability to swipe and match with potential partners
+3. The ability to chat to matches
 
 ## MVP
 
