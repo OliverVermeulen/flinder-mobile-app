@@ -54,7 +54,7 @@ const Onboarding = () => {
 
   return (
     <>
-      <div className="onboarding-overlay">
+      <div className="overlay">
         {/* Header */}
         <Header minimal={true} setShowModal={() => {}} showModal={false} />
 

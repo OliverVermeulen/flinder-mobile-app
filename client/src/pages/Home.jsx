@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import AuthModal from "../components/AuthModel";
+import AuthModal from "../components/home/AuthModel";
 import { useState } from "react";
 import { useCookies } from "react-cookie";
 
@@ -21,7 +21,7 @@ const Home = () => {
   };
 
   return (
-    <div className="home-overlay">
+    <div className="overlay">
       {/* Header */}
       <Header
         authToken={authToken}

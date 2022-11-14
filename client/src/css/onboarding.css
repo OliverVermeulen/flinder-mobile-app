@@ -1,35 +1,21 @@
 /* ----- Onboarding ----- */
-/* Onboarding Overlay */
-.onboarding-overlay {
-  width: 100%;
-  height: 100vh;
-  background: var(--background-image);
-  background-color: #242627;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 
-.onboarding {
-  height: 100vh;
-}
 /* Onboarding Form */
 .onboarding form {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
   text-align: start;
   justify-content: center;
-  min-width: 340px;
-  max-width: 480px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: fit-content;
   background-color: #242627;
+  border-radius: 20px;
+  padding: 40px;
   border: 1px solid var(--white);
   box-shadow: var(--neon-shadow);
-  border-radius: 20px;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
-  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Form Heading */
@@ -37,7 +23,7 @@
   font-size: 30px;
   font-weight: 400;
   font-style: italic;
-  margin: 0px;
+  margin: 8px 0px;
   color: var(--white);
   animation: pulsate 0.11s ease-in-out infinite alternate;
   text-align: center;
@@ -45,7 +31,7 @@
 
 /* Form Input Label */
 .onboarding form label {
-  margin: 10px 0;
+  margin: 0;
   color: var(--white);
   font-size: 20px;
 }
@@ -53,7 +39,7 @@
 /* Input */
 .onboarding form input {
   padding: 8px;
-  margin-bottom: 8px;
+  margin: 4px 0 8px 0;
   border-radius: 5px;
   outline: none;
   border: 2px solid var(--light-grey);
@@ -72,12 +58,13 @@
 .onboarding form select {
   appearance: none;
   padding: 8px;
-  margin-bottom: 8px;
+  margin: 4px 0 8px 0;
   font-size: 17px;
   border-radius: 5px;
   outline: none;
   border: 2px solid var(--light-grey);
   cursor: pointer;
+  width: 100%;
 }
 
 /* Multiple Input Container */
@@ -85,10 +72,10 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-bottom: 10px;
 }
 .onboarding form .multiple-input-container {
   display: flex;
-  flex-direction: row;
   gap: 10px;
 }
 .onboarding form .gender {
@@ -98,9 +85,9 @@
   padding: 10px;
   border: solid 2px var(--light-grey);
   border-radius: 10px;
-  transition: all 0.3s;
-  margin: 0;
-  margin-bottom: 8px;
+  transition: 0.4s;
+  margin: 4px 0 8px 0;
+  margin-top: 4px;
   background-color: var(--white);
   cursor: pointer;
 }
@@ -126,19 +113,69 @@
   padding: 12px 30px;
   border-radius: 30px;
   border: solid 2px var(--light-grey);
-  margin: 8px auto;
+  margin: 4px auto;
   cursor: pointer;
   width: fit-content;
   text-align: center;
+  transition: 0.4s;
 }
 .test {
   display: flex;
-  flex-direction: row;
 }
 .gender-label {
   display: flex;
-  flex-direction: row;
 }
 .gender-label label {
   width: 50%;
+}
+
+/* Media Query for Mobile Devices (portrait mode) */
+@media (max-width: 480px) {
+  .onboarding form {
+    margin: 5px auto;
+    width: 350px;
+    padding: 15px;
+  }
+  .test {
+    justify-content: space-between;
+  }
+  .gender-label {
+    text-align: center;
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads and Mobile Devices (portrait mode) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .onboarding form {
+    margin: 5px auto;
+    width: 480px;
+    padding: 20px;
+  }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .onboarding form {
+    margin: 5% auto;
+    width: 480px;
+    padding: 20px;
+  }
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .onboarding form {
+    margin: 1% auto;
+    width: 480px;
+    padding: 20px;
+  }
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+  .onboarding form {
+    margin: 1% auto;
+    width: 480px;
+    padding: 20px;
+  }
 }
