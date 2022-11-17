@@ -43,7 +43,7 @@ const MatchesDisplay = ({ matches, setClickedUser }) => {
         >
           {/* Match Profile Picture */}
           <div className="img-container" title={match?.first_name}>
-            <img src={match?.url} alt={match?.first_name + " profile"} />
+            <img src={match?.url} alt={match?.first_name} />
           </div>
 
           {/* Match Name */}

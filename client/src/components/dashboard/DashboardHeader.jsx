@@ -5,7 +5,7 @@ const DashboardHeader = ({ user, page }) => {
 
   // Redirect to Profile page
   const redirect = () => {
-    navigate("/profile");
+    navigate("/dashboard/profile");
   };
 
   return (

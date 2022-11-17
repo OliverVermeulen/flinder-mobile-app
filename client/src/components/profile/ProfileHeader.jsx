@@ -30,11 +30,6 @@ const ProfileHeader = () => {
     window.location.reload(navigate("/"));
   };
 
-  // Navigate back to previous game
-  const previousPage = () => {
-    navigate("/dashboard/swipe", { replace: true });
-  };
-
   useEffect(() => {
     getUser();
   }, []);
@@ -53,9 +48,6 @@ const ProfileHeader = () => {
         <div className="profile-header-content">
           <p onClick={logout}>
             <BiExit /> Log Out
-          </p>
-          <p onClick={previousPage}>
-            <BsArrowReturnLeft /> Back
           </p>
         </div>
       </div>

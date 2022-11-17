@@ -13,10 +13,14 @@ const ChatInput = ({
   const userId = user?.user_id;
   const clickUserId = clickedUser?.user_id;
 
+  const now = new Date();
+  const current = now.getHours() + ":" + now.getMinutes();
+
   // Add Message
   const addMessage = async () => {
     const message = {
       timestamp: new Date().toISOString(),
+      time: now.getHours() + ":" + now.getMinutes(),
       from_userId: userId,
       to_userId: clickUserId,
       message: textArea,
@@ -46,7 +50,7 @@ const ChatInput = ({
         onChange={setTextArea}
         cleanOnEnter
         placeholder="Type a message"
-        required
+        required={true}
         maxLength="500"
       />
 

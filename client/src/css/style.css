@@ -21,11 +21,15 @@ body {
   --light-grey: rgb(121, 119, 119);
   --gradient: linear-gradient(
     to right,
-    #f25ebf,
+    /* #f25ebf,
     #db27f2,
     #7f0cf2,
     #044bd9,
-    #0785f2
+    #0785f2 */ #f21ba7,
+    #d932bd,
+    #7f50bf,
+    #4b83f2,
+    #2994f2
   );
   --neon-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #7f0cf2,
     0 0 0.8rem #7f0cf2, 0 0 2.8rem #7f0cf2, inset 0 0 1.3rem #7f0cf2;
@@ -51,6 +55,10 @@ body {
   }
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .overlay {
   width: 100%;
   height: 100%;
@@ -60,7 +68,6 @@ body {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  /* overflow: hidden; */
   overflow: auto;
 }
 
@@ -75,15 +82,11 @@ body {
   border: none;
   background-size: 300% 100%;
   border-radius: 50px;
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   background-image: var(--gradient);
 }
 .primary-button:hover {
   background-position: 100% 0;
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 .primary-button:focus {

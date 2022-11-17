@@ -39,7 +39,8 @@
 .profile-header .profile-header-content {
   display: none;
   position: absolute;
-  left: -100px;
+  left: -90px;
+  width: 120px;
   background-color: var(--bg-color);
   z-index: 1;
   border-radius: 20px;
@@ -71,7 +72,7 @@
   width: 100%;
   height: 100%;
   max-width: 480px;
-  max-height: calc(100vh - 60px);
+  max-height: calc(100vh - 100px);
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
@@ -82,7 +83,7 @@
   position: relative;
   background-color: #3336388a;
   width: 100%;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 100px);
   background-size: cover;
   background-position: center;
 }
