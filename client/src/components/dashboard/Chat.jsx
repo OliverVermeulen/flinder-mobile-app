@@ -12,8 +12,8 @@ const Chat = ({ descendingOrderMessages }) => {
             <div key={_index}>
               {/* Split Chat */}
               <div
-                className={`chat-message-header ${
-                  message.from_userId === userId && "owner"
+                className={`chat-message ${
+                  message.from_userId === userId && "user"
                 }`}
               >
                 {/* User / Match Profile Picture */}
@@ -22,9 +22,9 @@ const Chat = ({ descendingOrderMessages }) => {
                 </div>
 
                 {/* Message */}
-                <div className="text-message">
+                <div className="message">
                   <p>{message.message}</p>
-                  <p className="message-time">{message.time}</p>
+                  <p className="timestamp">{message.time}</p>
                 </div>
               </div>
             </div>

@@ -49,8 +49,9 @@ const ChatInput = ({
         value={textArea}
         onChange={setTextArea}
         cleanOnEnter
-        placeholder="Type a message"
+        placeholder="Message"
         required={true}
+        minLength="1"
         maxLength="500"
       />
 

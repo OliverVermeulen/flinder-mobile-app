@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
 }
+
 html,
 body {
   margin: 0;
@@ -15,17 +16,14 @@ body {
 
 /* Color Root */
 :root {
-  --bg-color: #37393b;
+  --dark-grey: #242627;
+  --light-grey: rgb(121, 119, 119);
+  --disabled: rgb(199, 199, 199);
   --black: #000;
   --white: #fff;
-  --light-grey: rgb(121, 119, 119);
   --gradient: linear-gradient(
     to right,
-    /* #f25ebf,
-    #db27f2,
-    #7f0cf2,
-    #044bd9,
-    #0785f2 */ #f21ba7,
+    #f21ba7,
     #d932bd,
     #7f50bf,
     #4b83f2,
@@ -55,45 +53,25 @@ body {
   }
 }
 
+/* Disable Scrollbar */
 ::-webkit-scrollbar {
   display: none;
 }
 
+/* Background Overlay */
 .overlay {
   width: 100%;
   height: 100%;
   position: fixed;
   background: var(--overlay);
-  background-color: #242627;
+  background-color: var(--dark-grey);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   overflow: auto;
 }
 
-.primary-button {
-  width: 200px;
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--white);
-  cursor: pointer;
-  height: 55px;
-  text-align: center;
-  border: none;
-  background-size: 300% 100%;
-  border-radius: 50px;
-  transition: all 0.4s ease-in-out;
-  background-image: var(--gradient);
-}
-.primary-button:hover {
-  background-position: 100% 0;
-  transition: all 0.4s ease-in-out;
-}
-.primary-button:focus {
-  outline: none;
-}
-
-/* header */
+/* Header */
 .header {
   width: 100%;
   display: flex;
@@ -127,23 +105,19 @@ body {
   border: none;
   background-size: 300% 100%;
   border-radius: 50px;
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   background-image: var(--gradient);
 }
 .header .header-button:hover {
   background-position: 100% 0;
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 .header .header-button:focus {
   outline: none;
 }
 .header .header-button:disabled {
-  color: rgb(199, 199, 199);
-  background: #f25ebf;
+  color: var(--disabled);
+  background: #d932bd;
   transition: none;
   cursor: auto;
 }

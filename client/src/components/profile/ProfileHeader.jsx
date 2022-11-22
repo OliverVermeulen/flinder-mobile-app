@@ -35,17 +35,17 @@ const ProfileHeader = () => {
   }, []);
 
   return (
-    <div className="profile-header">
-      <p className="profile-header-name" title="Profile">
+    <div className="dashboard-header">
+      <p className="dashboard-header-name" title="Profile">
         Profile
       </p>
-      <div className="profile-header-dropdown">
-        <button className="settings" title="Settings">
+      <div className="profile-dropdown">
+        <button className="icon" title="Settings">
           <BsGearFill />
         </button>
 
         {/* Header Dropdown */}
-        <div className="profile-header-content">
+        <div className="profile-dropdown-content">
           <p onClick={logout}>
             <BiExit /> Log Out
           </p>

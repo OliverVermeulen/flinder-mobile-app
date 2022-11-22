@@ -9,7 +9,7 @@
   right: 0;
   margin: 0 auto;
   height: fit-content;
-  background-color: #242627;
+  background-color: var(--dark-grey);
   border-radius: 20px;
   padding: 40px;
   border: 1px solid var(--white);
