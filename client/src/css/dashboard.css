@@ -199,6 +199,13 @@
   line-height: 15px;
 }
 /* Emoji Selector */
+.react-emoji-picker--wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 357px !important;
+  width: 357px !important;
+}
 .emoji-mart {
   width: 357px !important;
 }
@@ -284,6 +291,12 @@
   .user-info {
     bottom: 5%;
   }
+/* Emoji Selector */
+  .react-emoji-picker--wrapper {
+    left: 50%;
+    height: 250px !important;
+    width: 357px !important;
+  }
 }
 
 /* Media Query for Tablets Ipads portrait mode */
@@ -302,6 +315,12 @@
   .user-info {
     bottom: 5%;
   }
+  /* Emoji Selector */
+  .react-emoji-picker--wrapper {
+    left: 60%;
+    height: 250px !important;
+    width: 357px !important;
+  }
 }
 
 /* Media Query for Laptops and Desktops */
@@ -313,6 +332,12 @@
   .user-info {
     bottom: 4%;
   }
+  /* Emoji Selector */
+  .react-emoji-picker--wrapper {
+    left: 70%;
+    height: 357px !important;
+    width: 357px !important;
+  }
 }
 
 /* Media Query for Large screens */
@@ -323,5 +348,11 @@
   }
   .user-info {
     bottom: 4%;
+  }
+  /* Emoji Selector */
+  .react-emoji-picker--wrapper {
+    left: 75%;
+    height: 357px !important;
+    width: 357px !important;
   }
 }
