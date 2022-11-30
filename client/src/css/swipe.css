@@ -95,7 +95,18 @@
 
 /* Media Query for low resolution  Tablets, Ipads and Mobile Devices (portrait mode) */
 @media (min-width: 481px) and (max-width: 767px) {
-
+  .card-container {
+    width: 400px;
+    height: calc(100vh - 200px);
+  }
+  .card {
+    width: 400px;
+    height: calc(100vh - 200px);
+  }
+  .info-text {
+    position: absolute;
+    bottom: -45px;
+  }
 }
 
 /* Media Query for Tablets Ipads portrait mode */

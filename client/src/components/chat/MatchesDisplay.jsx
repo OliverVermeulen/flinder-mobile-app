@@ -1,11 +1,11 @@
+// Packages
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 
 const MatchesDisplay = ({ matches, setClickedUser }) => {
-  const [matchedProfiles, setMatchedProfiles] = useState(null);
   const [cookies] = useCookies(null);
-
+  const [matchedProfiles, setMatchedProfiles] = useState(null);
   const matchedUserIds = matches.map(({ user_id }) => user_id);
   const userId = cookies.UserId;
 

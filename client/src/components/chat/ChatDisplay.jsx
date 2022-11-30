@@ -1,7 +1,9 @@
-import Chat from "./Chat";
-import ChatInput from "./ChatInput";
+// Packages
 import axios from "axios";
 import { useState, useEffect } from "react";
+// Components
+import ChatMessages from "./ChatMessages";
+import ChatInput from "./ChatInput";
 
 const ChatDisplay = ({ user, clickedUser }) => {
   const userId = user?.user_id;
@@ -40,6 +42,7 @@ const ChatDisplay = ({ user, clickedUser }) => {
 
   const messages = [];
 
+  // Loop Through User Messages
   usersMessages?.forEach((message) => {
     const formattedMessage = {};
     formattedMessage["name"] = user?.first_name;
@@ -51,6 +54,7 @@ const ChatDisplay = ({ user, clickedUser }) => {
     messages.push(formattedMessage);
   });
 
+  // Loop Through Clicked User Messages
   clickedUsersMessages?.forEach((message) => {
     const formattedMessage = {};
     formattedMessage["name"] = clickedUser?.first_name;
@@ -61,15 +65,15 @@ const ChatDisplay = ({ user, clickedUser }) => {
     messages.push(formattedMessage);
   });
 
-  // Order Messages based on time stamp
+  // Order Messages Based on Timestamp
   const descendingOrderMessages = messages?.sort((a, b) =>
     a.timestamp.localeCompare(b.timestamp)
   );
 
   return (
     <>
-      {/* Chat */}
-      <Chat descendingOrderMessages={descendingOrderMessages} />
+      {/* Chat Messages */}
+      <ChatMessages descendingOrderMessages={descendingOrderMessages} />
 
       {/* Chat Input */}
       <ChatInput

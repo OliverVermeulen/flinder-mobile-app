@@ -1,7 +1,8 @@
+// Packages
 import { useState } from "react";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import { MdClose } from "react-icons/md";
 
 const AuthModal = ({ setShowModal, isSignUp }) => {
@@ -10,13 +11,13 @@ const AuthModal = ({ setShowModal, isSignUp }) => {
   const [confirmPassword, setConfirmPassword] = useState(null);
   const [error, setError] = useState(null);
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
-
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleClick = () => {
     setShowModal(false);
   };
 
+  // Submit Form
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -34,8 +35,11 @@ const AuthModal = ({ setShowModal, isSignUp }) => {
       setCookie("UserId", response.data.userId);
 
       const success = response.status === 201;
+
+      // If Not Signed Up Navigate to Onboarding
       if (success && isSignUp) navigate("/onboarding");
-      // if (success && !isSignUp) navigate("/dashboard");
+
+      // If Signed Up Navigate To Dashboard
       if (success && !isSignUp) navigate("/dashboard/swipe");
       window.location.reload();
     } catch (error) {

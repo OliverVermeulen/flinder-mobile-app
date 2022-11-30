@@ -1,3 +1,4 @@
+// Packages
 import { useState } from "react";
 import axios from "axios";
 import InputEmoji from "react-input-emoji";
@@ -12,15 +13,13 @@ const ChatInput = ({
   const [textArea, setTextArea] = useState("");
   const userId = user?.user_id;
   const clickUserId = clickedUser?.user_id;
-
   const now = new Date();
-  const current = now.getHours() + ":" + now.getMinutes();
 
   // Add Message
   const addMessage = async () => {
     const message = {
       timestamp: new Date().toISOString(),
-      time: now.getHours() + ":" + now.getMinutes(),
+      time: now.getHours() + ":" + now.getMinutes(), // Calculate Time Sent
       from_userId: userId,
       to_userId: clickUserId,
       message: textArea,

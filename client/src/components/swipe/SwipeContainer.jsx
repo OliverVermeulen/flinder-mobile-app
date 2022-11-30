@@ -2,10 +2,10 @@ import TinderCard from "react-tinder-card";
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 import axios from "axios";
-import DashboardHeader from "./dashboard/DashboardHeader";
+import DashboardHeader from "../dashboard/DashboardHeader";
 import { CiLocationOn } from "react-icons/ci";
 
-const CTest = (page) => {
+const SwipeContainer = (page) => {
   const [user, setUser] = useState(null);
   const [genderedUsers, setGenderedUsers] = useState(null);
   const [lastDirection, setLastDirection] = useState();
@@ -130,4 +130,4 @@ const CTest = (page) => {
     </>
   );
 };
-export default CTest;
+export default SwipeContainer;

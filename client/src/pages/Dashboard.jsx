@@ -1,5 +1,5 @@
+import SwipeContainer from "../components/swipe/SwipeContainer";
 import ATest from "../components/ATest";
-import CTest from "../components/CTest";
 import ProfileContainer from "../components/profile/ProfileContainer";
 import DashboardNav from "../components/dashboard/DashboardNav";
 import { Route, Routes } from "react-router-dom";
@@ -9,7 +9,7 @@ const Dashboard = () => {
     <div className="overlay">
       <Routes>
         {/* Swipe Page */}
-        <Route path="swipe" element={<CTest />} />
+        <Route path="swipe" element={<SwipeContainer />} />
 
         {/* Chat Page */}
         <Route path="chat" element={<ATest />} />

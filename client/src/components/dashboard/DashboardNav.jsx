@@ -1,4 +1,4 @@
-import { Link, useMatch, useResolvedPath } from "react-router-dom";
+// Packages
 import {
   MdOutlineSwipe,
   MdSwipe,
@@ -6,38 +6,32 @@ import {
   MdChatBubble,
 } from "react-icons/md";
 import { RiUser3Fill, RiUser3Line } from "react-icons/ri";
+// Components
+import NavLink from "./NavLink";
+
 const DashboardNav = () => {
   return (
     <nav className="dashboard-nav">
       <ul>
-        <CustomLink to="swipe">
+        {/* Swipe Page */}
+        <NavLink to="swipe">
           <MdOutlineSwipe className="icon-inactive" />
           <MdSwipe className="icon-active" />
-        </CustomLink>
+        </NavLink>
 
-        <CustomLink to="chat">
+        {/* Chat Page */}
+        <NavLink to="chat">
           <MdChatBubbleOutline className="icon-inactive" />
           <MdChatBubble className="icon-active" />
-        </CustomLink>
+        </NavLink>
 
-        <CustomLink to="profile">
+        {/* Profile Page */}
+        <NavLink to="profile">
           <RiUser3Line className="icon-inactive" />
           <RiUser3Fill className="icon-active" />
-        </CustomLink>
+        </NavLink>
       </ul>
     </nav>
   );
 };
 export default DashboardNav;
-
-const CustomLink = ({ to, children, ...props }) => {
-  const resolvedPath = useResolvedPath(to);
-  const isActive = useMatch({ path: resolvedPath.pathname, end: true });
-  return (
-    <li className={isActive ? "active" : ""}>
-      <Link to={to} {...props}>
-        {children}
-      </Link>
-    </li>
-  );
-};

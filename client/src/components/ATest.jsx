@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
-import ChatContainer from "./dashboard/ChatContainer";
+import ChatContainer from "./chat/ChatContainer";
 import axios from "axios";
 
 const ATest = () => {

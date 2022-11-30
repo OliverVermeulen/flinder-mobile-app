@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+import Header from "../components/home/Header";
 import { useState } from "react";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";

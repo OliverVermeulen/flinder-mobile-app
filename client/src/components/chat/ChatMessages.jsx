@@ -1,12 +1,14 @@
+// Packages
 import { useCookies } from "react-cookie";
 import ScrollToBottom from "react-scroll-to-bottom";
 
-const Chat = ({ descendingOrderMessages }) => {
+const ChatMessages = ({ descendingOrderMessages }) => {
   const [cookies] = useCookies(["user"]);
   const userId = cookies.UserId;
   return (
     <>
       <div className="chat-box">
+        {/* Scroll Chat To Bottom */}
         <ScrollToBottom className="chat-display">
           {descendingOrderMessages.map((message, _index) => (
             <div key={_index}>
@@ -35,4 +37,4 @@ const Chat = ({ descendingOrderMessages }) => {
   );
 };
 
-export default Chat;
+export default ChatMessages;

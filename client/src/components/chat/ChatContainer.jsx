@@ -1,26 +1,27 @@
-import DashboardHeader from "./DashboardHeader";
-import MatchesDisplay from "../MatchesDisplay.jsx";
-import ChatDisplay from "./ChatDisplay";
+// Packages
 import { useState } from "react";
-
 import { createRipples } from "react-ripples";
-
-const MyRipples = createRipples({
-  color: "#3336386c",
-  during: 1000,
-});
+// Components
+import DashboardHeader from "../dashboard/DashboardHeader";
+import MatchesDisplay from "./MatchesDisplay.jsx";
+import ChatDisplay from "./ChatDisplay";
 
 const ChatContainer = ({ user, page }) => {
   const [clickedUser, setClickedUser] = useState(null);
+  // Ripples
+  const MyRipples = createRipples({
+    color: "#3336386c",
+    during: 1000,
+  });
 
   return (
     <>
+      {/* Dashboard Header */}
       <DashboardHeader user={user} page={!page} />
 
       <div className="chat-container">
-        {/* Display Module */}
+        {/* Chat Navigation */}
         <div className="chat-nav">
-          {/* Matches Display */}
           <MyRipples>
             <button
               className="option-btn"
@@ -31,7 +32,6 @@ const ChatContainer = ({ user, page }) => {
             </button>
           </MyRipples>
 
-          {/* Chat Display */}
           <MyRipples>
             <button className="option-btn" disabled={!clickedUser} title="Chat">
               Chat
@@ -39,6 +39,7 @@ const ChatContainer = ({ user, page }) => {
           </MyRipples>
         </div>
 
+        {/* Display Page */}
         {!clickedUser && (
           <MatchesDisplay
             matches={user.matches}
