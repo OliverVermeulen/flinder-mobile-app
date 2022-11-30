@@ -101,7 +101,7 @@
   display: none;
 }
 .onboarding form input[type="radio"]:checked + label {
-  border: solid 2px #7f0cf2;
+  border: solid 2px var(--purple);
   color: var(--black);
 }
 

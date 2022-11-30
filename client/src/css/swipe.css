@@ -1,0 +1,135 @@
+/* Match Page */
+.match {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.card-container {
+  width: 400px;
+  height: 600px;
+}
+.swipe {
+  position: absolute;
+}
+
+/* Card */
+.card {
+  position: relative;
+  background-color: var(--dark-grey);
+  width: 400px;
+  height: 600px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  cursor: grab;
+}
+.card .match-info {
+  position: absolute;
+  bottom: 0;
+  margin: 5%;
+  color: var(--white);
+  width: 90%;
+  background-color: var(--dark-grey);
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--white);
+  box-shadow: var(--neon-shadow);
+}
+.card .match-info .info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.card .match-info p {
+  margin: 0;
+  font-weight: 200;
+}
+.card .match-info .match-name {
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+  animation: pulsate 0.11s ease-in-out infinite alternate;
+}
+.card .match-info .province-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+/* Info Text */
+.info-text {
+  color: var(--white);
+  animation: pulsate 0.11s ease-in-out infinite alternate;
+  font-style: italic;
+  font-size: 30px;
+  font-weight: 500;
+  /* position: absolute;
+  bottom: -35px; */
+}
+
+/* Media Query for Mobile Devices (portrait mode) */
+@media (max-width: 480px) {
+  .card-container {
+    width: 350px;
+    height: calc(100vh - 200px);
+  }
+  .card {
+    width: 350px;
+    height: calc(100vh - 200px);
+  }
+  .info-text {
+    position: absolute;
+    bottom: -45px;
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads and Mobile Devices (portrait mode) */
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .card-container {
+    width: 400px;
+    height: calc(100vh - 200px);
+  }
+  .card {
+    width: 400px;
+    height: calc(100vh - 200px);
+  }
+  .info-text {
+    position: absolute;
+    bottom: -45px;
+  }
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .card-container {
+    width: 400px;
+    height: calc(100vh - 200px);
+  }
+  .card {
+    width: 400px;
+    height: calc(100vh - 200px);
+  }
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+  .info-text {
+    position: absolute;
+    bottom: -35px;
+  }
+}

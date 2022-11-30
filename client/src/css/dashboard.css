@@ -1,34 +1,3 @@
-/* Dashboard Header */
-.dashboard-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 60px;
-  width: 100%;
-  color: var(--white);
-  background-color: #7f0cf2;
-  padding: 0px 10px;
-}
-.dashboard-header .dashboard-header-name {
-  font-size: 35px;
-  font-weight: 500;
-  font-style: italic;
-  animation: pulsate 0.11s ease-in-out infinite alternate;
-  cursor: default;
-}
-.dashboard-header .dashboard-header-img {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  overflow: hidden;
-  background-color: #3336386c;
-}
-.dashboard-header .dashboard-header-img img {
-  width: 100%;
-  cursor: pointer;
-}
-
-/* --- Chat Page --- */
 /* Dashboard Chat Display */
 .chat-nav {
   display: flex;
@@ -73,7 +42,7 @@
   border-radius: 50%;
   overflow: hidden;
   margin: 10px;
-  background-color: #33363831;
+  background-color: var(--smoke);
 }
 .chat-container .img-container img {
   width: 100%;
@@ -95,7 +64,7 @@
   transition: 0.2s;
 }
 .match-card:hover {
-  background-color: #33363831;
+  background-color: var(--smoke);
 }
 .match-card .match-name {
   font-size: 20px;
@@ -147,7 +116,7 @@
   padding-right: 0px;
   display: flex;
   flex-direction: row;
-  background-color: #7f0cf2;
+  background-color: var(--purple);
   position: absolute;
   bottom: 40px;
   width: 100%;
@@ -217,40 +186,6 @@
   fill: var(--disabled) !important;
 }
 
-/* Dashboard Nav */
-.dashboard-nav {
-  background-color: var(--dark-grey);
-  color: var(--white);
-  display: flex;
-  align-items: stretch;
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-}
-.dashboard-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-}
-.dashboard-nav li.active .icon-inactive,
-.dashboard-nav li .icon-active {
-  display: none;
-}
-.dashboard-nav li.active .icon-active,
-.dashboard-nav li .icon-inactive {
-  display: block;
-}
-.dashboard-nav a {
-  color: inherit;
-  text-decoration: none;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding: 10px 0;
-  font-size: 20px;
-}
-
 /* Media Query for Mobile Devices (portrait mode) */
 @media (max-width: 480px) {
   /* Chat */
@@ -291,7 +226,7 @@
   .user-info {
     bottom: 5%;
   }
-/* Emoji Selector */
+  /* Emoji Selector */
   .react-emoji-picker--wrapper {
     left: 50%;
     height: 250px !important;

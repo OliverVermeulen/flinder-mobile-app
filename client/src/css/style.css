@@ -14,13 +14,17 @@ body {
   padding: 0;
 }
 
-/* Color Root */
 :root {
+  /* Colors */
   --dark-grey: #242627;
   --light-grey: rgb(121, 119, 119);
   --disabled: rgb(199, 199, 199);
   --black: #000;
   --white: #fff;
+  --purple: #7f0cf2;
+  --smoke: #33363831;
+
+  /* Gradient */
   --gradient: linear-gradient(
     to right,
     #f21ba7,
@@ -29,8 +33,12 @@ body {
     #4b83f2,
     #2994f2
   );
+
+  /* Shadow */
   --neon-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #7f0cf2,
     0 0 0.8rem #7f0cf2, 0 0 2.8rem #7f0cf2, inset 0 0 1.3rem #7f0cf2;
+
+  /* Overlay */
   --overlay: repeating-linear-gradient(
       0deg,
       rgba(255, 255, 255, 0.05) 0px,
@@ -120,4 +128,68 @@ body {
   background: #d932bd;
   transition: none;
   cursor: auto;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  width: 100%;
+  color: var(--white);
+  background-color: var(--purple);
+  padding: 0px 10px;
+}
+.dashboard-header .dashboard-header-name {
+  font-size: 35px;
+  font-weight: 500;
+  font-style: italic;
+  animation: pulsate 0.11s ease-in-out infinite alternate;
+  cursor: default;
+}
+.dashboard-header .dashboard-header-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--smoke);
+}
+.dashboard-header .dashboard-header-img img {
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Dashboard Nav */
+.dashboard-nav {
+  background-color: var(--dark-grey);
+  color: var(--white);
+  display: flex;
+  align-items: stretch;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+.dashboard-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.dashboard-nav li.active .icon-inactive,
+.dashboard-nav li .icon-active {
+  display: none;
+}
+.dashboard-nav li.active .icon-active,
+.dashboard-nav li .icon-inactive {
+  display: block;
+}
+.dashboard-nav a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 20px;
 }
