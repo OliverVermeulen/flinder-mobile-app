@@ -26,13 +26,13 @@ In my Project specifically I aim to make a dating app inspired by Tinder using t
 ## Backlog
 
 - Fix react-tinder-card error(fixed)
-- Fix navbar
-- Style all pages
+- Fix navbar (fixed)
+- Style all pages (complete)
 - Make help page
 - Make profile pages (complete)
-- Add better Mongo.uri
-- fix matches colour bug
-- fix chat box stretching
+- Add better Mongo.uri 
+- Fix matches color bug (fixed)
+- Fix chat box stretching (complete)
 
 ## Future additions
 
@@ -43,3 +43,7 @@ In my Project specifically I aim to make a dating app inspired by Tinder using t
 ## Repo link
 
 https://github.com/OliverVermeulen/flinder-mobile-app
+
+## Disclaimer
+
+This is only project inspired by Tinder, I do not own Tinder nor do I claim to.

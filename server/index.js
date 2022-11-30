@@ -1,20 +1,21 @@
+// Server Port Number
 const PORT = 8000;
+// Packages
 const express = require("express");
+app.use(express.json());
+const cors = require("cors");
+app.use(cors());
 const { MongoClient } = require("mongodb");
 const { v4: uuidv4 } = require("uuid");
 const jwt = require("jsonwebtoken");
-const cors = require("cors");
 const bcrypt = require("bcrypt");
 require("dotenv").config();
 const uri = process.env.URI;
 const app = express();
 
-app.use(cors());
-app.use(express.json());
-
 // Default
 app.get("/", (req, res) => {
-  res.json("Welcome to my app");
+  res.json("Welcome to Flinder");
 });
 
 // Sign up to the Database
