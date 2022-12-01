@@ -1,30 +1,12 @@
-import { useEffect, useState } from "react";
 import Header from "../components/home/Header";
+import { useEffect,useState } from "react";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const Update = () => {
-    const [user, setUser] = useState(null);
+const Onboarding = () => {
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
-  const userId = cookies.UserId;
-
-    // Get User Data
-    const getUser = async () => {
-        try {
-          const response = await axios.get("http://localhost:8000/user", {
-            params: { userId },
-          });
-          setUser(response.data);
-        } catch (error) {
-          console.log(error);
-        }
-      };
-    
-      useEffect(() => {
-        getUser();
-      }, []);
-
+  const [user, setUser] = useState(null);
   // Form Data
   const [formData, setFormData] = useState({
     user_id: cookies.UserId,
@@ -52,7 +34,7 @@ const Update = () => {
         formData,
       });
       const success = response.status === 200;
-      if (success) navigate("/dashboard/swipe");
+      if (success) navigate("/dashboard/profile");
     } catch (err) {
       console.log(err);
     }
@@ -86,8 +68,7 @@ const Update = () => {
               type="text"
               id="first_name"
               name="first_name"
-              placeholder={user.first_name}
-              required={true}
+              placeholder="Display Name"
               value={formData.first_name}
               onChange={handleChange}
             />
@@ -100,8 +81,7 @@ const Update = () => {
                 type="number"
                 id="dob_day"
                 name="dob_day"
-                placeholder={user.dob_day}
-                required={true}
+                placeholder="DD"
                 value={formData.dob_day}
                 onChange={handleChange}
                 min={1}
@@ -114,8 +94,7 @@ const Update = () => {
                 type="number"
                 id="dob_month"
                 name="dob_month"
-                placeholder={user.dob_month}
-                required={true}
+                placeholder="MM"
                 value={formData.dob_month}
                 onChange={handleChange}
                 min={1}
@@ -128,8 +107,7 @@ const Update = () => {
                 type="number"
                 id="dob_year"
                 name="dob_year"
-                placeholder={user.dob_year}
-                required={true}
+                placeholder="YYYY"
                 value={formData.dob_year}
                 onChange={handleChange}
                 title="Year"
@@ -143,7 +121,6 @@ const Update = () => {
               name="province"
               onChange={handleChange}
               value={formData.province}
-              required={true}
             >
               <option>Choose Province</option>
               <option value="Eastern Cape">Eastern Cape</option>
@@ -277,8 +254,7 @@ const Update = () => {
               type="url"
               id="url"
               name="url"
-              required={true}
-              placeholder={user.url}
+              placeholder="Photo URL"
               onChange={handleChange}
             />
 
@@ -288,8 +264,7 @@ const Update = () => {
               type="text"
               id="about"
               name="about"
-              required={true}
-              placeholder={user.about}
+              placeholder="I like long walks..."
               value={formData.about}
               onChange={handleChange}
               minLength="10"
@@ -297,10 +272,11 @@ const Update = () => {
             />
 
             <input type="submit" />
+            <button>Cancel</button>
           </form>
         </div>
       </div>
     </>
   );
 };
-export default Update;
+export default Onboarding;

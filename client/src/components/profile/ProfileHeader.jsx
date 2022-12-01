@@ -30,6 +30,10 @@ const ProfileHeader = () => {
     window.location.reload(navigate("/"));
   };
 
+  const update = () => {
+    window.location.reload(navigate("/update"));
+  };
+
   useEffect(() => {
     getUser();
   }, []);
@@ -49,6 +53,7 @@ const ProfileHeader = () => {
           <p onClick={logout}>
             <BiExit /> Log Out
           </p>
+          <p onClick={update}>Update</p>
         </div>
       </div>
     </div>
