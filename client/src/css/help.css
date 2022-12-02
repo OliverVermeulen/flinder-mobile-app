@@ -1,0 +1,57 @@
+/* Help Page */
+.help {
+  background-color: var(--dark-grey);
+  border-radius: 20px;
+  padding: 30px 40px 40px 50px;
+  border: 1px solid var(--white);
+  box-shadow: var(--neon-shadow);
+  width: 650px;
+  color: var(--white);
+  font-size: 17px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.help h1 {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 30px;
+  text-shadow: 1px 1px 2px #fff, 0 0 1em #7f0cf2, 0 0 0.2em #7f0cf2;
+  font-style: italic;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Media Query for Mobile Devices (portrait mode) */
+@media (max-width: 480px) {
+  .help {
+    width: 350px;
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads and Mobile Devices (portrait mode) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .help {
+    width: 600px;
+  }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .help {
+    margin-top: 5%;
+  }
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .help {
+    margin-top: 5%;
+  }
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+}

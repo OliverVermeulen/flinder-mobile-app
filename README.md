@@ -30,7 +30,6 @@ In my Project specifically I aim to make a dating app inspired by Tinder using t
 - Style all pages (complete)
 - Make help page
 - Make profile pages (complete)
-- Add better Mongo.uri 
 - Fix matches color bug (fixed)
 - Fix chat box stretching (complete)
 
@@ -39,6 +38,7 @@ In my Project specifically I aim to make a dating app inspired by Tinder using t
 - Add live chat
 - Add ability to send pictures and videos to matches
 - Add in physical distance between matches
+- Add in way to view match data
 
 ## Repo link
 

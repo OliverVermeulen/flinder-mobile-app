@@ -7,9 +7,10 @@ import App from "./App";
 import "./css/style.css";
 import "./css/home.css";
 import "./css/onboarding.css";
-import "./css/dashboard.css";
+import "./css/chat.css";
 import "./css/profile.css";
 import "./css/swipe.css";
+import "./css/help.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

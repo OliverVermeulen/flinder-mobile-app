@@ -35,6 +35,11 @@
   color: var(--white);
   font-size: 20px;
 }
+.question {
+  font-size: 15px;
+  padding-top: 3px;
+  cursor: pointer;
+}
 
 /* Input */
 .onboarding form input {
@@ -68,12 +73,6 @@
 }
 
 /* Multiple Input Container */
-.test-label label {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-bottom: 10px;
-}
 .onboarding form .multiple-input-container {
   display: flex;
   gap: 10px;
@@ -119,7 +118,7 @@
   text-align: center;
   transition: 0.4s;
 }
-.test {
+.gender-container {
   display: flex;
 }
 .gender-label {
@@ -156,7 +155,7 @@
     width: 350px;
     padding: 15px;
   }
-  .test {
+  .gender-container {
     justify-content: space-between;
   }
   .gender-label {

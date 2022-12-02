@@ -1,8 +1,8 @@
 // Packages
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
-import { useNavigate } from "react-router-dom"
-import { MdSettings, MdOutlineLogout } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
+import { MdSettings } from "react-icons/md";
 import axios from "axios";
 
 const ProfileHeader = () => {
@@ -30,6 +30,10 @@ const ProfileHeader = () => {
     window.location.reload(navigate("/"));
   };
 
+  const help = () => {
+    navigate("/help");
+  };
+
   // Executes getUser Function After Render
   useEffect(() => {
     getUser();
@@ -48,9 +52,8 @@ const ProfileHeader = () => {
 
         {/* Header Dropdown */}
         <div className="profile-dropdown-content">
-          <p onClick={logout}>
-            <MdOutlineLogout /> Log Out
-          </p>
+          <p onClick={logout} title="Log Out">Log Out</p>
+          <p onClick={help} title="Help">Help</p>
         </div>
       </div>
     </div>

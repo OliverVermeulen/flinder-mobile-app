@@ -18,8 +18,8 @@
 .profile-dropdown-content {
   display: none;
   position: absolute;
-  left: -90px;
-  width: fit-content;
+  right: 0px;
+  width: 90px;
   background-color: var(--dark-grey);
   z-index: 1;
   border-radius: 20px;
