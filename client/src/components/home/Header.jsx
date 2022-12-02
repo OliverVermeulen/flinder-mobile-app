@@ -21,6 +21,7 @@ const Header = ({
           className="header-button"
           onClick={handleClick}
           disabled={showModal}
+          title="Log In"
         >
           Log In
         </button>

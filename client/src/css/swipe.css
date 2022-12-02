@@ -1,4 +1,4 @@
-/* Match Page */
+/* Swipe Page */
 .match {
   display: flex;
   flex-direction: column;
@@ -9,15 +9,15 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.card-container {
-  width: 400px;
-  height: 600px;
-}
 .swipe {
   position: absolute;
 }
 
 /* Card */
+.card-container {
+  width: 400px;
+  height: 600px;
+}
 .card {
   position: relative;
   background-color: var(--dark-grey);
@@ -73,8 +73,6 @@
   font-style: italic;
   font-size: 30px;
   font-weight: 500;
-  /* position: absolute;
-  bottom: -35px; */
 }
 
 /* Media Query for Mobile Devices (portrait mode) */

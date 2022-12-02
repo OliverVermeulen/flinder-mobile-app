@@ -1,4 +1,4 @@
-// import TinderCard from "react-tinder-card";
+// Packages
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 import { CiLocationOn } from "react-icons/ci";
@@ -21,6 +21,7 @@ const ProfileCard = () => {
     }
   };
 
+  // Executes getUser Function After Render
   useEffect(() => {
     getUser();
   }, []);

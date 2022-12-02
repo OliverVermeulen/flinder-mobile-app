@@ -1,8 +1,8 @@
 // Packages
 import { useState } from "react";
-import axios from "axios";
-import InputEmoji from "react-input-emoji";
 import { MdSend, MdRefresh } from "react-icons/md";
+import InputEmoji from "react-input-emoji";
+import axios from "axios";
 
 const ChatInput = ({
   user,
@@ -24,7 +24,6 @@ const ChatInput = ({
       to_userId: clickUserId,
       message: textArea,
     };
-
     try {
       await axios.post("http://localhost:8000/message", { message });
       getUserMessages();

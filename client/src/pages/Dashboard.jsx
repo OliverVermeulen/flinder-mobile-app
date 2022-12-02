@@ -1,18 +1,21 @@
+// Packages
+import { Route, Routes } from "react-router-dom";
+// Components
 import SwipeContainer from "../components/swipe/SwipeContainer";
-import ATest from "../components/ATest";
+import ChatContainer from "../components/chat/ChatContainer";
 import ProfileContainer from "../components/profile/ProfileContainer";
 import DashboardNav from "../components/dashboard/DashboardNav";
-import { Route, Routes } from "react-router-dom";
 
 const Dashboard = () => {
   return (
     <div className="overlay">
+      {/* Router */}
       <Routes>
         {/* Swipe Page */}
         <Route path="swipe" element={<SwipeContainer />} />
 
         {/* Chat Page */}
-        <Route path="chat" element={<ATest />} />
+        <Route path="chat" element={<ChatContainer />} />
 
         {/* Profile Page */}
         <Route path="profile" element={<ProfileContainer />} />

@@ -10,6 +10,7 @@ const ChatDisplay = ({ user, clickedUser }) => {
   const clickedUserId = clickedUser?.user_id;
   const [usersMessages, setUsersMessages] = useState(null);
   const [clickedUsersMessages, setClickedUsersMessages] = useState(null);
+  const messages = [];
 
   // Get User Messages
   const getUsersMessages = async () => {
@@ -35,14 +36,13 @@ const ChatDisplay = ({ user, clickedUser }) => {
     }
   };
 
+  // Executes getUsersMessages And getClickedUsersMessages Functions After Render
   useEffect(() => {
     getUsersMessages();
     getClickedUsersMessages();
   }, []);
 
-  const messages = [];
-
-  // Loop Through User Messages
+  // Loop Through User Messages And Push To Messages Array
   usersMessages?.forEach((message) => {
     const formattedMessage = {};
     formattedMessage["name"] = user?.first_name;
@@ -54,7 +54,7 @@ const ChatDisplay = ({ user, clickedUser }) => {
     messages.push(formattedMessage);
   });
 
-  // Loop Through Clicked User Messages
+  // Loop Through Clicked User Messages And Push To Messages Array
   clickedUsersMessages?.forEach((message) => {
     const formattedMessage = {};
     formattedMessage["name"] = clickedUser?.first_name;

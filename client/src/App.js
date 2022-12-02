@@ -1,9 +1,10 @@
+// Packages
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useCookies } from "react-cookie";
+// Pages
 import Home from "./pages/Home";
 import Onboarding from "./pages/Onboarding";
 import Dashboard from "./pages/Dashboard";
-import Update from "./pages/Update";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { useCookies } from "react-cookie";
 
 const App = () => {
   const [cookies] = useCookies(["user"]);
@@ -20,9 +21,6 @@ const App = () => {
 
         {/* Dashboard */}
         {authToken && <Route path="/dashboard/*" element={<Dashboard />} />}
-
-        {/* Update */}
-        {authToken && <Route path="/update" element={<Update />} />}
       </Routes>
     </BrowserRouter>
   );

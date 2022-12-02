@@ -1,7 +1,7 @@
 // Packages
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
+import axios from "axios";
 
 const MatchesDisplay = ({ matches, setClickedUser }) => {
   const [cookies] = useCookies(null);
@@ -21,6 +21,7 @@ const MatchesDisplay = ({ matches, setClickedUser }) => {
     }
   };
 
+  // Executes getMatches Function After Render
   useEffect(() => {
     getMatches();
   }, [matches]);

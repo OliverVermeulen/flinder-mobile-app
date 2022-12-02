@@ -1,8 +1,10 @@
-import Header from "../components/home/Header";
+// Packages
 import { useState } from "react";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+// Components
+import Header from "../components/home/Header";
 
 const Onboarding = () => {
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
@@ -180,23 +182,6 @@ const Onboarding = () => {
                 >
                   W
                 </label>
-
-                {/* Non Binary */}
-                <input
-                  type="radio"
-                  id="more-gender-identity"
-                  name="gender_identity"
-                  value="more"
-                  onChange={handleChange}
-                  checked={formData.gender_identity === "more"}
-                />
-                <label
-                  htmlFor="more-gender-identity"
-                  className="choice-label"
-                  title="Non Binary"
-                >
-                  NB
-                </label>
               </div>
 
               {/* Gender Interest */}
@@ -234,23 +219,6 @@ const Onboarding = () => {
                 >
                   W
                 </label>
-
-                {/* All */}
-                <input
-                  type="radio"
-                  id="everyone-gender-interest"
-                  name="gender_interest"
-                  value="everyone"
-                  onChange={handleChange}
-                  checked={formData.gender_interest === "everyone"}
-                />
-                <label
-                  htmlFor="everyone-gender-interest"
-                  className="choice-label"
-                  title="All"
-                >
-                  All
-                </label>
               </div>
             </div>
 
@@ -279,7 +247,9 @@ const Onboarding = () => {
               maxLength="150"
             />
 
-            <input type="submit" />
+            <div className="form-handel-buttons">
+              <input type="submit" />
+            </div>
           </form>
         </div>
       </div>

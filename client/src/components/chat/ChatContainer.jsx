@@ -1,55 +1,61 @@
 // Packages
-import { useState } from "react";
-import { createRipples } from "react-ripples";
+import { useEffect, useState } from "react";
+import { useCookies } from "react-cookie";
+import axios from "axios";
 // Components
-import DashboardHeader from "../dashboard/DashboardHeader";
-import MatchesDisplay from "./MatchesDisplay.jsx";
-import ChatDisplay from "./ChatDisplay";
+import ChatPage from "./ChatPage";
 
-const ChatContainer = ({ user, page }) => {
-  const [clickedUser, setClickedUser] = useState(null);
-  // Ripples
-  const MyRipples = createRipples({
-    color: "#3336386c",
-    during: 1000,
-  });
+const ChatContainer = () => {
+  const [user, setUser] = useState(null);
+  const [genderedUsers, setGenderedUsers] = useState(null);
+  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
+  const userId = cookies.UserId;
+
+  // Get User
+  const getUser = async () => {
+    try {
+      const response = await axios.get("http://localhost:8000/user", {
+        params: { userId },
+      });
+      setUser(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  // Get Gendered Users
+  const getGenderedUsers = async () => {
+    try {
+      const response = await axios.get("http://localhost:8000/gendered-users", {
+        params: { gender: user?.gender_interest },
+      });
+      setGenderedUsers(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  // Executes getUser Function After Render
+  useEffect(() => {
+    getUser();
+  }, []);
+
+  // Executes getGenderedUsers Function After Render
+  useEffect(() => {
+    if (user) {
+      getGenderedUsers();
+    }
+  }, [user]);
 
   return (
     <>
-      {/* Dashboard Header */}
-      <DashboardHeader user={user} page={!page} />
-
-      <div className="chat-container">
-        {/* Chat Navigation */}
-        <div className="chat-nav">
-          <MyRipples>
-            <button
-              className="option-btn"
-              onClick={() => setClickedUser(null)}
-              title="Matches"
-            >
-              Matches
-            </button>
-          </MyRipples>
-
-          <MyRipples>
-            <button className="option-btn" disabled={!clickedUser} title="Chat">
-              Chat
-            </button>
-          </MyRipples>
-        </div>
-
-        {/* Display Page */}
-        {!clickedUser && (
-          <MatchesDisplay
-            matches={user.matches}
-            setClickedUser={setClickedUser}
-          />
-        )}
-        {clickedUser && <ChatDisplay user={user} clickedUser={clickedUser} />}
-      </div>
+      {user && (
+        <>
+          {/* Chat Container */}
+          <ChatPage user={user} />
+        </>
+      )}
     </>
   );
 };
-
 export default ChatContainer;

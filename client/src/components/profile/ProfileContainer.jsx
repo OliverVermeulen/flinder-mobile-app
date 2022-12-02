@@ -1,6 +1,6 @@
+// Components
 import ProfileHeader from "./ProfileHeader";
 import ProfileCard from "./ProfileCard";
-import DashboardNav from "../dashboard/DashboardNav";
 
 const ProfileContainer = () => {
   return (
@@ -12,7 +12,6 @@ const ProfileContainer = () => {
         {/* Profile Card */}
         <ProfileCard />
       </div>
-      {/* <DashboardNav /> */}
     </>
   );
 };

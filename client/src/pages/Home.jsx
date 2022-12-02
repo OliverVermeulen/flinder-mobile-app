@@ -1,7 +1,9 @@
-import Header from "../components/home/Header";
-import AuthModal from "../components/home/AuthModel";
+// Packages
 import { useState } from "react";
 import { useCookies } from "react-cookie";
+// Components
+import Header from "../components/home/Header";
+import AuthModal from "../components/home/AuthModel";
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
@@ -33,10 +35,10 @@ const Home = () => {
 
       <div className="home">
         {/* Slogan */}
-        <h1 className="neonText">Start Swiping</h1>
+        <h1 className="neonText" title="Start Swiping">Start Swiping</h1>
 
         {/* Create Account / Sign Out */}
-        <button className="primary-button" onClick={handleClick}>
+        <button className="primary-button" onClick={handleClick} title={authToken ? "Sign Out" : "Create Account"}>
           {authToken ? "Sign Out" : "Create Account"}
         </button>
 

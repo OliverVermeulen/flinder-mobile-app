@@ -1,9 +1,9 @@
+// Packages
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"
+import { MdSettings, MdOutlineLogout } from "react-icons/md";
 import axios from "axios";
-import { BsGearFill, BsArrowReturnLeft } from "react-icons/bs";
-import { BiExit } from "react-icons/bi";
 
 const ProfileHeader = () => {
   const [user, setUser] = useState(null);
@@ -30,30 +30,27 @@ const ProfileHeader = () => {
     window.location.reload(navigate("/"));
   };
 
-  const update = () => {
-    window.location.reload(navigate("/update"));
-  };
-
+  // Executes getUser Function After Render
   useEffect(() => {
     getUser();
   }, []);
 
   return (
+    // Header
     <div className="dashboard-header">
       <p className="dashboard-header-name" title="Profile">
         Profile
       </p>
       <div className="profile-dropdown">
         <button className="icon" title="Settings">
-          <BsGearFill />
+          <MdSettings />
         </button>
 
         {/* Header Dropdown */}
         <div className="profile-dropdown-content">
           <p onClick={logout}>
-            <BiExit /> Log Out
+            <MdOutlineLogout /> Log Out
           </p>
-          <p onClick={update}>Update</p>
         </div>
       </div>
     </div>

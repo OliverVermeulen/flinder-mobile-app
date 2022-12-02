@@ -1,9 +1,11 @@
+// Packages
 import TinderCard from "react-tinder-card";
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 import axios from "axios";
-import DashboardHeader from "../dashboard/DashboardHeader";
 import { CiLocationOn } from "react-icons/ci";
+// Components
+import DashboardHeader from "../dashboard/DashboardHeader";
 
 const SwipeContainer = (page) => {
   const [user, setUser] = useState(null);
@@ -36,10 +38,12 @@ const SwipeContainer = (page) => {
     }
   };
 
+  // Executes getUser Function After Render
   useEffect(() => {
     getUser();
   }, []);
 
+  // Executes getGenderedUsers Function After Render
   useEffect(() => {
     if (user) {
       getGenderedUsers();
@@ -59,6 +63,7 @@ const SwipeContainer = (page) => {
     }
   };
 
+  // When Swiped Right Adds User To Matches
   const swiped = (direction, swipedUserId) => {
     if (direction === "right") {
       updateMatches(swipedUserId);
@@ -66,6 +71,7 @@ const SwipeContainer = (page) => {
     setLastDirection(direction);
   };
 
+  // Logs When User Has Left The Screen
   const outOfFrame = (name) => {
     console.log(name + " left the screen!");
   };
@@ -74,6 +80,7 @@ const SwipeContainer = (page) => {
     .map(({ user_id }) => user_id)
     .concat(userId);
 
+  // Filters Gendered Users by user_id
   const filteredGenderedUsers = genderedUsers?.filter(
     (genderedUser) => !matchedUserIds.includes(genderedUser.user_id)
   );
@@ -118,7 +125,7 @@ const SwipeContainer = (page) => {
                 </TinderCard>
               ))}
             </div>
-            
+
             {lastDirection ? (
               <h2 className="info-text">You swiped {lastDirection}</h2>
             ) : (

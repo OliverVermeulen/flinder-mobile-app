@@ -12,6 +12,7 @@
   font-size: 70px;
   animation: pulsate 0.11s ease-in-out infinite alternate;
   margin-bottom: 10px;
+  cursor: default;
 }
 
 /* Home Button */

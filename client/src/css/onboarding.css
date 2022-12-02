@@ -113,7 +113,7 @@
   padding: 12px 30px;
   border-radius: 30px;
   border: solid 2px var(--light-grey);
-  margin: 4px auto;
+  /* margin: 4px auto; */
   cursor: pointer;
   width: fit-content;
   text-align: center;
@@ -127,6 +127,26 @@
 }
 .gender-label label {
   width: 50%;
+}
+.form-handel-buttons {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 10px;
+}
+.cancel-btn {
+  color: var(--light-grey);
+  background-color: var(--white);
+  font-weight: 500;
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: solid 2px var(--light-grey);
+  margin: 4px 0px 8px 0px;
+  cursor: pointer;
+  width: fit-content;
+  text-align: center;
+  transition: 0.4s;
+  font-size: 17px;
 }
 
 /* Media Query for Mobile Devices (portrait mode) */

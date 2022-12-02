@@ -8,7 +8,7 @@
 .profile-dropdown .icon {
   background-color: transparent;
   color: var(--white);
-  font-size: 25px;
+  font-size: 30px;
   border: none;
   padding-top: 7px;
   cursor: pointer;
@@ -19,7 +19,7 @@
   display: none;
   position: absolute;
   left: -90px;
-  width: 120px;
+  width: fit-content;
   background-color: var(--dark-grey);
   z-index: 1;
   border-radius: 20px;
@@ -27,13 +27,14 @@
   border: 1px solid var(--white);
   box-shadow: var(--neon-shadow);
   animation: none;
+  align-items: center;
 }
 .profile-dropdown-content p {
   color: var(--white);
   padding: 10px;
   text-decoration: none;
   display: block;
-  font-size: 18px;
+  font-size: 17px;
   cursor: pointer;
   transition: 0.4s;
   margin: 0;

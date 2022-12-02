@@ -5,6 +5,7 @@ import ScrollToBottom from "react-scroll-to-bottom";
 const ChatMessages = ({ descendingOrderMessages }) => {
   const [cookies] = useCookies(["user"]);
   const userId = cookies.UserId;
+
   return (
     <>
       <div className="chat-box">
@@ -12,7 +13,7 @@ const ChatMessages = ({ descendingOrderMessages }) => {
         <ScrollToBottom className="chat-display">
           {descendingOrderMessages.map((message, _index) => (
             <div key={_index}>
-              {/* Split Chat */}
+              {/* Divides Chat */}
               <div
                 className={`chat-message ${
                   message.from_userId === userId && "user"
@@ -26,7 +27,7 @@ const ChatMessages = ({ descendingOrderMessages }) => {
                 {/* Message */}
                 <div className="message">
                   <p>{message.message}</p>
-                  <p className="timestamp">{message.time}</p>
+                  <p className="timestamp">{message.time}</p> {/* Time Sent */}
                 </div>
               </div>
             </div>

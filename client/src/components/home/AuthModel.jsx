@@ -2,8 +2,8 @@
 import { useState } from "react";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 import { MdClose } from "react-icons/md";
+import axios from "axios";
 
 const AuthModal = ({ setShowModal, isSignUp }) => {
   const [email, setEmail] = useState(null);
@@ -21,6 +21,7 @@ const AuthModal = ({ setShowModal, isSignUp }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      // Shows Error If Passwords Don't Match
       if (isSignUp && password !== confirmPassword) {
         setError("Passwords need to match!");
         return;
@@ -98,7 +99,7 @@ const AuthModal = ({ setShowModal, isSignUp }) => {
         )}
 
         {/* Submit */}
-        <input type="submit" />
+        <input type="submit" title="Submit" />
 
         {/* error */}
         <span>{error}</span>
